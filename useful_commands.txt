@@ -1,3 +1,9 @@
 make html && make serve
 http://localhost:8000
 
+ghp-import -m "Generate Pelican site" --no-jekyll -b master output
+git push origin master
+
+git add .
+git commit -m "update blog"
+git push origin content
