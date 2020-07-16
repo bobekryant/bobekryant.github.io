@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="en">
 <head>
         <meta charset="utf-8" />
         <title>Bobe's Thoughts - UFC</title>
@@ -29,27 +29,57 @@
         </address>
 <p>In <a href="/category/ufc.html">UFC</a>.</p>
 <p>tags: <a href="/tag/ufc.html">UFC</a> <a href="/tag/analytics.html">analytics</a> </p>
-</footer><!-- /.post-info --><p>
-UFC is based off a 10-9 scoring system similar to boxing. Typically fights last 3 rounds of 5 minutes, with championship belts and top contender fights lasting 5 rounds of 5 minutes. 
-For those interested, <a href="http://media.ufc.tv/discover-ufc/Unified_Rules_MMA.pdf" target="_blank">here</a> is the current official MMA unifed rules. Note that these have been changed and amended a few times.
-</p>                </article>
+</footer><!-- /.post-info --><h3>Background</h3>
+
+<p>
+Ultimate Fighting Championship or UFC is based off a 10-9 scoring system similar to boxing and the fight goes to the judges unless there is a KO,TKO, DQ, or submission. Typically fights last 3 rounds of 5 minutes, with championship belts and top contender fights lasting 5 rounds of 5 minutes. 
+For those interested, <a href="http://media.ufc.tv/discover-ufc/Unified_Rules_MMA.pdf" target="_blank">here</a> is the current official MMA unified rules. Note that these have been changed and amended a few times since they were created in the early 2000s.
+</p>
+
+<h3>How to Win</h3>
+
+<p>
+As mentioned above there are a few different ways to end a UFC fight. Here we see both a pie chart and a time series graph of how fights end. I have removed all DQ and overturned results from the dataset and I have combined the split decision and majority decisions.
+I aggregate the data into a pie graph and we can see that about a third of the fights are unanimous decisions and another third are KO/TKOs. The other third are a combination of submissions and split or majority decisions. There are rarely any draws. 
+</p>
+
+<p><img alt="Pelican" src="../images/ufc_finish_percent.png">
+<p>
+However these percentages are not consistent. Like I mentioned previously there have been many iterations of rules and technique adaptations. The UFC looks vastly different now than in years past. To examine the changes, I create a rolling 5 year time series graph which again contains the various methods of how a fight can finish.
+The five year rolling method smooths the data and we see that the proportion of submissions and KO/TKOs have both decreased over the years with an increase in both the decision methods. This could hint that fighters are getting better at defense, leading to longer fighting times ultimately more decisions.
+</p>
+<img alt="Pelican" src="../images/ufc_finish_percent_year.png"></p>
+<h3>Data</h3>
+
+<p>
+I have built a database of UFC <a href="http://www.ufcstats.com" target="_blank">stats</a> starting from UFC 1 in November 12, 1993, including promotions UFC bought like StrikeForce and WEC, resulting in a database of over 5000 fights and 3000 unique fighters. I am able to get fighters physical attributes like age and reach as well as certain fighting stats like knock down percentage. In addition, I have scraped a few betting websites for their lines, but unfortunately some of the earlier fights did not have betting lines. The betting data starts in 2012.
+I am working to release the scraping code and data on my github so others can create reproducible results and test new theories. When looking through this data it is important to note that the UFC is rapidly evolving and conclusions found today may not hold in a few years. 
+There has been a lot of evolution within the UFC as in the beginning there was no time limits and only finishes, thus draws did not exist.
+</p>
+
+<p>
+Below is an example of a recent fight between Molly McCann and Taila Santos. Similar to home and away in other sports, there is a red corner (Molly) and a blue corner (Talia) in which the red corner is usually the higher ranked fighter. 
+Taking a glance at the specific statistics, we can see that the UFC records a multitude of stats that are broken down into two categories: striking stats and totals. The totals focus on miscellaneous stats like KD (knock downs), TD (take downs) as well as total strikes.
+The striking stats are broken down into the location on the body as well as the distance the strike was landed. In addition, strikes are classified as significant or not significant. We see Taila out-striking Molly and outclassing her in the take-down category, so it understanding that Taila won a unanimous decision,
+</p>
+
+<p><img alt="Pelican" src="../images/ufc_sample_stats.png"></p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>
                         <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
+                            <li><a href="http://reddit.com/r/nba">NBA Subreddit</a></li>
+                            <li><a href="http://www.basketball-reference.com">NBA Stats</a></li>
+                            <li><a href="http://www.ufcstats.com/statistics/events/completed">UFC Stats</a></li>
+                            <li><a href="https://github.com/bobekryant">My Github</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
                         <h2>social</h2>
                         <ul>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
+                            <li><a href="mailto:bobekryant33824">Email</a></li>
                         </ul>
                 </div><!-- /.social -->
         </section><!-- /#extras -->
