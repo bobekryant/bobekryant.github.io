@@ -34,6 +34,10 @@ Below is an example of a the fighting stats that I shall collect. Here we see a 
 Taking a glance at the specific statistics, we can see that the UFC records a multitude of stats that are broken down into two categories: striking stats and totals. The totals focus on miscellaneous stats like KD (knock downs), TD (take downs) as well as total strikes.
 The striking stats are broken down into the location on the body as well as the distance the strike was landed. In addition, strikes are classified as significant or not significant. We see Taila out-striking Molly and outclassing her in the take-down category, so it understanding that Taila won a unanimous decision,
 </p>
-<p>
 ![Pelican](../images/ufc_sample_stats.png)
+<p>
+Going one step further when analyzing these stats, we can use feature engineering to break down these stats on a ratio basis think per minute stats. 
+When Jorge Masvidal knocked out Ben Askren in 5 seconds with a flying knee, he only had 3 significant strikes, the first flying knee and two followup punches. 
+Here is a <a href="https://streamable.com/34cjn" target="_blank">clip</a> of the fight. Looking only at the total number of significant strikes would penalize this career altering performance.
+This is an extreme example, but serves as an important point as to why changing stats to a common timeframe. 
 </p>
