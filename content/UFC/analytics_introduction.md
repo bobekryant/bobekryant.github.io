@@ -34,4 +34,6 @@ Below is an example of a the fighting stats that I shall collect. Here we see a 
 Taking a glance at the specific statistics, we can see that the UFC records a multitude of stats that are broken down into two categories: striking stats and totals. The totals focus on miscellaneous stats like KD (knock downs), TD (take downs) as well as total strikes.
 The striking stats are broken down into the location on the body as well as the distance the strike was landed. In addition, strikes are classified as significant or not significant. We see Taila out-striking Molly and outclassing her in the take-down category, so it understanding that Taila won a unanimous decision,
 </p>
+<p>
 ![Pelican](../images/ufc_sample_stats.png)
+</p>
