@@ -1,6 +1,6 @@
 Title: About Me
 Slug: about-me
-Date: 2020-07-14
+Date: 2020-07-07
 <!--- Modified: 2017-11-27 12:30 -->
 <!--- Category: About <br> -->
 <!--- Tags: Introduction, Misc -->
