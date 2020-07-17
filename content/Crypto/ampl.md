@@ -1,7 +1,7 @@
 Title: Ampleforth
 Slug: ampl-intro
 Date: 2020-07-17
-Tags: crypto, AMPL
+Tags: crypto, $AMPL
 Summary: Introduction to Ampleforth
 
 <p>
@@ -11,7 +11,7 @@ Another cryptocurrency with more elastic supply would have the benefits Bitcoin 
 </p>
 <p>
 Ampleforth, $AMPL, is one of the most interesting coins, because the supply of it changes daily based on the price. When the price is high, the wallet balances increases and when it is low the balance decreases.
-The main purpose of this rebase is to dampen the volatility of the price, giving it an intrinsic ability to be a stablecoin and price other assets off of Ampleforth. In essence, the larger the market cap, the more stable AMPL price will be. The whitepaper can be found 
+The main purpose of this rebase is to dampen the volatility of the price, giving it an intrinsic ability to be a stablecoin and price other assets off of Ampleforth. In essence, the larger the market cap, the more stable $AMPL price will be. The whitepaper can be found 
 <a href="https://drive.google.com/file/d/1I-NmSnQ6E7wY1nyouuf-GuDdJWNCnJWl/view" target="_blank">here</a>.
 </p>
 
@@ -40,7 +40,7 @@ We can see that while the price increased from $1 to around $2.3, around a 130% 
 
 
 <h3>Additional Thoughts</h3>
-Due to the rebase mechanism AMPL should have very unique returns characteristics, uncorrelated with other assets both in the traditional space and the crypto space. 
-I believe that it is the ultimate momentum asset because as long as the price stays above $1 the supply will increase. People will see that their net worth has gone up and buy more AMPL.
-Thoertically people will sell the extra AMPL for ever new issuance, but I do not think that will happen at all. People will chase returns and put even more money into AMPL to recieve a larger split.
-In a market prone to rapid bull runs, it is against human nature to sell, leading to an increase in AMPL supply causing a rapid feedback loop.
+Due to the rebase mechanism $AMPL should have very unique returns characteristics, uncorrelated with other assets both in the traditional space and the crypto space. 
+I believe that it is the ultimate momentum asset because as long as the price stays above $1 the supply will increase. People will see that their net worth has gone up and buy more $AMPL.
+Thoertically people will sell the extra $AMPL for ever new issuance, but I do not think that will happen at all. People will chase returns and put even more money into $AMPL to recieve a larger split.
+In a market prone to rapid bull runs, it is against human nature to sell. They will infact buy more $AMPL, leading to an increase in $AMPL supply and potentially causing a large feedback loop.
