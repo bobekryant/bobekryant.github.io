@@ -1,121 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Bobe's Thoughts - UFC</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-		<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  "HTML-CSS": {
-  styles: {
-  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-  },
-  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
-  });
-</script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-</head>
+        <meta name="author" content="Bobe Kryant" />
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Bobe's Thoughts </a></h1>
-                <nav><ul>
-                    <li><a href="/category/about-me.html">About Me</a></li>
-                    <li><a href="/category/crypto.html">Crypto</a></li>
-                    <li><a href="/category/investing.html">Investing</a></li>
-                    <li><a href="/category/nba.html">NBA</a></li>
-                    <li><a href="/category/ufc.html">UFC</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/ufc-stats.html">UFC Stats</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2020-07-12T00:00:00-04:00">
-                Published: Sun 12 July 2020
-        </abbr>
+<meta property="og:title" content="Bobe&#39;s Thoughts"/>
+<meta name="twitter:title" content="Bobe&#39;s Thoughts">
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="Bobe&#39;s Thoughts" />
+<meta property="og:article:author" content="Bobe Kryant" />
+<meta name="keywords" content=" $AMPL,  analytics,  crypto,  $DELL,  investing,  NBA,  UFC,  $VMW,  About Me,  Crypto,  Investing,  NBA,  UFC, " />
+        <title>Bobe's Thoughts - UFC tag</title>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/bobe-kryant.html">Bobe Kryant</a>
-        </address>
-<p>In <a href="/category/ufc.html">UFC</a>.</p>
-<p>tags: <a href="/tag/ufc.html">UFC</a> <a href="/tag/analytics.html">analytics</a> </p>
-</footer><!-- /.post-info --><h3>Background</h3>
 
-<p>
-Ultimate Fighting Championship or UFC is based off a 10-9 scoring system similar to boxing and the fight goes to the judges unless there is a KO,TKO, DQ, or submission. Typically fights last 3 rounds of 5 minutes, with championship belts and top contender fights lasting 5 rounds of 5 minutes. 
-For those interested, <a href="http://media.ufc.tv/discover-ufc/Unified_Rules_MMA.pdf" target="_blank">here</a> is the current official MMA unified rules. Note that these have been changed and amended a few times since they were created in the early 2000s.
-</p>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>Bobe's Thoughts</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/categories.html">Categories</a></li>
+                                <li ><a href="/tags.html">Tags</a></li>
+                                <li ><a href="/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
 
-<h3>How to Win</h3>
 
-<p>
-As mentioned above there are a few different ways to end a UFC fight. Here we see both a pie chart and a time series graph of how fights end. I have removed all DQ and overturned results from the dataset and I have combined the split decision and majority decisions.
-I aggregate the data into a pie graph and we can see that about a third of the fights are unanimous decisions and another third are KO/TKOs. The other third are a combination of submissions and split or majority decisions. There are rarely any draws. 
-</p>
+<div class="row-fluid">
 
-<p><img alt="Pelican" src="../images/ufc_finish_percent.png"></p>
-<p>
-However these percentages are not consistent. Like I mentioned previously there have been many iterations of rules and technique adaptations. The UFC looks vastly different now than in years past. To examine the changes, I create a rolling 5 year time series graph which again contains the various methods of how a fight can finish.
-The five year rolling method smooths the data and we see that the proportion of submissions and KO/TKOs have both decreased over the years with an increase in both the decision methods. This could hint that fighters are getting better at defense, leading to longer fighting times ultimately more decisions.
-</p>
+    <div class="row-fluid">
 
-<p><img alt="Pelican" src="../images/ufc_finish_percent_year.png"></p>
-<h3>Data</h3>
+    </div>
 
-<p>
-I have built a database of UFC <a href="http://www.ufcstats.com" target="_blank">stats</a> (starting from UFC 1 in November 12, 1993 and also incorporating promotions UFC bought like StrikeForce and WEC); in total, this results to a database of over 5000 fights and 3000 fighters. I am able to get fighters physical attributes like age and reach as well as certain fighting stats like knock down percentage. 
-In addition, I have scraped a few betting websites for their lines, but unfortunately some of the earlier fights did not have betting lines. The betting data starts in 2012.
-I am working to release the scraping code and data on my github so others can create reproducible results and test new theories. When looking through this data it is important to note that the UFC is rapidly evolving and conclusions found today may not hold in a few years. 
-There has been a lot of evolution within the UFC as in the beginning there was no time limits and only finishes, thus draws did not exist.
-</p>
+    <div class="row-fluid">
+        <div class="span8 offset2">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="/archives.html">all posts</a></h1>
+            </header>
+        <div class="recent-posts">
+            <div itemscope class="recent-posts-article">
+                <a href="/ufc-stats.html">
+                    UFC Stats
+                </a>
+                <div class="recent-posts-posted">
+                    posted in
+                    <a href="/categories.html#ufc-ref">UFC</a>
+                    <time itemprop="dateCreated" datetime="2020-07-12T00:00:00-04:00">Sun 12 July 2020</time>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
 
-<p>
-Below is an example of a the fighting stats that I shall collect. Here we see a recent fight between Molly McCann and Taila Santos. Similar to home and away in other sports, there is a red corner (Molly) and a blue corner (Talia) in which the red corner is usually the higher ranked fighter. 
-Taking a glance at the specific statistics, we can see that the UFC records a multitude of stats that are broken down into two categories: striking stats and totals. The totals focus on miscellaneous stats like KD (knock downs), TD (take downs) as well as total strikes.
-The striking stats are broken down into the location on the body as well as the distance the strike was landed. In addition, strikes are classified as significant or not significant. We see Taila out-striking Molly and outclassing her in the take-down category, so it understanding that Taila won a unanimous decision,
-</p>
 
-<!--- ![Pelican](../images/ufc_finish_percent_year.png)-->
 
-<p><img alt="Pelican" src="../images/ufc_sample_stats.PNG"></p>
-<h3>Features</h3>
 
-<p>
-Going one step further when analyzing these stats, we can use feature engineering to break down these stats on a ratio basis think per minute stats. 
-When Jorge Masvidal knocked out Ben Askren in 5 seconds with a flying knee, he only had 3 significant strikes, the first flying knee and two followup punches. 
-Here is a <a href="https://streamable.com/34cjn" target="_blank">clip</a> of the fight. Looking only at the total number of significant strikes would penalize this career altering performance.
-This is an extreme example, but serves as an important reminder as to why changing stats to a common timeframe can be important. 
-</p>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://reddit.com/r/nba">NBA Subreddit</a></li>
-                            <li><a href="http://www.basketball-reference.com">NBA Stats</a></li>
-                            <li><a href="http://www.ufcstats.com/statistics/events/completed">UFC Stats</a></li>
-                            <li><a href="https://github.com/bobekryant">My Github</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-
-                            <li><a href="mailto:bobekryant33824">Email</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-</body>
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
 </html>

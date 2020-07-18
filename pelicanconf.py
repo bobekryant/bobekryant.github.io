@@ -31,9 +31,12 @@ SOCIAL = (('Email', 'mailto:bobekryant33824'),)
 
 # MARKUP = ('md', 'ipynb')
 # MARKUP = ('md')
-
+DEFAULT_PAGINATION = 10
+THEME = 'elegant'
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['render_math']
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images','static']
+FAVICON = 'img/favicon.ico'
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

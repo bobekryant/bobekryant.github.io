@@ -5,7 +5,7 @@ Tags: investing, $DELL, $VMW
 Summary: How to trade the Dell VMWare split
 
 <p>
-Dell Technologies, \$DELL, owns 81\% of VMware, \$VMW, through its \$67 billion purchase of EMC. Looking at the prices at the close of 2020-07-16, we see that VMWare is worth 58.61B while Dell is worth 43.78B.
+Dell Technologies, \$DELL, owns 81% of VMware, \$VMW, through its \$67 billion purchase of EMC. Looking at the prices at the close of 2020-07-16, we see that VMWare is worth 58.61B while Dell is worth 43.78B.
 This means that the portion of stock in VMWare Dell owns is worth 47.5B. According to the market, Dell without VMware is worth around negative 4B. 
 It seems that a spin-off is in play and would be beneficial to both companies. Dell bought VMW in September of 2016 so he needs to wait 5 years till 2021 and there will be a spinoff in a tax-free transaction fashion. 
 For what its worth, the closest competitor to \$DELL, \$HPE trades at a similar PE ratio to \$DELL, has similar margins in the PC space and is worth 12B.
