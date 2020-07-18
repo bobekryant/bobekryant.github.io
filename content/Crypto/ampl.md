@@ -17,10 +17,12 @@ The main purpose of this rebase is to dampen the volatility of the price, giving
 
 <h3>How the rebase works works</h3>
 I will outline two specific scenarios. 
+
 <ol>
-  <li>Jordan buys 1 Ample for \$1 and the price soon increases to \$2. The price-supply equilibrium would 'split' the Amples and Jordan would end up with 2 Amples worth \$1 each. The total net worth of Amples is constant, this is literally a stock split</li>
-  <li>Say after this Jordan's Amples shoot down to $.5. Similarly, after the rebase period, he will end up with 1 Ample worth \$1. This is akin to a reverse stock split</li>
+  <li>Jordan buys 1 Ample for $1 and the price soon increases to $2. The price-supply equilibrium would 'split' the Amples and Jordan would end up with 2 Amples worth $1 each. The total net worth of Amples is constant, this is literally a stock split.</li>
+  <li>Say after this Jordan's Amples shoot down to $.5. Similarly, after the rebase period, he will end up with 1 Ample worth $1. This is akin to a reverse stock split</li>
 </ol>
+
 The exact details are subject to change but currently if the price is above a target threshold the supply expands and if it is below the supply contracts. Specifically the current price target is one 
 <a href="https://www.bea.gov/data/personal-consumption-expenditures-price-index" target="_blank">2019</a> US dollar and price threshold is at 5%.
 The rebalance occurs gradually over 10 days to smooth out the supply changes, but the key here is that this process is memoryless. The previous days supply change does not matter when calculating the current days supply change. Whatever the supply should be is just adjusted by 1/10 everyday.
