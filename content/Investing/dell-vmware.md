@@ -14,8 +14,15 @@ For what its worth, the closest competitor to $DELL, $HPE trades at a similar PE
 <p>
 In 2013, Michael Dell and Silver Lake Partners bought out Dell's shares in the public market and took Dell Technologies private. 5 years later, Dell Technologies returned to the public makets by buying back shares that tracked the financial performance of VMware.
 Using historical market caps (from ycharts), I have plotted both $DELL and $VMW market caps below. 
-$e=mc^2$
-</p>
+$$
+\begin{bmatrix}
+a \\
+b 
+\end{bmatrix} = \begin{bmatrix}
+m_{1,1} & m_{1,2} \\
+m_{2,1} & m_{2,2} 
+\end{bmatrix} {\bf \hat{x}}
+$$
 
 <h3>Potential Trades</h3>
 I think there is the obvious trade which is to long $DELL and then there are two hedged plays which may be more lucrative from a risk-reward standpoint. 

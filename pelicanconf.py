@@ -32,9 +32,8 @@ SOCIAL = (('Email', 'mailto:bobekryant33824'),)
 # MARKUP = ('md', 'ipynb')
 MARKUP = ('md')
 
-PLUGIN_PATHS = ['./plugins']
-# PLUGINS = ['ipynb.markup']
-PLUGINS = ["render_math"]
+PLUGIN_PATHS = ['./pelican-plugins']
+PLUGINS = ['render_math']
 STATIC_PATHS = ['images']
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
