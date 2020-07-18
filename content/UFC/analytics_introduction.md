@@ -40,7 +40,7 @@ The striking stats are broken down into the location on the body as well as the 
 </p>
 
 ![Pelican](../images/ufc_finish_percent_year.png)
-![Pelican](../images/ufc_sample_stats.png)
+<!--- ![Pelican](../images/ufc_sample_stats.png) -->
 
 <h3>Features</h3>
 <p>
