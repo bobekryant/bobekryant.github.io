@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +31,18 @@
 </title>
 
 
+
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		  "HTML-CSS": {
+		  styles: {
+		  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+		  },
+		  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+		  });
+		</script>
+
+		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     </head>
     <body>
         <div id="content">
@@ -93,8 +106,9 @@ I bring this finance example into discussion, because not all counting stats are
 <p>
 By looking at the boxscore, one is able to see certain offensive categories like points, threes, rebounds, assists and defensive categories like blocks and steals.
 Below is the Warriors boxscore from the Raptors-Warriors game on 2016-11-16. In this boxscore, we can see that Klay Thompson took 11 threes and made 3 while his backcourt mate Steph Curry took 9 and made 3.
-<!---  <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=bbr&url=%2Fboxscores%2F201611160TOR.html&div=div_box_gsw_basic"></script> -->
+</p><!---  <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=bbr&url=%2Fboxscores%2F201611160TOR.html&div=div_box_gsw_basic"></script> -->
 <img alt="Pelican2" src="../images/boxscore_warriors.PNG">
+<p>
 Suppose that Klay Thompson also took 9 threes and still made 3 of them for the same shooting percentage as Steph Curry. Then it would take a small jump of logic to say that Klay and Steph both shot 33% and had similar shooting nights.
 This small jump of logic is similar to the fallacy in the two financial assets, because Steph Curry and Klay Thompson create their threes in very different ways: Klay Thompson is a lot more screen dependent then Steph Curry is. 
 </p>
