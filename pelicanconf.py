@@ -30,7 +30,7 @@ LINKS = (('NBA Subreddit', 'http://reddit.com/r/nba'),
 SOCIAL = (('Email', 'mailto:bobekryant33824'),)
 
 # MARKUP = ('md', 'ipynb')
-MARKUP = ('md')
+# MARKUP = ('md')
 
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['render_math']

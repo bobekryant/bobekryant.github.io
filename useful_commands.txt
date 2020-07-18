@@ -7,3 +7,14 @@ git push origin master
 git add .
 git commit -m "update blog"
 git push origin content
+
+----
+need to add following in base.html of themes
+MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+
