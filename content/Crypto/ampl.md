@@ -25,7 +25,7 @@ I will outline two specific scenarios.
 
 The exact details are subject to change but currently if the price is above a target threshold the supply expands and if it is below the supply contracts. Specifically the current price target is one 
 <a href="https://www.bea.gov/data/personal-consumption-expenditures-price-index" target="_blank">2019</a> US dollar and price threshold is at 5%.
-The rebalance occurs gradually over 10 days to smooth out the supply changes, but the key here is that this process is memoryless. The previous days supply change does not matter when calculating the current days supply change. Whatever the supply should be is just adjusted by 1/10 everyday.
+The rebalance occurs gradually over 10 days to smooth out the supply changes, but the key here is that this process is memoryless. The previous days supply change does not matter when calculating the current days supply change. Whatever the supply should be is just adjusted by $\frac{1}{10}$ everyday.
 More details can be found in this <a href="https://medium.com/ampleforth/the-ampleforth-chainlink-oracle-integration-is-going-live-16053ccdebd5" target="_blank">article</a> written by the founder.
 
 <h3>Trading Implications</h3>
@@ -35,14 +35,15 @@ This rebalance feature has massive implications for the trading world. It can be
 
 <h3>Investing Implications</h3>
 <p>
-Unlike most crypto coins, the price here is really secondary to the market cap due to the rebase protocol. Below is a market cap and price over the past month from <a href="https://coinmarketcap.com/currencies/ampleforth/" target="_blank">coinmarketcap</a>.
-We can see that while the price increased from \$1 to around \$2.3, around a 130% increase. However the market cap during this same period increased from 6 million to 120 million, a 20x increase and the true value of the investment during this period. 
+Unlike most crypto coins, the price of \$AMPL is really secondary to the market cap due to the rebase protocol. Below is a market cap and price over the past month from <a href="https://coinmarketcap.com/currencies/ampleforth/" target="_blank">coinmarketcap</a>.
+We can see that while the price increased from $1 to around $2.3, around a 1.3x increase. However the market cap during this same period increased from 6 million to 120 million, a 20x increase and the true value of the investment during this period. 
 </p>
 ![Pelican](../images/ampl_mcap.png)
 
-
 <h3>Additional Thoughts</h3>
-Due to the rebase mechanism \$AMPL should have very unique returns characteristics, uncorrelated with other assets both in the traditional space and the crypto space. 
-I believe that it is the ultimate momentum asset because as long as the price stays above \$1 the supply will increase. People will see that their net worth has gone up and buy more \$AMPL.
+<p>
+Due to the rebase mechanism, \$AMPL should have very unique returns characteristics, uncorrelated with other assets both in the traditional space and the crypto space. 
+I believe that it is the ultimate momentum asset because as long as the price stays above $1 the supply will increase. People will see that their net worth has gone up and buy more \$AMPL.
 Thoertically people will sell the extra \$AMPL for ever new issuance, but I do not think that will happen at all. People will chase returns and put even more money into \$AMPL to recieve a larger split.
 In a market prone to rapid bull runs, it is against human nature to sell. They will infact buy more \$AMPL, leading to an increase in \$AMPL supply and potentially causing a large feedback loop.
+</p>

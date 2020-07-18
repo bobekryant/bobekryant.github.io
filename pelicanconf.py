@@ -33,6 +33,7 @@ SOCIAL = (('Email', 'mailto:bobekryant33824'),)
 # MARKUP = ('md')
 DEFAULT_PAGINATION = 10
 THEME = 'elegant'
+# THEME = 'notmyidea'
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['render_math']
 STATIC_PATHS = ['images','static']
