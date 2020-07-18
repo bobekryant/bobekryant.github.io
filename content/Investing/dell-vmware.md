@@ -28,6 +28,7 @@ VMW_{\text{Market Cap}} &= \text{Current Market Cap of VMWare} \\
 </center>
 
 <p>
+<p>
 We can see that the intrinsic value of $D_{\text{val}}$ started at around -10 billion when it listed and has hovered mainly between -20 billion and -10 billion. It is currentely at an all time high of -4 billion due to \$VMW spinoff rumors. I believe that the fair value of \$DELL would be in the ballpark of
 \$HPE given that they are competitors and \$DELL has higher gross profit and profit margin along with a similar PE ratio. Even if $DELL is only worth 10B, thats still a 15B increase on the current -4B price and almost a 35% increase on the current market cap.
 </p>
