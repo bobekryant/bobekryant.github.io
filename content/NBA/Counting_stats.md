@@ -19,7 +19,7 @@ I bring this finance example into discussion, because not all counting stats are
 By looking at the boxscore, one is able to see certain offensive categories like points, threes, rebounds, assists and defensive categories like blocks and steals.
 Below is the Warriors boxscore from the Raptors-Warriors game on 2016-11-16. In this boxscore, we can see that Klay Thompson took 11 threes and made 3 while his backcourt mate Steph Curry took 9 and made 3.
 <!---  <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=bbr&url=%2Fboxscores%2F201611160TOR.html&div=div_box_gsw_basic"></script> -->
-<!--- ![Pelican2](../images/boxscore_warriors.png) -->
+![Pelican2](../images/boxscore_warriors.png)
 Suppose that Klay Thompson also took 9 threes and still made 3 of them for the same shooting percentage as Steph Curry. Then it would take a small jump of logic to say that Klay and Steph both shot 33% and had similar shooting nights.
 This small jump of logic is similar to the fallacy in the two financial assets, because Steph Curry and Klay Thompson create their threes in very different ways: Klay Thompson is a lot more screen dependent then Steph Curry is. 
 </p>
@@ -29,9 +29,6 @@ When Klay Thompson gets open and shoots a three, often times there are many scre
 Zaza Pachulia gets no credit. But when Zaza Pachulia gets called for an illegal screen by attempting to free Klay Thompson up, Pachulia gets a TO credited to his box score, while Thompson gets nothing. So Thompson is getting all of the benefits of a Pachulia screen with none of the disadvantages in the boxscore, because the boxscore only focuses on the final result of a make or a miss and not the process.
 An accurate statistic should incorporate the fact that Pachulia also helped in creating the shot for Klay Thompson and award him appropriately when Thompson hits a shot, while punishing Thompson when Pachulia sets an illegal screen.
 </p>
-
-![Pelican4](../images/ufc_finish_percent_year.png)
-
 <p>
 I bring up Thompsons's backcourt mate Steph Curry, because he shoots many of his three pointers off the bounce which do not require a screener. And because he creates more of his shots from a 1-on-1 perspective, his style is very different than Klay's, like how the two assets have different paths but all lead to the same net outcome. 
 Curry's 1-on-1 playing style (although he does have off ball screens and pick and rolls) creates a more accurate representation of his 3-point shooting percentage when looking at the counting stats of 3PA and 3PM, because the screener is not being accounted for. Klay Thompson shooting around 42% (a very elite number) from three during his entire career, however the counting stats have inflated his number.
