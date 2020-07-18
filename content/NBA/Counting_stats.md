@@ -23,7 +23,7 @@ Below is the Warriors boxscore from the Raptors-Warriors game on 2016-11-16. In 
 Suppose that Klay Thompson also took 9 threes and still made 3 of them for the same shooting percentage as Steph Curry. Then it would take a small jump of logic to say that Klay and Steph both shot 33% and had similar shooting nights.
 This small jump of logic is similar to the fallacy in the two financial assets, because Steph Curry and Klay Thompson create their threes in very different ways: Klay Thompson is a lot more screen dependent then Steph Curry is. 
 </p>
-![Pelican3](../images/paths.png)
+<!--- ![Pelican3](../images/paths.png)  -->
 <p>
 When Klay Thompson gets open and shoots a three, often times there are many screeners setting multiple screens to free him up. If Zaza Pachulia sets Klay Thompson a perfect screen that frees him up for a wide open shot and Klay Thompson hits the shot, Thompson gets all the credit in the boxscore. The boxscore will increase Thomspon's FGA by 1 and his FGM by 1.
 Zaza Pachulia gets no credit. But when Zaza Pachulia gets called for an illegal screen by attempting to free Klay Thompson up, Pachulia gets a TO credited to his box score, while Thompson gets nothing. So Thompson is getting all of the benefits of a Pachulia screen with none of the disadvantages in the boxscore, because the boxscore only focuses on the final result of a make or a miss and not the process.
