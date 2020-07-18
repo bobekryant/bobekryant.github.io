@@ -99,7 +99,6 @@ For what its worth, the closest competitor to \$DELL, \$HPE trades at a similar 
 <p>
 In 2013, Michael Dell and Silver Lake Partners bought out Dell's shares in the public market and took Dell Technologies private. 5 years later, Dell Technologies returned to the public makets by buying back shares that tracked the financial performance of VMware.
 Using historical market caps (from ycharts), I have plotted a time series graph of \$DELL marketcap without the \$VMW portion. The exact forumla is below
-<br> 
 \begin{align}
 D_{\text{val}} &= DELL_{\text{Market Cap}}-.81*VMW_{\text{Market Cap}} \\
 \text{where} &=  \\
@@ -107,15 +106,86 @@ D_{\text{val}} &= \text{Market Cap of Dell Technologies without VMWare} \\
 DELL_{\text{Market Cap}} &= \text{Current Market Cap of Dell Technologies} \\
 VMW_{\text{Market Cap}} &= \text{Current Market Cap of VMWare} \\
 \end{align}
-![Pelican](../images/dell_mcap.png)
-We can see that the intrinsic value of $D_{\text{val}}$ started at around -10 billion when it listed and has hovered mainly between -20 billion and -10 billion. It is currentely at an all time high of -4 billion due to \$VMW spinoff rumors. I believe that the fair value of \$DELL would be in the ballpark of
-\$HPE given that they are competitors and \$DELL has higher gross profit and profit margin along with a similar PE ratio. Even if $DELL is only worth 10B, thats still a 15B increase on the current -4B price and almost a 35% increase on the current market cap.
+</p>
 
+<p><center>
+<img alt="Pelican" src="../images/dell_mcap.png">
+</center>
+<p>
+We can see that the intrinsic value of <span class="math">\(D_{\text{val}}\)</span> started at around -10 billion when it listed and has hovered mainly between -20 billion and -10 billion. It is currentely at an all time high of -4 billion due to \<span class="math">\(VMW spinoff rumors. I believe that the fair value of \\)</span>DELL would be in the ballpark of
+\<span class="math">\(HPE given that they are competitors and \\)</span>DELL has higher gross profit and profit margin along with a similar PE ratio. Even if $DELL is only worth 10B, thats still a 15B increase on the current -4B price and almost a 35% increase on the current market cap.
+</p></p>
 <h3>Potential Trades</h3>
+
+<p>
 I think there is the obvious trade which is to long \$DELL and then there are two hedged plays which may be more lucrative from a risk-reward standpoint. 
 The first hegdged trade would be to long \$DELL and short \$HPE, which is betting on both \$VMW increasing and \$DELL increasing from the -4 billion valuation. 
 A more involved play would be to short both \$HPE and \$VMW and only bet on Dell's -4 billion valuation increasing to something reasonable.
 For what its worth I am long \$DELL, because I believe that they will spin-off the VMWare shares and I wish to be long \$VMW as I think it is a very cheap business with highly profitable margins in the SaaS space. I will write a followups for why I like \$VWM and track how the proposed trades suggested have done.
+</p>
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
              

@@ -38,7 +38,10 @@ This rebalance feature has massive implications for the trading world. It can be
 Unlike most crypto coins, the price of \$AMPL is really secondary to the market cap due to the rebase protocol. Below is a market cap and price over the past month from <a href="https://coinmarketcap.com/currencies/ampleforth/" target="_blank">coinmarketcap</a>.
 We can see that while the price increased from $1 to around $2.3, around a 1.3x increase. However the market cap during this same period increased from 6 million to 120 million, a 20x increase and the true value of the investment during this period. 
 </p>
+
+<center>
 ![Pelican](../images/ampl_mcap.png)
+</center>
 
 <h3>Additional Thoughts</h3>
 <p>
