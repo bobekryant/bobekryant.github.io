@@ -16,14 +16,18 @@ As mentioned above there are a few different ways to end a UFC fight. Here we se
 I aggregate the data into a pie graph and we can see that about a third of the fights are unanimous decisions and another third are KO/TKOs. The other third are a combination of submissions and split or majority decisions. There are rarely any draws. 
 </p>
 
+<center>
 ![Pelican](../images/ufc_finish_percent.png)
+</center>
 
 <p>
 However these percentages are not consistent. Like I mentioned previously there have been many iterations of rules and technique adaptations. The UFC looks vastly different now than in years past. To examine the changes, I create a rolling 5 year time series graph which again contains the various methods of how a fight can finish.
 The five year rolling method smooths the data and we see that the proportion of submissions and KO/TKOs have both decreased over the years with an increase in both the decision methods. This could hint that fighters are getting better at defense, leading to longer fighting times ultimately more decisions.
 </p>
 
+<center>
 ![Pelican](../images/ufc_finish_percent_year.png)
+</center>
 
 <h3>Data</h3>
 <p>
@@ -40,7 +44,9 @@ The striking stats are broken down into the location on the body as well as the 
 </p>
 
 <!--- ![Pelican](../images/ufc_finish_percent_year.png)-->
+<center>
 ![Pelican](../images/ufc_sample_stats.PNG)
+</center>
 
 <h3>Features</h3>
 <p>

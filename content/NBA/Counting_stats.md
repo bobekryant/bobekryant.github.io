@@ -14,12 +14,21 @@ This type of investor is only interested in the asset price at t=0 when he buys 
 This type of investor is similar to a person analyzing the box score, because the boxscore only contains the end result, not what happened in between to achieve that result. However, if a person was to go more granular into the asset returns and look at the day by day paths he would see that the two assets are not the same.
 I bring this finance example into discussion, because not all counting stats are the same and equal, but they are often discussed as such.
 </p>
+
+<center>
 ![Pelican1](../images/paths.png)
+</center>
+
+
 <p>
 By looking at the boxscore, one is able to see certain offensive categories like points, threes, rebounds, assists and defensive categories like blocks and steals.
 Below is the Warriors boxscore from the Raptors-Warriors game on 2016-11-16. In this boxscore, we can see that Klay Thompson took 11 threes and made 3 while his backcourt mate Steph Curry took 9 and made 3.
 </p><!---  <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=bbr&url=%2Fboxscores%2F201611160TOR.html&div=div_box_gsw_basic"></script> -->
+
+<center>
 ![Pelican2](../images/boxscore_warriors.PNG)
+</center>
+
 <p>
 <p>
 Suppose that Klay Thompson also took 9 threes and still made 3 of them for the same shooting percentage as Steph Curry. Then it would take a small jump of logic to say that Klay and Steph both shot 33% and had similar shooting nights.

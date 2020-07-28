@@ -75,7 +75,7 @@ Even before COVID-19 we had negative real rates and COVID-19 just accelerated th
 <h3>Central Bank Balance Sheet</h3>
 <p>
 Aggregating some of the largest central banks in the world (Fed, ECB, BoJ)
-[ref] PBoC is the other large central bank, but I was unable to find up to date data on it.[/ref]
+[ref] PBoC is the other large central bank, but I was unable to find up to date data on its holdings.[/ref]
 , I created a total balance sheet of these central banks. Then I take rolling 12 month differences between this aggregated global bank balance sheet and the price of gold.
 I am able to see that gold typically appreciates in value when the Central Banks expand their balance sheet.
 The major exception to this case would be in 2008, when gold tanked, but that was more due to a liquidity crisis where people were selling anything to get cash. 
