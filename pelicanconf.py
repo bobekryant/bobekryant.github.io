@@ -35,7 +35,7 @@ DEFAULT_PAGINATION = 10
 THEME = 'elegant'
 # THEME = 'notmyidea'
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['render_math']
+PLUGINS = ['render_math','simple_footnotes']
 STATIC_PATHS = ['images','static']
 FAVICON = 'img/favicon.ico'
 
