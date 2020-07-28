@@ -35,9 +35,10 @@ DEFAULT_PAGINATION = 10
 THEME = 'elegant'
 # THEME = 'notmyidea'
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['render_math','simple_footnotes']
+PLUGINS = ['render_math','simple_footnotes','tipue_search']
 STATIC_PATHS = ['images','static']
 FAVICON = 'img/favicon.ico'
+DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))  
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
