@@ -22,7 +22,7 @@ Using the same formula as above, I calculate the theoretical price of Gold and p
 </p>
 
 <center>
-![Pelican](../images/gold_theo.png)
+![Pelican](../images/investing/gold_theo.png)
 </center>
 
 <p>
@@ -36,7 +36,7 @@ Further more the stimulus checks that the government hands out are were delivere
 </p>
 
 <center>
-![Pelican](../images/fred_m2_recent.png)
+![Pelican](../images/investing/fred_m2_recent.png)
 </center>
 
 <h3>Other Factors on Gold Price</h3>
@@ -67,8 +67,8 @@ Even before COVID-19 we had negative real rates and COVID-19 just accelerated th
 </p>
 
 <center>
-![Pelican](../images/gold_inflation.png) 
-![Pelican](../images/gold_inflation_inv.png)
+![Pelican](../images/investing/gold_inflation.png) 
+![Pelican](../images/investing/gold_inflation_inv.png)
 </center>
 
 
@@ -84,7 +84,7 @@ While I expect the expansion of the balance sheet to slow down, there is no indi
 </p>
 
 <center>
-![Pelican](../images/gold_balance_sheet.png)
+![Pelican](../images/investing/gold_balance_sheet.png)
 </center>
 
 <h3>Central Bank Gold Reserves</h3>
@@ -94,7 +94,7 @@ Below we can see that cumulative central bank reserves have been increasing by a
 </p>
 
 <center>
-![Pelican](../images/central_bank_gold_reserve.png)
+![Pelican](../images/investing/central_bank_gold_reserve.png)
 </center>
 
 <h3>ETF Flows</h3>
@@ -108,7 +108,7 @@ As gold price increases, more people get bullish on gold and this creates an fee
 </p>
 
 <center>
-![Pelican](../images/gold_etf_flow.png)
+![Pelican](../images/investing/gold_etf_flow.png)
 </center>
 
 

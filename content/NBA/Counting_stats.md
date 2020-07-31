@@ -16,7 +16,7 @@ I bring this finance example into discussion, because not all counting stats are
 </p>
 
 <center>
-![Pelican1](../images/paths.png)
+![Pelican1](../images/nba/paths.png)
 </center>
 
 
@@ -26,7 +26,7 @@ Below is the Warriors boxscore from the Raptors-Warriors game on 2016-11-16. In 
 </p><!---  <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=bbr&url=%2Fboxscores%2F201611160TOR.html&div=div_box_gsw_basic"></script> -->
 
 <center>
-![Pelican2](../images/boxscore_warriors.PNG)
+![Pelican2](../images/nba/boxscore_warriors.PNG)
 </center>
 
 <p>

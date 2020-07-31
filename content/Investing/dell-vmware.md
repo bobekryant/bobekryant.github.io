@@ -24,7 +24,7 @@ VMW_{\text{Market Cap}} &= \text{Current Market Cap of VMWare} \\
 </p>
 
 <center>
-![Pelican](../images/dell_mcap.png)
+![Pelican](../images/investing/dell_mcap.png)
 </center>
 
 <p>

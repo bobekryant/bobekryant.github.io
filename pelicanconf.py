@@ -20,8 +20,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('NBA Subreddit', 'http://reddit.com/r/nba'),
-         ('NBA Stats', 'http://www.basketball-reference.com'),
+LINKS = (('NBA Stats', 'http://www.basketball-reference.com'),
          ('UFC Stats', 'http://www.ufcstats.com/statistics/events/completed'),
          ('My Github', 'https://github.com/bobekryant'),
 		)
@@ -35,7 +34,7 @@ DEFAULT_PAGINATION = 10
 THEME = 'elegant'
 # THEME = 'notmyidea'
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['render_math','simple_footnotes','tipue_search']
+PLUGINS = ['render_math','simple_footnotes','tipue_search','pelican_youtube']
 STATIC_PATHS = ['images','static']
 FAVICON = 'img/favicon.ico'
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))  
