@@ -18,13 +18,13 @@ Is there a way quantify shot quality as it relates to the shot clock?
 <p>
 In the 1954-1955 NBA season, the NBA introduced the 24-second shot clock to speed the game up.
 The shot clock resets when there is a clear change of possession by either a defensive rebound, a turnover, or a made basket.
-If there is a kick ball violation, foul, or offensive rebound[ref] Offensive rebounds use to reset to the entire 24 second shot clock, but this was changed for the 2019-20 season.[/ref], the shot clock resets to 14 seconds.
+If there is a kick ball violation, foul, or offensive rebound[ref]Offensive rebounds use to reset to the entire 24 second shot clock, but this was changed for the 2019-20 season.[/ref], the shot clock resets to 14 seconds.
 Teams have at most 8 seconds to get the ball across the half court line, so there is always at least 16 seconds in the 'half-court' setup.
 </p>
 
 <h5>Points Per Possession</h5>
 <p>
-Every offensive possession has a non-negative expected value, ranging from 0 to 3[ref] Technically, there is the ability to get a 4 point play with a three pointer plus a foul or even 5 points with a flagrant foul and a three pointer.[/ref].
+Every offensive possession has a non-negative expected value, ranging from 0 to 3[ref]Technically, there is the ability to get a 4 point play with a three pointer plus a foul or even 5 points with a flagrant foul and a three pointer.[/ref].
 A team can miss or turn the ball over in which case they score 0 points this possession, or hit a three-pointer in which case they score 3 points.
 Teams will have different expected points per possession (PPP), and certain players are more efficient scorers than others, but in large part the PPP of a team ranges from about 1-1.15. Since teams typically have around 100 possessions per game, a .1 difference in PPP is very large and over the course of the game ends up being 10 points, the difference between a lottery team and a championship contender.
 </p>
@@ -32,7 +32,7 @@ Teams will have different expected points per possession (PPP), and certain play
 <h3>Thesis</h3>
 <p>
 Assume the Lakers are expected to score 1.2 points every possession and we denote this expression as $E[PPP|\text{24 seconds}]=1.2$. It is important to understand that this 1.2 number is with a full 24 second shot clock and should fall as the shot clock declines.
-Taking the extreme, if there was only 1 second left on the shot clock, the $E[PPP|\text{1 second}]$ would be strictly less than 1.2 (probably more like .5) [ref] This is inherently due to the quality of the shot when the shot clock winding down being worse.[/ref]. 
+Taking the extreme, if there was only 1 second left on the shot clock, the $E[PPP|\text{1 second}]$ would be strictly less than 1.2 (probably more like .5) [ref]This is inherently due to the quality of the shot when the shot clock winding down being worse.[/ref]. 
 I wish to quantify the difference in $E[PPP]$ as it relates to the shot clock, so every second on the 24 second shot clock will have a different $E[PPP]$.
 </p>
 <p>
@@ -112,7 +112,7 @@ Coaches can also follow the trade-off curve when calling plays.
 The Warriors are actually a prime example of a team successfully implementing the PPP trade-off curve, even though they never formalized this concept. 
 For the majority of the shot clock, the Warriors will run a variety of screens to free up Curry or Thompson to get them a comfortable shot.
 If the plays are successful in creating a clean look, the shot would instantly be in the green zone (regardless of shot clock) as both are prolific 40%+ shooters from deep.
-A classic example is this <a href="https://gfycat.com/brightweirdcranefly" target="_blank">elevator screen</a> where 3 other Warriors players work in unison to get Curry an open look.
+A classic example is this <a href="https://gfycat.com/brightweirdcranefly" target="_blank">elevator screen</a> where three other Warriors players work in unison to get Curry an open look.
 </p>
 
 <p>
@@ -169,7 +169,7 @@ JR Smith then compounds Lebron's mistake by leaving Klay Thompson one of the gre
 </p>
 
 <center>
-![Pelican](../images/nba/draymond_open.png)
+![Pelican](../images/nba/draymond_open.PNG)
 </center>
 
 <h5>Tough Shots</h5>
