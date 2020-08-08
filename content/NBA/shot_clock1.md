@@ -182,7 +182,7 @@ His ability to hit difficult shots at an elite clip complimented the Curry and T
 
 <h3>Final Thoughts</h3>
 <p>
-<ol>
+<ul>
   <li>
   Current boxscore basic and advanced stats come up short in evaluating tough shots, because they group the shots together without looking at circumstances such as shot clock.
 Shooting 45% on tough shots is not efficient when there is plenty on time on the clock, but it is elite if there is only a few seconds left. There should be some metric that quantifies the ability to score while the shot clock is low.
@@ -200,7 +200,8 @@ Shooting 45% on tough shots is not efficient when there is plenty on time on the
   Teams can go through a game and rate every possession to see when a shot was taken in the green zone and when a shot was passed up in the green zone. 
   They can then attribute these plays to individual players, to see which players make good decisions and vice versa.
   </li>
-</ol>
+</ul>
+
 
 
 </p>

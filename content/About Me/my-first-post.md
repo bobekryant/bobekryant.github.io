@@ -21,7 +21,7 @@ Sports analytics and sports betting are still in the nascent stages. The legal s
 Unlike in finance, where many fin-tech companies entire business model revolve around cleaning and selling data, when dealing with sports the data is hard to come by. 
 For instance, the NBA actively changes their api to prevent scraping.
 The pipeline requires the ability to web-scrape, store, and clean the data before any analysis can be done.
-Nonetheless, I have built robust pipelines for the NBA[ref] I applogize in advance if the NBA topics are very nuanced.[/ref], NFL, and UFC and I will share interesting insights and tidbits on each sport. I will try to open source as much code as possible so others can play around with data and code.
+Nonetheless, I have built robust pipelines for the NBA[ref] The NBA topics may be slightly more technical than the rest of the articles.[/ref], NFL, and UFC and I will share interesting insights and tidbits on each sport. I will try to open source as much code as possible so others can play around with data and code.
 </p>
 
 <p>
