@@ -26,7 +26,7 @@ LINKS = (('NBA Stats', 'http://www.basketball-reference.com'),
 		)
 
 # Social widget
-SOCIAL = (('Email', 'mailto:bobekryant33824'),)
+SOCIAL = (('Email', 'mailto:bobekryant33824@gmail.com'),)
 
 # MARKUP = ('md', 'ipynb')
 # MARKUP = ('md')
@@ -40,4 +40,4 @@ FAVICON = 'img/favicon.ico'
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))  
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True

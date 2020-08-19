@@ -15,7 +15,7 @@ As of July 16th 2020, <a href="https://fred.stlouisfed.org/series/M2" target="_b
 
 <p>
 Unfortunately, I cannot get a time series of global gold stock to see compare the price of gold versus this fundamental calculation. 
-However, I will try to estimate this number since the removal of the Bretton Woods agreement where we were taken off the gold standard by looking at the amount of gold produced annually[ref]
+However, I will try to estimate this number since the removal of the Bretton Woods agreement when the world was taken off the gold standard by looking at the amount of gold produced annually[ref]
 The gold production data was collected from the United States Geological Survey, which has annual <a href="https://www.usgs.gov/centers/nmic/gold-statistics-and-information" target="_blank">statistics</a> on a variety of minerals.[/ref] 
 and subtracting it from the 197.6k tonnes at the end of 2019.
 Using the same formula as above, I calculate the theoretical price of Gold and plot it against the traded price. We can see that gold typically trades at a large discount, but there are periods that it catches up or even surpasses the fundamental price. 
@@ -114,6 +114,6 @@ As gold price increases, more people get bullish on gold and this creates an fee
 
 <h3>Conculsion</h3>
 <p>
-Many of the historical gold indicators are flashing buy signs at the same time. I believe that gold is posied for a continued breakout past its all time highs. 
+Many of the historical gold indicators are flashing buy signs at the same time. I believe that gold is poised for a continued breakout past its all time highs. 
 In the next few posts, I will talk about other some other assets that will rise in tandem with gold and some other investment possibilities.
 </p>

@@ -50,4 +50,5 @@ I believe that it is the ultimate momentum asset because as long as the price st
 Thoertically people will sell the extra \$AMPL for every new issuance, but I do not think that will happen. People will chase returns and put even more money into \$AMPL to recieve a larger split.
 In a market prone to rapid bull runs, it is against human nature to sell. They will infact buy more \$AMPL, leading to an increase in \$AMPL supply and potentially causing a large feedback loop.
 I am not advocating for the fundamentals of \$AMPL, rather I believe that the built in mechanics give it a shot to multiply a lot more than some of the other smallcap crypto coins.
+I believe return distribution should have a lot higher right skew and kurtosis than a normal smallcap.
 </p>
