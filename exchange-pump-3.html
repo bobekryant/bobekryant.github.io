@@ -16,18 +16,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="investing, $DELL, $VMW, Investing, " />
+<meta name="keywords" content="crypto, exchange, trading, Crypto, " />
 
-<meta property="og:title" content="Dell VMWare split "/>
-<meta property="og:url" content="./dell-vmware.html" />
-<meta property="og:description" content="How to trade the Dell VMWare split" />
+<meta property="og:title" content="The Exchange Pump: Coin Tracking (Part 3) "/>
+<meta property="og:url" content="./exchange-pump-3.html" />
+<meta property="og:description" content="How to anticipate new coin listings on exchanges by tracking exchange wallets" />
 <meta property="og:site_name" content="Bobe&#39;s Thoughts" />
 <meta property="og:article:author" content="Bobe Kryant" />
-<meta property="og:article:published_time" content="2020-07-18T00:00:00-04:00" />
-<meta name="twitter:title" content="Dell VMWare split ">
-<meta name="twitter:description" content="How to trade the Dell VMWare split">
+<meta property="og:article:published_time" content="2020-08-15T00:00:00-04:00" />
+<meta name="twitter:title" content="The Exchange Pump: Coin Tracking (Part 3) ">
+<meta name="twitter:description" content="How to anticipate new coin listings on exchanges by tracking exchange wallets">
 
-        <title>Dell VMWare split  · Bobe&#39;s Thoughts
+        <title>The Exchange Pump: Coin Tracking (Part 3)  · Bobe&#39;s Thoughts
 </title>
 
 
@@ -79,8 +79,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./dell-vmware.html">
-                Dell VMWare split
+            <a href="./exchange-pump-3.html">
+                The Exchange Pump: Coin Tracking (Part 3)
             </a>
         </h1>
     </header>
@@ -89,42 +89,64 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>
-Dell Technologies, \$DELL, owns 81% of VMware, \$VMW, through its \$67 billion purchase of EMC. Looking at the prices at the close of 2020-07-16, we see that VMWare is worth 58.61B while Dell is worth 43.78B.
-This means that the portion of stock in VMWare Dell owns is worth 47.5B. According to the market, Dell without VMware is worth around negative 4B. 
-It seems that a spin-off is in play and would be beneficial to both companies. Dell bought VMW in September of 2016 so he needs to wait 5 years till 2021 and there will be a spinoff in a tax-free transaction fashion. 
-For what its worth, the closest competitor to \$DELL, \$HPE trades at a similar PE ratio to \$DELL, has similar margins in the PC space and is worth 12B.
+            <h3>Recap</h3>
+
+<p>
+Previously I wrote two articles, one describing how listing on tier 1 exchanges is beneficial to price of coin, and the other detailing how to identify these potential listings.
+This article focuses on trying to pinpoint when an exchange will list a particular coin.
+</p>
+
+<h3>Etherscan</h3>
+
+<p>
+<a href="https://etherscan.io" target=_blank>Etherscan</a> is a website which allows people to track transactions on the ethereum blockchain. 
+Specifically, people can search specific transaction ids to see the wallet that sent the tokens, the wallet that received the tokens, how much tokens were sent, and when the transaction occurred.
+Another tool on etherscan is the ability search by wallet id to see how much tokens are in a wallet and the historical transactions of all the tokens in said wallet. 
 </p>
 
 <p>
-In 2013, Michael Dell and Silver Lake Partners bought out Dell's shares in the public market and took Dell Technologies private. 5 years later, Dell Technologies returned to the public makets by buying back shares that tracked the financial performance of VMware.
-Using historical market caps (from ycharts), I have plotted a time series graph of \$DELL marketcap without the \$VMW portion. The exact forumla is below
-\begin{align}
-D_{\text{val}} &= DELL_{\text{Market Cap}}-.81*VMW_{\text{Market Cap}} \\
-\text{where} &=  \\
-D_{\text{val}} &= \text{Market Cap of Dell Technologies without VMWare} \\
-DELL_{\text{Market Cap}} &= \text{Current Market Cap of Dell Technologies} \\
-VMW_{\text{Market Cap}} &= \text{Current Market Cap of VMWare} \\
-\end{align}
+This is akin to a continuous time 13-F form that traditional finance uses. 
+At the end of every quarter, funds with at least \$100 million assets under management must share their holdings.
+Often times analysts study these hedge fund positions to try to capture some of that supposed alpha.
+Due to the nature of the open blockchain, I am similarly able to query the current holdings all the players in the ecosystem.
+However, this is even more powerful than a 13-F, because the blockchain allows me to see all the holdings live rather than the once per quarter snapshot.
 </p>
 
-<p><center>
-<img alt="Pelican" src="../images/investing/dell_mcap.png">
-</center></p>
-<p>
-<p>
-We can see that the intrinsic value of $D_{\text{val}}$ started at around -10 billion when it listed and has hovered mainly between -20 billion and -10 billion. It is currentely at an all time high of -4 billion due to \$VMW spinoff rumors. I believe that the fair value of \$DELL would be in the ballpark of
-\$HPE given that they are competitors and \$DELL has higher gross profit and profit margin along with a similar PE ratio. Even if $DELL is only worth 10B, thats still a 15B increase on the current -4B price and almost a 35% increase on the current market cap.
-</p>
-
-<h3>Potential Trades</h3>
+<h3>Trade Theory</h3>
 
 <p>
-I think there is the obvious trade which is to long \$DELL and then there are two hedged plays which may be more lucrative from a risk-reward standpoint. 
-The first hegdged trade would be to long \$DELL and short \$HPE, which is betting on both \$VMW increasing and \$DELL increasing from the -4 billion valuation. 
-A more involved play would be to short both \$HPE and \$VMW and only bet on Dell's -4 billion valuation increasing to something reasonable.
-For what its worth I am long \$DELL, because I believe that they will spin-off the VMWare shares and I wish to be long \$VMW as I think it is a very cheap business with highly profitable margins in the SaaS space. I will write a followups for why I like \$VWM and track how the proposed trades suggested have done.
+Delving one step deeper, if I know the exchange wallet ids, I can see all transactions and holdings of said exchange. 
+This can be used to find new listings, because I can constantly scan an exchange wallet to look for coins deposited in the wallet that are not listed.
+Prior to listing, an exchange would need to store some coins and test the deposit/withdraw mechanisms as well as trading logic dedicated to the new token listing for bugs.
+So if I see a large increase of a unlisted coin in the wallet address of a large exchange, it is a very probable bet that the exchange will list the token soon.
 </p>
+
+<h3>Binance Example</h3>
+
+<p>
+A few days ago, on August 10th, Binance <a href="https://www.binance.com/en/support/articles/a2e3970cd7334b659d426e547f7bcea0" target=_blank>listed</a> $YFI<sup id=sf-exchange-pump-3-1-back><a href=#sf-exchange-pump-3-1 class=simple-footnote title="This coin has very strong fundamentals and I am very bullish on it. Will make a seperate post on the fundamentals.">1</a></sup> also known as yearn finance at around 09:28 UTC.
+Just like the other Coinbase coins in my previous blog post, \$YFI immediately rallied after this announcement, going from \$4200 to \$6500, before settling down around \$6000. 
+</p>
+
+<p></p><center>
+<img alt=Pelican2 src="../images/crypto/yfi_price.PNG">
+</center><p></p>
+<p>
+However, looking closely at the Binance wallet on Etherscan, the <a href="https://etherscan.io/tx/0xe9ce4900f4193db560f4c33701625552ec114ad514651b881422af66fbebb0ba" target=_blank>first </a> \$YFI transaction 
+in Binance occurred  at 4:34 UTC, almost four hours before the official blog post and tweet.
+In fact there were over 50 \$YFI transactions with the Binance wallet before the official announcement. 
+If someone where to been tracking popular unlisted coins on the ethereum blockchain, they would have been able to frontrun Binance and the exchange listing. 
+In fact there is a small run up in the price and volume of \$YFI before the accouncement and I believe some other savvy participants noticed these Binance transactions and started to buy \$YFI. 
+</p>
+
+<h3>Conclusion</h3>
+
+<p>
+I can use information from alternative data to search for which coins I believe will list and then if these coins are on the ethereum blockchain, I am able to predict when they will list.
+I view these trades as asymmetric bets, because if the exchange does not list the token, I can get rid of the coin close to buy price.
+On the off chance that the coin is listed, the returns are usually astronomical.
+It would be interesting to get statistics on how often each exchange has transactions from non-listed coins and how often these become actual listings.
+</p><ol class=simple-footnotes><li id=sf-exchange-pump-3-1>This coin has very strong fundamentals and I am very bullish on it. Will make a seperate post on the fundamentals. <a href=#sf-exchange-pump-3-1-back class=simple-footnote-back>↩</a></li></ol>
 
 
              
@@ -143,19 +165,19 @@ For what its worth I am long \$DELL, because I believe that they will spin-off t
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-07-18T00:00:00-04:00">Sat 18 July 2020</time>
+            <time itemprop="dateCreated" datetime="2020-08-15T00:00:00-04:00">Sat 15 August 2020</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#investing-ref">Investing</a>
+            <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#dell-ref">$DELL
-                    <span class="superscript">1</span>
+                <li><a href="./tags.html#crypto-ref">crypto
+                    <span class="superscript">6</span>
 </a></li>
-                <li><a href="./tags.html#investing-ref">investing
+                <li><a href="./tags.html#exchange-ref">exchange
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="./tags.html#trading-ref">trading
                     <span class="superscript">2</span>
-</a></li>
-                <li><a href="./tags.html#vmw-ref">$VMW
-                    <span class="superscript">1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
