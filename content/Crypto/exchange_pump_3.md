@@ -5,10 +5,8 @@ Tags: crypto, exchange, trading
 Summary: How to anticipate new coin listings on exchanges by tracking exchange wallets
 
 <h3>Recap</h3>
-<p>
-Previously I wrote two articles, one describing how listing on tier 1 exchanges is beneficial to price of coin, and the other detailing how to identify these potential listings.
+Previously I wrote two articles, [one](./exchange-pump-1.html) describing how listing on tier 1 exchanges is beneficial to price of coin, and the [other](./exchange-pump-2.html) detailing how to identify these potential listings.
 This article focuses on trying to pinpoint when an exchange will list a particular coin.
-</p>
 
 
 <h3>Etherscan</h3>

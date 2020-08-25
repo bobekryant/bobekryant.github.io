@@ -5,11 +5,9 @@ Tags: crypto, exchange, trading
 Summary: How to anticipate new coin listings on exchanges with educated guesses
 
 <h3>Aligned Incentives</h3>
-<p>
-In the prior article, I explored the impact of a new listing on a tier one exchange and showed that listings are very beneficial to a coins price in the near term.
+In the [prior](./exchange-pump-1.html) article, I explored the impact of a new listing on a tier one exchange and showed that listings are very beneficial to a coins price in the near term.
 However there are thousands of coins, so its very difficult find which one will be listed and guessing specific coins is a low probability endeavor. 
 In this article, I will show how it is possible to find coins with high probability of listing by looking at alternative data.
-</p>
 
 <h3>Exchange Investments</h3>
 <p>

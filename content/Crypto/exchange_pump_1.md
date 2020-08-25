@@ -33,7 +33,7 @@ We can see a rapid increase from \$20 to around \$60, before stabilizing at arou
 </p>
 
 <center>
-![Pelican2](../images/crypto/numeraire_tweet.PNG)
+![Pelican2](../images/crypto/numeraire_tweet.png)
 </center>
 
 <center>
@@ -72,8 +72,6 @@ I have included the mean and median of these cumulative returns and we can see t
 </center>
 
 <h3>Next Steps</h3>
-<p>
-In the upcoming days, I will write two follow up articles about strategies that can be used in tandem to front-run these exchange listings. 
-The first will be how to identify coins which have a high probability of listing and the second will be how to guestimate when the coins will be listing.
-</p>
 
+In the upcoming days, I will write two follow up articles about strategies that can be used in tandem to front-run these exchange listings. 
+The [first](./exchange-pump-2.html) will be how to identify coins which have a high probability of listing and the [second](./exchange-pump-3.html) will be how to guestimate when the coins will be listing.
