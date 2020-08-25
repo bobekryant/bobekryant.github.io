@@ -6,8 +6,8 @@ Summary: Insurance for the every growing crypto space.
 
 <h3>Introduction</h3>
 <p>
-Decentralized finance, DeFi, is the hottest subsection in crypto right now and is one of the main driving forces behind this current the bull market. 
-In this space I have two tokens with high conviction, Nexus Mutual, \$NXM, and Yearn Finance, \$YFI and I will be sharing my thesis for Nexus Mutual below.
+Decentralized finance, also known as DeFi, is the hottest subsection of crypto right now and is one of the main driving forces behind this current the bull market. 
+In this space I have two tokens with high conviction, Nexus Mutual, \$NXM, and Yearn Finance, \$YFI and I my thesis for Nexus Mutual is below.
 Here is an outline of the article:
 <ul>
   <li>The use case for \$NXM.</li>
@@ -20,9 +20,9 @@ Here is an outline of the article:
 
 <h3>DeFi</h3>
 <p>
-The main principles of DeFi are to rebuild the financial system in a more fair, equitable, and transparent fashion.
-Visible and auditied immutable smart contracts deployed so users can trust the system and underlying code.
-There are many startups tackling various problems across the entire DeFi stack.
+The main principles of DeFi focus around rebuilding the financial system in a more fair, equitable, and transparent fashion.
+Visible and auditied immutable smart contracts are deployed so users generate trust the in the system and its underlying code.
+There are many companies tackling various problems across the entire DeFi stack.
 Currently, the projects in DeFi with the highest market cap are trading (decentralized exchanges) and yield farming (lending).
 Smaller projects include prediction markets and payments are also popular.
 </p>
@@ -44,7 +44,8 @@ Looking at this chart in terms of \$BTC or \$ETH value is a more accurate repres
 
 <h3>NXM Use Case: Insurance</h3>
 <p>
-At the heart of DeFi is the reliance of smart contract protocols and Nexus Mutual provides insurance on all of the underlying code to protect users from bugs in these contracts. 
+At the heart of DeFi is a reliance on smart contract protocols.
+Nexus Mutual provides insurance on the underlying code to protect users from bugs in these contracts. 
 Nexus Mutual is the first and largest insurance provider in the DeFi space. 
 The current smart contracts in Nexus Mutual cover the popular DeFi tokens such as \$CRV, \$YFI, \$SNX, and \$LEND.
 Members of the mutual are able to use the \$NXM token to provide coverage of smart contracts, purchase coverage of smart contracts, and participate in claims assessment and risk assessment. 
@@ -53,14 +54,14 @@ on the Nexus Mutual exchange.
 </p>
 
 <p>
-If DeFi grows, Nexus Mutual should also grow as people want to exposure to this space, but need to cap downside risk.
+If DeFi grows, Nexus Mutual should also grow as people want to exposure to this space, but also need to cap downside risk.
 Below is a scatter plot which shows the empirical relationship of the TVL in DeFi to the Nexus Mutual capital pool (amount of assets in the mutual).
 The data starts in July 23, 2019 and goes to present day.
-Although the data is noisy, as each data point is a day, there is a strong linear and then exponential trend between the two variables. 
+Although the data is noisy (each data point is a day), there is a strong linear and then exponential trend between the two variables. 
 </p>
 
 <center>
-![Pelican2](../images/crypto/defi_tvl_nxm_cp.PNG)
+![Pelican2](../images/crypto/defi_tvl_nxm_cp.png)
 </center>
 
 
