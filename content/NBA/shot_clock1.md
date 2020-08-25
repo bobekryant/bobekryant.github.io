@@ -1,6 +1,6 @@
 Title: Quantifying the Expected Value of a Second
 Slug: shot-clock
-Date: 2020-07-29
+Date: 2020-08-25
 Tags: NBA, analytics
 Summary: How valuable is each second on the shot clock? Should all seconds be valued the same?
 

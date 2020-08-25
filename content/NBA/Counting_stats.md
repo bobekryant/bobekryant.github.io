@@ -1,6 +1,6 @@
 Title: Counting Stats
 Slug: counting-stats
-Date: 2020-07-09
+Date: 2020-07-22
 Tags: NBA, analytics
 Summary: The issue with counting stats and why the process of achieving a particular statistic is important.
 <p>
