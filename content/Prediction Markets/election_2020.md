@@ -15,9 +15,9 @@ They can range from "if Kim Kardashian and Kayne West will get a divorce in 2020
 </p>
 
 <p>
-The most popular prediction betting sites[ref]Other than the sports betting sites[/ref] are <a href="https://www.predictit.org" target="_blank">PredictIt</a> or the decentralized crypto alternatives <a href="net" target="_blank">Augur</a> and <a href="https://polymarket.com" target="_blank">Polymarket</a>. 
-Oftentimes these sites will have similar markets, so sometimes arbitrage is possible between the sites or even within the various markets in the site.
-When doing this it is important to read the fine print as to how the bet settles as they could slightly differ from site to site. 
+Some of the most popular prediction betting sites include[ref]Other than the sports betting sites[/ref] are <a href="https://www.predictit.org" target="_blank">PredictIt</a> or the decentralized crypto alternatives <a href="net" target="_blank">Augur</a> and <a href="https://polymarket.com" target="_blank">Polymarket</a>. 
+Oftentimes these sites will have similar markets, so arbitrage is possible between the sites or even within the various markets in the site.
+Before betting it is important to read the fine print as to how the bet settles as they could slightly differ from site to site. 
 In addition different sites have different betting and payout fees. 
 <ul>
   <li>PredictIt has a 5% withdraw fee and a 10% winnings fee. </li>
@@ -49,7 +49,7 @@ For all intensive purposes, Joe Biden wins this election if he wins either Georg
 </p>
 
 <center>
-![Pelican](../images/prediction/poly_election_2020.png)
+![Pelican](../images/prediction/poly_election_2020.PNG)
 </center>
 
 <h3>Election Modelling</h3>
@@ -81,7 +81,7 @@ If Biden losses Pennsylvania, then we make \$.88 off Trump's Pennsylvania victor
 Pollsters often use advanced models to try and predict the probabilities of the election race. 
 Some of the more popular/famous ones include Nate Silver, who famously predicted all of the races correctly in <a href="https://www.theguardian.com/world/2012/nov/07/nate-silver-election-forecasts-right" target="_blank">2012</a> and 49/50 correctly in <a href="https://www.theguardian.com/commentisfree/2008/nov/06/us-elections-nate-silver-predictions" target="_blank">2008</a>.
 How these models build fundamental predictions from the bottom up is more advanced than the scope of this blog, but the gist is that they take state polls and try to adjust for various polling biases like education and race.
-Here is a <a href="https://www.youtube.com/watch?v=D8dyuRYqkhk" target="_blank">video</a> of him calling the Pennsylvania race 1/20000 chance for Trump making both the Biden Presidency and Biden Pennsylvania lines very mispriced.
+Here is a <a href="https://www.youtube.com/watch?v=D8dyuRYqkhk" target="_blank">video</a> of him calling the Pennsylvania race 1/20,000 chance for Trump making both the Biden Presidency and Biden Pennsylvania lines very mispriced.
 At this point, Biden was ahead of Trump with only mail-in and provisional ballots left and Nate Silver like most political analysts saw no chance for Biden to lose, but the market had Biden only at 88% to win the election.
 </p>
 
