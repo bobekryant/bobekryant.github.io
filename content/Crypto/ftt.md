@@ -1,4 +1,4 @@
-Title: \$FTT
+Title: FTX Exchange
 Slug: ftt-1
 Date: 2021-01-30
 Tags: $FTT, altcoins
@@ -144,5 +144,5 @@ Then just yesterday, on the heels of Robinhood and other US brokerages limiting 
 
 <p>
 With the new innovative features along with a history of growth, I believe that FTX will continue on its path to becoming one of the largest exchanges in the world. 
-I own \$FTT both as a beta play on exchange volume increasing as well as an alpha play on it continuing to take market share from other participants.
+I own \$FTT both as a beta play on exchange volume increasing as well as an alpha play on FTX continuing to take market share from other participants.
 </p>
