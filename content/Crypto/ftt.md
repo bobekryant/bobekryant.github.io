@@ -139,10 +139,11 @@ If 2021 is even remotely close to 2020, \$FTT is extremely undervalued.
 <p>
 FTX has consistenly made strides to capture the most crypto volume. 
 In August 2020, FTX bought <a href="https://www.coindesk.com/ftx-blockfolio-150m-deal" target="_blank">Blockfolio</a>, one of the leading portfolio tracking apps with over 6 million users at the time of purchase.
-Then just yesterday, on the heels of Robinhood and other US brokerages limiting stock trading in select names, Blockfolio adds zero fee<a href="https://www.coindesk.com/porfolio-app-blockfolio-crypto-stock-trading" target="_blank">stock and crypto trading</a>.
+Then just yesterday, on the heels of Robinhood and other US brokerages limiting stock trading in select names, Blockfolio adds zero fee <a href="https://www.coindesk.com/porfolio-app-blockfolio-crypto-stock-trading" target="_blank">stock and crypto trading</a>.
 </p>
 
 <p>
-With the new innovative features along with a history of growth, I believe that FTX will continue on its path to becoming one of the largest exchanges in the world. 
-I own \$FTT both as a beta play on exchange volume increasing as well as an alpha play on FTX continuing to take market share from other participants.
+With innovative features along with a history of growth, I believe that FTX will continue on its path to becoming the largest exchanges in the world. 
+I own \$FTT both as a beta play on crypto exchange volume increasing as well as an alpha play on FTX continuing to eat market share from other participants.
+The pie is growing and the share of the pie is growing.
 </p>
