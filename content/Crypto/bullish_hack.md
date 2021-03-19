@@ -1,8 +1,8 @@
-Title: WCRES Hack
+Title: Bullish Hack
 Slug: wcres-hack
 Date: 2021-03-12
 Tags: $wCRES, altcoins
-Summary: Bullish hack?
+Summary: Can hacks be bullish?
 
 <h3>Background</h3>
 <p>
