@@ -34,4 +34,3 @@ With ETH around 2k, this will create around 40k daily additional buy pressure; a
 I expect \$WCRES to increase during this period and am putting on this trade at around $7 and .004 WCRES/ETH. 
 </p>
 
-
