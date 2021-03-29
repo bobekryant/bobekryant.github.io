@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Bobe Kryant" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="$FARM, $PASTA, $YAM, $BANK, Crypto, " />
+
+<meta property="og:title" content="Voting Pumps "/>
+<meta property="og:url" content="./voting-pump.html" />
+<meta property="og:description" content="Voting random old coins to farm new coins often creates lucrative oppurtunites for the old coin." />
+<meta property="og:site_name" content="Bobe&#39;s Thoughts" />
+<meta property="og:article:author" content="Bobe Kryant" />
+<meta property="og:article:published_time" content="2021-03-22T00:00:00-04:00" />
+<meta name="twitter:title" content="Voting Pumps ">
+<meta name="twitter:description" content="Voting random old coins to farm new coins often creates lucrative oppurtunites for the old coin.">
+
+        <title>Voting Pumps  · Bobe&#39;s Thoughts
+</title>
+
+
+
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		  "HTML-CSS": {
+		  styles: {
+		  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+		  },
+		  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+		  });
+		</script>
+
+		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="./"><span class=site-name>Bobe's Thoughts</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       .
+                                    >Home</a>
+                                </li>
+                                <li ><a href="./categories.html">Categories</a></li>
+                                <li ><a href="./tags.html">Tags</a></li>
+                                <li ><a href="./archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="./voting-pump.html">
+                Voting Pumps
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <h3>Background</h3>
+
+<p>
+DeFi protocol fair value pricing is a mix of modeling technology on its standalone future cash flows, relation value in relation to other DeFi projects, and then game theory to see how incentives (tokenomics) align with the price.
+This article will focus on the latter game theory aspect: in a particular case of the farming pump.
+DeFi protocols often use farming (liquidity mining) to bootstrap interest in their project, give the community some tokens, and create liquidity for said token.
+These can range from safe stable coin farms, single asset farms, to riskiest pool 2 farms. 
+</p>
+
+<p>
+For those who are unfamiliar with the farming craze, a stable coin farm is when \$USDC, \$USDT, \$DAI and other stable coins are deposited in return for a protocol's token.
+This is pretty risk free as the value of the stable coin wont deviate and then people are just getting the token for free<sup id=sf-voting-pump-1-back><a href=#sf-voting-pump-1 class=simple-footnote title="It is often during these times that stable coin borrowing rates on AAVE get expensive as people try to borrow stablecoins to farm free tokens at a higher borrowing rate.">1</a></sup>
+<sup id=sf-voting-pump-2-back><a href=#sf-voting-pump-2 class=simple-footnote title="Many of the first DeFi farms were stable coin farms like Yearn.">2</a></sup>
+<sup id=sf-voting-pump-3-back><a href=#sf-voting-pump-3 class=simple-footnote title="There is always smart contract risk. DYOR before interacting with these farms and be sure to revoke permissions afterwards">3</a></sup>.
+A single asset farm is when other assets are deposited in return for a protocol's token. 
+One of the first single asset farms was \$YAM, when it allowed other DeFi tokens like \$SNX and \$YFI to be deposited to recieve \$YAM. 
+This is inherentely riskier as the tokens from other protocols may increase or decrease in price, removing the risk free value catpure from stable coins
+<sup id=sf-voting-pump-4-back><a href=#sf-voting-pump-4 class=simple-footnote title="For this extra risk, the yield on these single asset farms are often times multiples higher than stable coin farms.">4</a></sup>
+<sup id=sf-voting-pump-5-back><a href=#sf-voting-pump-5 class=simple-footnote title='Often times yield farmers will use futures on centralized exchanges to hedge out the delta risk of the various single asset tokens, thus creating a synthetic dollar and getting the yield "risk free"'>5</a></sup>.
+</p>
+
+<p>
+Continuing on the risk specturm there are the \$SUSHI ETH LP token farms and finally the riskiest \$1inch pool 2 (deathpool) farms<sup id=sf-voting-pump-6-back><a href=#sf-voting-pump-6 class=simple-footnote title="If there is interest I can write another article on the intracacies of the various farms as there is also a decent amount of game theory at play there">6</a></sup>.
+The latter two use liquidity provider tokens from AMMs to create more liquid markets. 
+The Sushi ETH pairing farms are not that much risker from a pricing standpoint as \$ETH is relatively liquid and typically has lower volatility than the single asset funds, however in deathpool farms one can lose both deathpool tokens.
+Most of the time, the non-stablecoin farms will have some combination of the popular large coins like \$ETH and \$WBTC, and then maybe some DeFi "Blue Chips" (\$YFI, \$AAVE, \$SNX).
+</p>
+
+<p>
+Often times a picture is worth a thousand words, so here is the front end of the sushiswap farm from late august. 
+The APYs vary substaintially from LEND-ETH around 1.24k% to UMA-ETH at 4k% to SUSHI-ETH at 8.7k%.
+Besdies farming in the SUSHI-ETH pool which has its inflation issues, the next best trade is to farm the UMA-ETH pool because it has the highest APY.
+It has the higest APY, because all the pools give out the same about of \$SUSHI per <a href="https://web.archive.org/web/*/https://medium.com/sushiswap/the-sushiswap-project-c4049ea9941e" target=_blank>block</a>, but \$UMA has one of the smallest mcaps so natrually its APY is higher.
+This caused people to bid up \$UMA in order to chase the apy and \$UMA went from $6 to $24. 
+The exact trickle down effect goes something like this:
+</p><ol>
+  <li>All the pools (other than SUSHI-ETH) distribute the same amount of \$SUSHI daily.</li>
+  <li>The pools tied to the smallest market cap tokens to have the highest APY.</li>
+  <li>People purchase the coin and try to balance out the APYs between various pools.</li>
+  <li>Coin price rises as the coin is not very liquid in the first place.</li>
+</ol>
+<p></p>
+
+<p></p>
+<center>
+<img alt=Pelican2 src="../images/crypto/sushi_farm.PNG">
+</center><p></p>
+<p></p><center>
+<img alt=Pelican2 src="../images/crypto/uma_chart_price.PNG">
+</center><p></p>
+<p>
+After that long winded intro on farming, we now come to the interesting portion of various trades one can do during farming.
+There are certain cases when the members of the protocol get to vote which coins are eligible for liquidity mining and it is in these unique cases that there are often outsized risk/reward trades and the primary focus of this article.
+Fundamentally speaking these coins that are used for liquidity mining gain a lucrative short term usecase and thus their underlying value appreciates during this time period.
+I will highlight two different cases below with Harvest Finance and Float Protocol. 
+</p>
+
+<h3>Harvest</h3>
+
+<p>
+Harvest Finance is one of the first Yearn clones and in late August 2020 and they used discord to vote for coins to farm their new token \$FARM. 
+Each member of the discord is allocated one vote and the results are below.
+</p>
+
+<p></p><center>
+<img alt=Pelican2 src="../images/crypto/harvest_vote.PNG">
+</center><p></p>
+<p>
+We can see that \$SUSHI, \$YFII, \$YFV, \$OGN, \$BASED, and \$PASTA, ended up <a href="https://medium.com/harvest-finance/harvest-reward-pools-launch-60d1dcbc4b81" target=_blank>winning</a>.
+For those of you that are unfamiliar with these coins, they are all shitcoins, but some are more trash than others due to their low liquidity. 
+Enter \$PASTA, a meme food coin with no use case created just over two weeks ago to farm and dump. 
+At the time of the vote, this coin was trading around 1 cent and 100k market cap, but by the time the vote had concluded, it touched 50 cents with a 5 million market cap and 5 million daily volume.
+The sole purpose of \$PASTA was as a liquidity mining token for \$FARM, the Harvest Finance token.
+Below is the astonshing 50x from 8/31 to 9/2.
+</p>
+
+<p></p><center>
+<img alt=Pelican2 src="../images/crypto/pasta_chart.PNG">
+</center><p></p>
+<p>
+A closer look at the final tallies reveals that \$PASTA ended up in 4th place with 109 votes and 6th place went to \$AMPL with 73 votes. 
+Only 109 discord votes were cast to create this ridiculous pump. 
+Discord accounts require a unique email and emails can be created for free so all this trade required was a few hours of fake emails.
+</p>
+
+<h3>Float Protocol</h3>
+
+<p>
+Voting has evolved since the early days of DeFi summer and now most projects use snapshot/scattershot which requires the underlying token. 
+A snapshot of all the addresses holding the underlying token is taken at a specific block time and then each token is given 1 vote. 
+It is still is still possible to create large movements in illiquid tokens through the farming pump, but now it will require some risk to capture votes instead of free discord accounts.
+</p>
+
+<p>
+Float protocol is a unstable coin loosely pegged to the dollar. 
+There was a phase 1 whitelist, in which <a href="https://medium.com/float-protocol/float-protocol-bank-distribution-whitelist-expansion-fd5a84c42356" target=_blank>certain</a> wallets where able to use stablecoins to farm their native token \$BANK.
+Then phase 2 allowed the top 5 coins from a <a href="https://scattershot.page/#/snapshot.floatprotocol.eth/proposal/Qmf3rzXtVTvox5QoJ7LEgR7cXAqL2PetuAFGihZXiRNXFp" target=_blank>vote</a> to also farm.
+This vote lasted 4 days (from 3/14/2021 to 3/18/2021) and the top 5 vote getters where \$YFI, \$YAM, \$SUSHI, \$ETH, and \$wBTC.
+Out of these 5, only \$YAM has a market cap under 100 mil and pumped due to its addition as a eligible farming token.
+</p>
+
+<p>
+The a similar low cap voting pump played out here.
+On 3/10/2021, a team member from Float created a phase 2 <a href="https://forum.floatprotocol.com/t/fip-02-phase-2-plans/15" target=_blank>proposal</a> to see which of the new coins would be farming Float's underlying token \$BANK.
+After a few days of discussion, the <a href="https://forum.floatprotocol.com/t/fip-02-phase-2-plans/15/105" target=_blank>snapshot</a> was taken on 3/12/2021, when \$Bank was roughly \$700.
+There were 3.49k \$Bank votes (1 \$Bank equals 1 vote) for \$Yam and the 5th place token had around 3.26k votes. 
+It would cost rouhgly 2.4 mil for all of the \$YAM votes<sup id=sf-voting-pump-7-back><a href=#sf-voting-pump-7 class=simple-footnote title="It would cost around 2.3 mil for 5th place.">7</a></sup>.
+Due to this vote, \$Yam price went from around 3.5 to a high over 6 and the market cap went from around 40 mil to 70 mil. 
+Not as lucrative in percentage terms as Harvest, but this trade could take alot more size and still was very attractive from a risk rewards standpoint<sup id=sf-voting-pump-8-back><a href=#sf-voting-pump-8 class=simple-footnote title="There are also no futures of \$YAM so is hard to get a short and farm risk free. Thus the \$YAM pool would have alot less TVL and thus higher APY.">8</a></sup>.
+</p>
+
+<p>
+Below is the price action for \$YAM. 
+We can see a increase near the close of voting as we see \$YAM was voted in and then one final spike at the beginning of farming right when farming is about to start on 3/21/2021.
+Unfortunately the price slowly fell off a cliff as voters decided to shorted phase 2 to 1 week through another proposal, but the initial trade was still very promising.
+</p>
+
+<p></p><center>
+<img alt=Pelican2 src="../images/crypto/yam_chart_price.PNG">
+</center><p></p>
+<h3>Conclusion</h3>
+
+<p>
+There are many examples other examples farming pumps like Harvest and Float where community members can vote in illiquid altcoins for farming collateral.
+These types of trades should continue to be high expected value trades in the current bull market.
+</p><ol class=simple-footnotes><li id=sf-voting-pump-1>It is often during these times that stable coin borrowing rates on AAVE get expensive as people try to borrow stablecoins to farm free tokens at a higher borrowing rate. <a href=#sf-voting-pump-1-back class=simple-footnote-back>↩</a></li><li id=sf-voting-pump-2>Many of the first DeFi farms were stable coin farms like Yearn. <a href=#sf-voting-pump-2-back class=simple-footnote-back>↩</a></li><li id=sf-voting-pump-3>There is always smart contract risk. DYOR before interacting with these farms and be sure to revoke permissions afterwards <a href=#sf-voting-pump-3-back class=simple-footnote-back>↩</a></li><li id=sf-voting-pump-4>For this extra risk, the yield on these single asset farms are often times multiples higher than stable coin farms. <a href=#sf-voting-pump-4-back class=simple-footnote-back>↩</a></li><li id=sf-voting-pump-5>Often times yield farmers will use futures on centralized exchanges to hedge out the delta risk of the various single asset tokens, thus creating a synthetic dollar and getting the yield "risk free" <a href=#sf-voting-pump-5-back class=simple-footnote-back>↩</a></li><li id=sf-voting-pump-6>If there is interest I can write another article on the intracacies of the various farms as there is also a decent amount of game theory at play there <a href=#sf-voting-pump-6-back class=simple-footnote-back>↩</a></li><li id=sf-voting-pump-7>It would cost around 2.3 mil for 5th place. <a href=#sf-voting-pump-7-back class=simple-footnote-back>↩</a></li><li id=sf-voting-pump-8>There are also no futures of \$YAM so is hard to get a short and farm risk free. Thus the \$YAM pool would have alot less TVL and thus higher APY. <a href=#sf-voting-pump-8-back class=simple-footnote-back>↩</a></li></ol>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2021-03-22T00:00:00-04:00">Mon 22 March 2021</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#bank-ref">$BANK
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="./tags.html#farm-ref">$FARM
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="./tags.html#pasta-ref">$PASTA
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="./tags.html#yam-ref">$YAM
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="mailto:mailto:bobekryant33824@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Mail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#328cff"/><path d="m250 186c-46 0-69 35-69 74 0 44 29 72 68 72 43 0 73-32 73-75 0-44-34-71-72-71zm-1-37c30 0 57 13 77 33 0-22 35-22 35 1v150c-1 10 10 16 16 9 25-25 54-128-14-187-64-56-149-47-195-15-48 33-79 107-49 175 33 76 126 99 182 76 28-12 41 26 12 39-45 19-168 17-225-82-38-68-36-185 67-248 78-46 182-33 244 32 66 69 62 197-2 246-28 23-71 1-71-32v-11c-20 20-47 32-77 32-57 0-108-51-108-108 0-58 51-110 108-110" fill="#fff"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
