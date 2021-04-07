@@ -23,7 +23,7 @@
 <meta property="og:description" content="When is the best time to buy \$FTT?" />
 <meta property="og:site_name" content="Bobe&#39;s Thoughts" />
 <meta property="og:article:author" content="Bobe Kryant" />
-<meta property="og:article:published_time" content="2021-03-18T00:00:00-04:00" />
+<meta property="og:article:published_time" content="2021-03-31T00:00:00-04:00" />
 <meta name="twitter:title" content="FTT Mondays ">
 <meta name="twitter:description" content="When is the best time to buy \$FTT?">
 
@@ -91,32 +91,121 @@
             
             <h3>Background</h3>
 
-<p>After reading the <a href="./ftt-1.html">previous</a> article, the next question is when to buy. 
-Luckily, we can use the buyback mechanism as a good entry point barometer. 
-We know there is a buyback around 10pm HKT each Monday ending around 11:59pm HKT Tuesday. 
+<p>After reading the <a href="./ftt-1.html">previous</a> article, the follow up question would be when to buy. 
+Luckily, we can use the buyback mechanism as a good entry point barometer and also a stand alone trading strategy.
+We know there is a buyback that starts after 10pm HKT each Monday and ends beefore 11:59pm HKT Tuesday. 
 In these 26 hours, FTX buys back \$FTT on the open market giving it synthetic buy pressure, so it is ideal to buy right before this period.</p>
 <h3>Basic Trading Strategy</h3>
 
 <p>
-The first buyback was on 08/01/2019 and there have been about 90 more since then. 
-By creating a simple strategy that buys \$FTT at the initial buyback period and sells as the period ends, we can see how much edge there is to executing before this period.
-
+The first buyback was on 08/01/2019 and there have been about 90 more since then<sup id=sf-ftt-2-1-back><a href=#sf-ftt-2-1 class=simple-footnote title="This article uses data until mid March 2021.">1</a></sup>. 
+By creating a simple strategy that buys \$FTT at the initial buyback period and sells as the period ends, we can see how much edge there is when executing before this period.
+Below is the cumulative return of this period with an average of over 2% per day and a total of over 4x in around 85 days.
 </p>
 
-<h3>Buy Back Size</h3>
+<p></p><center>
+<img alt=Pelican2 src="../images/crypto/ftt_monday_baseline.png">
+</center><p></p>
+<h3>Trading Strategy Tweaks</h3>
+
+<h5>Timing Improvement</h5>
 
 <p>
-Buybacks can be tracked 
+There are ways to just make money trading this strategy, but adding a few more bells and whistles to make this strategy more lucrative.
+One of these possible strategy enhancements is to stalk the network to see when the burn occurs and end the trade at that moment, reducing uncessary delta exposure to the market<sup id=sf-ftt-2-2-back><a href=#sf-ftt-2-2 class=simple-footnote title="One week in August 2020, burn occured on 08/14/2020 instead of usual 08/11/2020.">2</a></sup>..
+We are able to track the buybacks by looking at large burn <a href="https://etherscan.io/tx/0xc780a0944f644454c6a07e08c4446e07f01ddfdc0190935a0234feaa3b12009b" target=_blank>transactions</a>.
+So instead of closing the trade at 11:59pm HKT, we close whenever the burn concludes.
 </p>
 
-<h3>Trading Strategy Improvments</h3>
+<h5>Buy Back Size</h5>
 
 <p>
-There are ways to just make money trading this strategy and adding a few more bells and whistles to make this strategy more lucrative.
-One of these possible strategy enhancements is to stalk the network to see when the burn occurs and end the trade at that moment, reducing uncessary delta exposure to the market.
+Buybacks can be tracked by the either on etherscan or also on the <a href="https://ftx.com/en/ftt" target=_blank>burn</a> page.
+After normalizing (in USD) for the size of the burn, we can run correlations
+<sup id=sf-ftt-2-3-back><a href=#sf-ftt-2-3 class=simple-footnote title="Spearman is used which better accounts for nonlinearity. I believe this would be more accurate here as there are often outsized momentum moves.">3</a></sup>
+ to see that there is a strong positive relationship (.36) between the size of the burn and the resulting performance.
+A trading strategy would be to size up when buy is large and size down when burn is small.
+Breaking down the USD burn size into quantiles, the following strategy is run: if the burn size is in the upper 75% we 2x the size, bottom 25% half size, and we keep same size for middle two quantiles.
 </p>
 
+<p>
+Below are risk adjusted stats of the baseline and the various strategy tweaks.
+We see that the baseline is very strong with an average of 2.3% gain and high sharpe/sortino ratios. 
+The pnl is skewed right as the average winner is higher than the average loser. All in all a very powerful trade.
+Looking at our adjustments, we can see that conditioning trading size on burn size is positive expected value. 
+We get an increase to 3.2% as well as boosts to sharpe and average winner goes up while average loser goes down.
+However, the timing adjustment does not seem to help the strategy at all and decreases performance in both outright pnl and risk adjusted metrics.
+Perhaps there is a momentum effect after this day and cutting off at the burn time does not properly capture the residual momentum.
+</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align=right>Baseline</th>
+<th align=right>Sizing</th>
+<th align=right>Timing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean</td>
+<td align=right>0.023</td>
+<td align=right>0.032</td>
+<td align=right>0.019</td>
+</tr>
+<tr>
+<td>Sharpe</td>
+<td align=right>3.990</td>
+<td align=right>4.830</td>
+<td align=right>3.630</td>
+</tr>
+<tr>
+<td>Sortino</td>
+<td align=right>15.330</td>
+<td align=right>12.920</td>
+<td align=right>11.660</td>
+</tr>
+<tr>
+<td>Win%</td>
+<td align=right>0.610</td>
+<td align=right>0.610</td>
+<td align=right>0.610</td>
+</tr>
+<tr>
+<td>u_win</td>
+<td align=right>0.050</td>
+<td align=right>0.070</td>
+<td align=right>0.050</td>
+</tr>
+<tr>
+<td>u_lose</td>
+<td align=right>-0.030</td>
+<td align=right>-0.020</td>
+<td align=right>-0.030</td>
+</tr>
+<tr>
+<td>best</td>
+<td align=right>0.730</td>
+<td align=right>0.730</td>
+<td align=right>0.630</td>
+</tr>
+<tr>
+<td>worst</td>
+<td align=right>-0.100</td>
+<td align=right>-0.190</td>
+<td align=right>-0.090</td>
+</tr>
+</tbody>
+</table>
 <h3>Conclusion</h3>
+
+<p>
+A great time to buy \$FTT is right before the buyback period (10pm HKT on Mondays).
+The rest of the article examines a basic strategy based on market microstructure and shows the impact of simple tweaks on strategy performance.
+There are outsized returns during this specific time period because of the mechanics of the $\FTT coin.
+Knowing specific details of how other coins behave can help uncover similar trades to this one.
+</p><ol class=simple-footnotes><li id=sf-ftt-2-1>This article uses data until mid March 2021. <a href=#sf-ftt-2-1-back class=simple-footnote-back>↩</a></li><li id=sf-ftt-2-2>One week in August 2020, burn occured on 08/14/2020 instead of usual 08/11/2020. <a href=#sf-ftt-2-2-back class=simple-footnote-back>↩</a></li><li id=sf-ftt-2-3>Spearman is used which better accounts for nonlinearity. I believe this would be more accurate here as there are often outsized momentum moves. <a href=#sf-ftt-2-3-back class=simple-footnote-back>↩</a></li></ol>
 
 
              
@@ -135,7 +224,7 @@ One of these possible strategy enhancements is to stalk the network to see when 
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2021-03-18T00:00:00-04:00">Thu 18 March 2021</time>
+            <time itemprop="dateCreated" datetime="2021-03-31T00:00:00-04:00">Wed 31 March 2021</time>
             <h4>Category</h4>
             <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
             <h4>Tags</h4>
