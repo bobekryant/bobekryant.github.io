@@ -15,18 +15,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Election, Prediction Markets, " />
+<meta name="keywords" content="crypto, $ITGR, Crypto, " />
 
-<meta property="og:title" content="Election Odds "/>
-<meta property="og:url" content="./prediction-markets.html" />
-<meta property="og:description" content="Political betting markets are often mispriced in both a relative value and an absolute value manner" />
+<meta property="og:title" content="The Slowest Oracle Attack "/>
+<meta property="og:url" content="./integral.html" />
+<meta property="og:description" content="A bad oracle causes stablecoin loss." />
 <meta property="og:site_name" content="Bobe&#39;s Thoughts" />
 <meta property="og:article:author" content="Bobe Kryant" />
-<meta property="og:article:published_time" content="2020-11-08T00:00:00-05:00" />
-<meta name="twitter:title" content="Election Odds ">
-<meta name="twitter:description" content="Political betting markets are often mispriced in both a relative value and an absolute value manner">
+<meta property="og:article:published_time" content="2021-06-06T00:00:00-04:00" />
+<meta name="twitter:title" content="The Slowest Oracle Attack ">
+<meta name="twitter:description" content="A bad oracle causes stablecoin loss.">
 
-        <title>Election Odds  · Bobe&#39;s Thoughts
+        <title>The Slowest Oracle Attack  · Bobe&#39;s Thoughts
 </title>
 
 
@@ -67,8 +67,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./prediction-markets.html">
-                Election Odds
+            <a href="./integral.html">
+                The Slowest Oracle Attack
             </a>
         </h1>
     </header>
@@ -77,88 +77,99 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h3>Introduction</h3>
+            <h3>Background on Oracle Attacks</h3>
 <p>
-There are numerous prediction markets<sup id="sf-prediction-markets-1-back"><a href="#sf-prediction-markets-1" class="simple-footnote" title="Sports betting is a subsection of prediction markets.">1</a></sup> which are implemented to trade the outcome of events like if Donald Trump will win the 2020 presidential election.
-These markets are different from traditional financial markets because they usually have a defined end point where the bet settles to either 0 or 1 (similar to sports betting).
-Due to the nature of the settlement, there is extreme volatility as new information gets processed and odds rapidly shift. 
-Currently, the most popular prediction markets are the political events like the recent 2020 presidential election; in fact this election has generated the most volume of any event in the <a href="https://twitter.com/DaveMasonBOL/status/1324432207549792258" target="_blank">history</a> of many bookies.
-Other less popular markets include world events like "if Kim Jung Un will still be North Korea's leader by the end of this year" and if "2020 will be the hottest year on record".
-They can range from "if Kim Kardashian and Kayne West will get a divorce in 2020" or "if Airbnb will begin publicly trading in 2020". 
-</p>
-
-<p>
-Some of the most popular prediction betting sites include<sup id="sf-prediction-markets-2-back"><a href="#sf-prediction-markets-2" class="simple-footnote" title="Other than the sports betting sites">2</a></sup> are <a href="https://www.predictit.org" target="_blank">PredictIt</a> or the decentralized crypto alternatives <a href="net" target="_blank">Augur</a> and <a href="https://polymarket.com" target="_blank">Polymarket</a>. 
-Oftentimes these sites will have similar markets, so arbitrage is possible between the sites or even within the various markets in the site.
-Before betting it is important to read the fine print as to how the bet settles as they could slightly differ from site to site. 
-In addition different sites have different betting and payout fees. 
-</p><ul>
-  <li>PredictIt has a 5% withdraw fee and a 10% winnings fee. </li>
-  <li>Augur uses base layer Etherum and will have expensive gas fees along with around 1-2% of winning fees.</li>
-  <li>Polymarket charges around 2% of trades because it uses an AMM (Automated Market Maker) similar to Uniswap and its bonding curve. <sup id="sf-prediction-markets-3-back"><a href="#sf-prediction-markets-3" class="simple-footnote" title="I will dictate a future series of posts to AMM's as they have very interesting principles.">3</a></sup>
-</li>
-</ul>
+Some of the <a href="https://www.rekt.news/leaderboard/" target="_blank">largest hacks</a> in the DeFi space are due to oracle attacks, which is when price feeds are manipulated (typically via flash loans) allowing for arbitrage opportunities. 
+Popular examples of these attacks include <a href="https://www.rekt.news/pancakebunny-rekt/" target="_blank">Pancake Bunny</a>, <a href="https://www.rekt.news/yearn-rekt/" target="_blank">Yearn</a>, and <a href="https://www.rekt.news/harvest-finance-rekt/" target="_blank">Harvest Finance</a>.
+Below is a snippet from the Harvest page linked above which shows how the attack worked:
+</p><ol>
+  <li>Swap 11.4m USDC to USDT -&gt; USDT price up</li>
+  <li>Deposit 60.6m USDT into Vault</li>
+  <li>Exchange 11.4m USDT to USDC -&gt; USDT price down</li>
+  <li>Withdraw 61.1m USDT from Vault -&gt; 0.5m profit</li>
+</ol>
+The attacker was able to withdraw more USDT at step 4 because of the changed USDT price. As the price of USDT was lower during the time of the withdrawal, their shares represent more USDT from the Vault pool.
+This translated to around a 24 million dollar windfall at the expense of the Harvest vaults.
 <p></p>
 
 <p>
-It is worth noting that PredictIt is capped at \$850 dollar max risk per bet in order to comply with regulations and users need to KYC. 
-They try to get around this by offering multiple ways to bet the same outcome like "Will Donald Trump win the 2020 presidential election" along with "Will the republican nominee win the 2020 presidential election".
-Augur and Polymarket do not suffer from these constraints as they are decentralized, but they have less volume and liquidity than PredictIt.
+This article will describe in depth a slower oracle attack that occurred over a few days with a new AMM called Integral: the steps to create the opportunity and what the Integral team did to prevent the attacks.
+The whistles and bells of each oracle attack are unique, but the premise is the same: have a deep understanding of the oracle(s) to manipulate the price feeds and arbitrage the underlying.
 </p>
 
-<h3>Election Primer</h3>
+<h3>Integral</h3>
 <p>
-It is shocking how much volume and liquidity there is for these some of these events, because they are often mispriced relative to other correlated bets as well as in absolute probability.
-Below is a screenshot of the Polymarket presidential market and the correlated markets taken November 6th 2020. 
-Note that a yes of $0.12 means the yes outcome has a 12% chance of occurring.
+<a href="https://docs.integral.link" target="_blank">Integral </a> is a new AMM, which tries to improve on existing decentralized exchanges by combining parts of a centralized order book (from Binance) while using other Dexs as an oracle. 
+The objective of Integral is to create more liquidity for the popular trading pairs with less slippage on block trades than both Uniswap and Binance. 
+It accomplishes this claim by <a href="https://docs.integral.link/technology/trade-delay-mechanism" target="_blank">using a 5 minute Uniswap TWAP </a> to get a base execution price and then skews the liquidity in the pool based on Binance order book depth.
+The exact <a href="https://docs.integral.link/technology/concentrated-liquidity" target="_blank">details </a> are beyond the scope of this article, but for all intensive purposes Integral prices are close to Uniswap v2 pool prices, however instead of a 30 basis point fee there is a 10 basis point fee for non-stable coin pairs and 2 basis point fee for stable coins and all trades take at least 5 minutes per trip
+On May 31st, Integral <a href="https://integral.substack.com/p/next-2-weeks-4x-farming-rewards-to" target="_blank">launched </a> their stable coin pools and after substantially increasing the liquidity mining rewards, got around 10-20 million in their three stable pools $USDC-$USDT, $DAI-$USDT, and $DAI-$USDC.
+</p>
+
+<h3>Uniswap and Curve</h3>
+<p>
+While Uniswap V2 is a decent oracle for the non-stable coin pairs, it is a terrible oracle for stable coin pairs.
+Due to the constant-product formula for Uniswap, small amounts (relative to the pool size) of orders will cause large sized moves relative to other AMMs like Curve. 
+The <a href="https://curve.fi/files/stableswap-paper.pdf" target="_blank">Curve Whitepaper </a> does a good job of explaining the math behind the advantages and disadvantages of the constant-product formula and how they improve of it.
 </p>
 
 <p>
-Joe Biden, the democratic contender, is on the eve of winning the election and the only ballots left to count are the mail-in ballots and provisional ballots which heavily lean democrat.
-At this point, most of the battle ground states (Florida, Michigan, Wisconsin) had been called<sup id="sf-prediction-markets-4-back"><a href="#sf-prediction-markets-4" class="simple-footnote" title="Biden's margin of victory in Wisconsin was below the automatic threshold so there would be an automatic recount triggered by state law, but in the history of recounts those have not changed the final tally by over one thousand whereas his margin of victory in Wisconsin was over twenty thousand.">4</a></sup>,
-or about to be called. 
-For all intensive purposes, Joe Biden wins this election if he wins either Georgia, Arizona, or Pennsylvania whereas Trump would need all three states.
-</p>
-
-<p></p><center>
-<img alt="Pelican" src="../images/prediction/poly_election_2020.PNG">
-</center><p></p>
-<h3>Election Modelling</h3>
-<h5>Relative Probabilities</h5>
-<p>
-Instantly it is obvious that something is wrong with these odds. If we use relative probabilities implied from the state odds, then we can calculate Biden's chances as follows:
+There is a pool which has coins X and Y with a fair value of $1 and in the pool there initially is 5 X coins and 5 Y coins.
+Here is basic walk through of the Uniswap price (assuming no fees) when there is a .1 X trade into the above pool and we get 0.098 Y out of the pool, which leaves the pool with 5.1 X and 4.902 Y.
+Given that it is a 50-50 pool, we get 5.1X = 4.902Y, and Y is around 1.04 X, a 4% change to the original 1:1 ratio for a 2% trade into the original pool.
 </p>
 
 <div class="math">\begin{align}
-P_{Biden} &amp;= 1-((1-P_{ADem})*(1-P_{GDem})*(1-P_{PDem}))\\
-P_{Biden} &amp;= 1-(.27*.23*.12)\\
-P_{Biden} &amp;= 1-(.0075)\\
-P_{Biden} &amp;= .9925\\
-\\
+x*y &amp;= k\\
+(x + \Delta x)(y - \Delta y) &amp;= k\\
+(5 + .1)(5 + \Delta y) &amp;= 25\\
+\Delta y &amp;= 5-\frac{25}{5.1}\\
+\Delta y &amp;\approx -0.098\\
 \text{where} &amp; \\
-P_{Biden} &amp;= \text{Probability that Biden wins the election} \\
-P_{ADem} &amp;= \text{Probability that Biden wins Arizona} \\
-P_{GDem} &amp;= \text{Probability that Biden wins Georgia} \\
-P_{PDem} &amp;= \text{Probability that Biden wins Pennsylvania} \\
+x &amp;= \text{Number of X tokens} \\
+y &amp;= \text{Number of y tokens} \\
+\Delta x &amp;= \text{Number of x tokens exchanged in pool} \\
+\Delta y &amp;= \text{Number of y tokens returned} \\
 \end{align}</div>
-<p>Assuming the probabilities of winning each state are independent, the probability that Biden wins the election is the reciprocal of the probability that he losses all the states.
-Nonetheless, some simple hard arbitrage betting strategies can be created like buying Biden winning the presidential election and Trump winning Pennsylvania.
-In this scenario, if Biden wins Pennsylvania, he automatically wins the presidential election and the market is hedged, we make $.12 off Biden's presidential victory and lose $.12 off Trump's Pennsylvania victory.
-If Biden losses Pennsylvania, then we make $.88 off Trump's Pennsylvania victory and can potentially still win the presidential election, but even if he loses the loss is still only $.12 for a total profit of $.74.</p>
-<h5>Absolute Probabilities</h5>
 <p>
-Pollsters often use advanced models to try and predict the probabilities of the election race. 
-Some of the more popular/famous ones include Nate Silver, who famously predicted all of the races correctly in <a href="https://www.theguardian.com/world/2012/nov/07/nate-silver-election-forecasts-right" target="_blank">2012</a> and 49/50 correctly in <a href="https://www.theguardian.com/commentisfree/2008/nov/06/us-elections-nate-silver-predictions" target="_blank">2008</a>.
-How these models build fundamental predictions from the bottom up is more advanced than the scope of this blog, but the gist is that they take state polls and try to adjust for various polling biases like education and race.
-Here is a <a href="https://www.youtube.com/watch?v=D8dyuRYqkhk" target="_blank">video</a> of him calling the Pennsylvania race 1/20,000 chance for Trump making both the Biden Presidency and Biden Pennsylvania lines very mispriced.
-At this point, Biden was ahead of Trump with only mail-in and provisional ballots left and Nate Silver like most political analysts saw no chance for Biden to lose, but the market had Biden only at 88% to win the election.
+The details of the various AMM formulas will be covered in a different post, but for a more practical understanding, below is a plot from the paper comparing constant-price (also known as constant-sum) to Uniswap's constant-product, and finally to Curve which uses a hybrid approach.
+Going off the above pool which starts with 5 X coins and 5 Y coins, in the constant price variant the price of X and Y will always be $1, so when there is 9 X coins and 1 Y coin the price of each coin does not change.
+This is not true with the Uniswap version or the Curve version, as the Uniswap formula is most sensitive to price fluctuations, while the Curve version is in between the two.
 </p>
 
-<h3>Conclusion</h3>
+<p></p><center>
+<img alt="Pelican" src="../images/crypto/curve_uni_comp.png">
+</center><p></p>
+<h3>The Attack</h3>
 <p>
-There is a lot of edge in these prediction markets both from an absolute value perspective and from a relative value perspective.
-These markets have started to generate a lot of interest and I expect volume and liquidity on these platforms to grow in the coming years.
-I see modelling these markets as no different than sports betting because they both have defined payouts at fixed ending times.
+Basically this oracle attack works because Uniswap V2 is a bad oracle for stable coins and stable coin liquidity providers wanted yield for their stables. If Uniswap V3 or curve were used as oracles instead, this attack would not work.
+Below is a complete trade setup with the relevant transactions:
+</p><ol>
+  <li>Swap <a href="https://etherscan.io/tx/0xd4f52e1ca3c02dd3af3d9253d07d2bbcfe2a7362cc4a21d2cdf0b00a6dc78e9d" target="_blank">small amount</a> of DAI on DAI-USDT UniV2 -&gt; USDT price up, Dai price down</li>
+  <li>Swap <a href="https://etherscan.io/tx/0x23be89b84e7d27836fba081b5156be53c903fdac3ba6ca158c437b74bfdb74c7" target="_blank">large amount</a> of USDT in DAI-USDT Integral</li>
+  <li>Reswap <a href="https://etherscan.io/tx/0x95ecd8e948024dd0c8cb783bd2cc958055b1b43ca48625e415aef246eb586c90" target="_blank">USDT to DAI</a> USDT to DAI on Curve, Uni V3</li>
+  <li>Repeat</li>
+</ol>
+
+Using DAI-USDT as an example, an adversarial actor would take a small loss on the DAI-USDT Uni V2 pool and trade a much larger size on Integral to recoup the loss and book a profit.
+To complete the loop, either Uni V3, Curve, or other methods for cheap stablecoin swaps could be used. 
+It is worth noting that this is different from the Harvest Finance attack above because flash loans cannot be used due to the 5 minute delay on Integral.
+There needs to be a substantial startup capital cost in order to churn a profit after gas fees.
+<p></p>
+
+<p>
+In early June, there was about 20 million in DAI-USDC, 15 million in DAI-USDT, and 100 million in USDC-USDT, so the easiest prices to manipulate would be DAI-USDC and DAI-USDT. 
+A key to note is that the price of the stablecoin pools on Uni cannot be too much more than 30 bps (which is the Uniswap fee), because if they are off from other exchanges by more, arbitrageurs will do dex to dex arbs and move the spreads in line<sup id="sf-integral-1-back"><a href="#sf-integral-1" class="simple-footnote" title="Also aggregators like Matcha and 1inch route to the stable coin pools for random shitcoin trades a often times the stable coin pools are an intermediate step.">1</a></sup>.
+Fee wise it initially cost 2 bps for the integral pools and 4 bps on curve to swap back and the entire loop cost around 100 dollars in gas during this period, so profits were a little under 20 bps per trip.
+Due to the 5 minute oracle delay and transaction times, each trip took around 10 minutes. 
+</p>
+
+<h3>The Response</h3>
+<p>
+Liquidity providers realized that they were slowly losing their stablecoins and started to complain on the discord. 
+After a day the team issued an <a href="https://discord.com/channels/816135779481944084/816136335089729536/849545984248643630" target="_blank">announcement on discord</a> stating that they were aware of the problem and that they increased the trading fee from 2 bps to 4 bps.
+It is easy to see why this increase was inadequate as the edge was greater than the 2 bps fee increase and the edge was still around 10-15 bps. 
+A day later they <a href="https://discord.com/channels/816135779481944084/816136335089729536/850069177943588945" target="_blank">increased</a> the fee to 15 bps and then <a href="https://discord.com/channels/816135779481944084/816136335089729536/851827203696361522" target="_blank">limited</a> the trade size of the pools a few days after that effectively ending this oracle attack.
 </p>
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -222,7 +233,7 @@ I see modelling these markets as no different than sports betting because they b
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script><ol class="simple-footnotes"><li id="sf-prediction-markets-1">Sports betting is a subsection of prediction markets. <a href="#sf-prediction-markets-1-back" class="simple-footnote-back">↩</a></li><li id="sf-prediction-markets-2">Other than the sports betting sites <a href="#sf-prediction-markets-2-back" class="simple-footnote-back">↩</a></li><li id="sf-prediction-markets-3">I will dictate a future series of posts to AMM's as they have very interesting principles. <a href="#sf-prediction-markets-3-back" class="simple-footnote-back">↩</a></li><li id="sf-prediction-markets-4">Biden's margin of victory in Wisconsin was below the automatic threshold so there would be an automatic recount triggered by state law, but in the history of recounts those have not changed the final tally by over one thousand whereas his margin of victory in Wisconsin was over twenty thousand. <a href="#sf-prediction-markets-4-back" class="simple-footnote-back">↩</a></li></ol>
+</script><ol class="simple-footnotes"><li id="sf-integral-1">Also aggregators like Matcha and 1inch route to the stable coin pools for random shitcoin trades a often times the stable coin pools are an intermediate step. <a href="#sf-integral-1-back" class="simple-footnote-back">↩</a></li></ol>
 
 
              
@@ -241,12 +252,15 @@ I see modelling these markets as no different than sports betting because they b
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-11-08T00:00:00-05:00">Sun 08 November 2020</time>
+            <time itemprop="dateCreated" datetime="2021-06-06T00:00:00-04:00">Sun 06 June 2021</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#prediction-markets-ref">Prediction Markets</a>
+            <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#election-ref">Election
+                <li><a href="./tags.html#crypto-ref">crypto
+                    <span class="superscript">8</span>
+</a></li>
+                <li><a href="./tags.html#itgr-ref">$ITGR
                     <span class="superscript">1</span>
 </a></li>
             </ul>
