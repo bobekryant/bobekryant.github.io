@@ -158,7 +158,7 @@ There needs to be a substantial startup capital cost in order to churn a profit 
 <p></p>
 
 <p>
-In early June, there was about 20 million in DAI-USDC, 15 million in DAI-USDT, and 100 million in USDC-USDT, so the easiest prices to manipulate would be DAI-USDC and DAI-USDT. 
+In early June, there was about 20 million in DAI-USDC, 15 million in DAI-USDT, and 100 million in USDC-USDT (in the Uniswap V2 pools), so the easiest prices to manipulate would be DAI-USDC and DAI-USDT. 
 A key to note is that the price of the stablecoin pools on Uni cannot be too much more than 30 bps (which is the Uniswap fee), because if they are off from other exchanges by more, arbitrageurs will do dex to dex arbs and move the spreads in line<sup id="sf-integral-1-back"><a href="#sf-integral-1" class="simple-footnote" title="Also aggregators like Matcha and 1inch route to the stable coin pools for random shitcoin trades a often times the stable coin pools are an intermediate step.">1</a></sup>.
 Fee wise it initially cost 2 bps for the integral pools and 4 bps on curve to swap back and the entire loop cost around 100 dollars in gas during this period, so profits were a little under 20 bps per trip.
 Due to the 5 minute oracle delay and transaction times, each trip took around 10 minutes. 
@@ -168,8 +168,8 @@ Due to the 5 minute oracle delay and transaction times, each trip took around 10
 <p>
 Liquidity providers realized that they were slowly losing their stablecoins and started to complain on the discord. 
 After a day the team issued an <a href="https://discord.com/channels/816135779481944084/816136335089729536/849545984248643630" target="_blank">announcement on discord</a> stating that they were aware of the problem and that they increased the trading fee from 2 bps to 4 bps.
-It is easy to see why this increase was inadequate as the edge was greater than the 2 bps fee increase and the edge was still around 10-15 bps. 
-A day later they <a href="https://discord.com/channels/816135779481944084/816136335089729536/850069177943588945" target="_blank">increased</a> the fee to 15 bps and then <a href="https://discord.com/channels/816135779481944084/816136335089729536/851827203696361522" target="_blank">limited</a> the trade size of the pools a few days after that effectively ending this oracle attack.
+It is easy to see why this increase was inadequate as the edge was greater than the 2 bps fee increase and the attacked continued on. 
+A day later, the team <a href="https://discord.com/channels/816135779481944084/816136335089729536/850069177943588945" target="_blank">reraised</a> the fee to 15 bps and then <a href="https://discord.com/channels/816135779481944084/816136335089729536/851827203696361522" target="_blank">limited</a> the trade size of the pools a few days after that effectively ending this oracle attack.
 </p>
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
