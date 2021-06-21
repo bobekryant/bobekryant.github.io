@@ -103,19 +103,15 @@ Teams will have different expected points per possession (PPP), and certain play
 </p>
 
 <h3>Thesis</h3>
-<p>
-Assume the Lakers are expected to score 1.2 points every possession and we denote this expression as $E[PPP|\text{24 seconds}]=1.2$. It is important to understand that this 1.2 number is with a full 24 second shot clock and should fall as the shot clock declines.
-Taking the extreme, if there was only 1 second left on the shot clock, the $E[PPP|\text{1 second}]$ would be strictly less than 1.2 (probably more like .5) <sup id="sf-shot-clock-3-back"><a href="#sf-shot-clock-3" class="simple-footnote" title="This is inherently due to the quality of the shot when the shot clock winding down being worse.">3</a></sup>. 
-I wish to quantify the difference in $E[PPP]$ as it relates to the shot clock, so every second on the 24 second shot clock will have a different $E[PPP]$.
-</p>
-<p>
-My working hypothesis is that there is some sort of logarithmic distribution from 0-24 seconds. The $E[PPP]$ will be low in the beginning and then gradually rise and top off at 24 seconds.
+<p>Assume the Lakers are expected to score 1.2 points every possession and we denote this expression as <span class="math">\(E[PPP|\text{24 seconds}]=1.2\)</span>. It is important to understand that this 1.2 number is with a full 24 second shot clock and should fall as the shot clock declines.
+Taking the extreme, if there was only 1 second left on the shot clock, the <span class="math">\(E[PPP|\text{1 second}]\)</span> would be strictly less than 1.2 (probably more like .5) <sup id="sf-shot-clock-3-back"><a href="#sf-shot-clock-3" class="simple-footnote" title="This is inherently due to the quality of the shot when the shot clock winding down being worse.">3</a></sup>. 
+I wish to quantify the difference in <span class="math">\(E[PPP]\)</span> as it relates to the shot clock, so every second on the 24 second shot clock will have a different <span class="math">\(E[PPP]\)</span>.
+<br></p>
+<p>My working hypothesis is that there is some sort of logarithmic distribution from 0-24 seconds. The <span class="math">\(E[PPP]\)</span> will be low in the beginning and then gradually rise and top off at 24 seconds.
 Below, I have created a model of what I believe the trade-off should look like<sup id="sf-shot-clock-4-back"><a href="#sf-shot-clock-4" class="simple-footnote" title=" These values are rounded up, just like on the NBA shot clock so even if there is .1 seconds left on the shot clock it is counted as 1 second left.">4</a></sup>.
-With 1 second left on the shot clock, anything thrown to the rim is better than an alternative of a turnover so I think $E[PPP|\text{1 second}]$ is close to the expected value of a contested fade-away.
+With 1 second left on the shot clock, anything thrown to the rim is better than an alternative of a turnover so I think <span class="math">\(E[PPP|\text{1 second}]\)</span> is close to the expected value of a contested fade-away.
 At 24 seconds on the shot clock, we have the full 1.2 number, but the relationship should not be a linear one. NBA teams typically do not need the full 24 seconds to shoot and can probably generate a decent shot with half the time. 
-More time just gives them the optionality to turn down good shots for great shots. I use an inverse exponential model which tails off later in the shot clock. 
-</p>
-
+More time just gives them the optionality to turn down good shots for great shots. I use an inverse exponential model which tails off later in the shot clock. </p>
 <p></p><center>
 <img alt="Pelican" src="../images/nba/predicted_ppp.png">
 </center><p></p>
@@ -185,34 +181,27 @@ If the plays are successful in creating a clean look, the shot would instantly b
 A classic example is this <a href="https://gfycat.com/brightweirdcranefly" target="_blank">elevator screen</a> where three other Warriors players work in unison to get Curry an open look.
 </p>
 
-<p>
-Lets take a closer look at the elevator screen referenced above. Notice the shot clock is at 7 seconds during the initial pin-down and then Curry catches it with about 4 seconds left.
+<p>Lets take a closer look at the elevator screen referenced above. Notice the shot clock is at 7 seconds during the initial pin-down and then Curry catches it with about 4 seconds left.
 A wide open Curry three is worth at least 1.2 points, but what if the Jazz switched and blew this play up? Then Klay would be isoed against Gordon Hayward 30 feet from the hoop with 3 seconds left on the shot clock, and I estimate this to probably be around .6 points.
 Using the PPP trade-off curve as a guideline, one can judge if the elevator screen was a good play call with 7 seconds left on the shot clock. 
 Let us assume that the elevator screen play takes 4 seconds to run. We can then formalize the question: 
-if the expected value of the elevator screen play plus the expected value of the 3 seconds after that are greater than the $E[PPP|\text{7 seconds}]$, the elevator screen is a good play to call.
-</p>
-
-<p>
-Let us break the outcome of the elevator screen play down into two states, the state that Curry gets a clean look and the state that Curry does not so Thompson keeps the ball.
-This would lead us to a formula to calculate $E[\text{Elevator Screen}|7 seconds]$.
-
-\begin{align}
+if the expected value of the elevator screen play plus the expected value of the 3 seconds after that are greater than the <span class="math">\(E[PPP|\text{7 seconds}]\)</span>, the elevator screen is a good play to call.
+<br></p>
+<p>Let us break the outcome of the elevator screen play down into two states, the state that Curry gets a clean look and the state that Curry does not so Thompson keeps the ball.
+This would lead us to a formula to calculate <span class="math">\(E[\text{Elevator Screen}|7 seconds]\)</span>.</p>
+<div class="math">\begin{align}
 E[\text{Elevator Screen}|7 seconds] &amp;= P(ES)* E[\text{Curry 3PA}] + (1-P(ES))* E[\text{Iso}|\text{3 Seconds}] \\
 \text{where} &amp; \\
 E[\text{Elevator Screen}|7 seconds] &amp;= \text{Expected Value of the Elevator Screen given 7 seconds left} \\
 P(ES) &amp;= \text{Probability elevator screen is run successfully} \\
 E[\text{Curry 3PA}] &amp;= \text{Expected value of Curry getting a relatively clean look from three} \\
 E[\text{Iso}|\text{3 Seconds}] &amp;= \text{Expected value of Klay isoing given 3 seconds left} \\
-\end{align}
-
-If $E[\text{Elevator Screen}|7 seconds]=E[PPP|\text{7 seconds}]$, then the play was an average play, and the delta between these variables will determine how good or bad of a play it is.
-Maintaining the prior assumptions that a Curry three is worth 1.2 points, a Klay iso (with 3 seconds left) is worth .6 points, and $E[PPP|\text{7 seconds}]$ is .9 points, I will vary $P(ES)$ values to determine the possible range of $E[\text{Elevator Screen}|7 seconds]$.
-Looking at the graph below, I plot two lines $E[\text{Elevator Screen}|7 seconds]$ and $E[PPP|\text{7 seconds}]$ to see at which point the trade off occurs.
-So to answer the original question, if the Warriors can get the $P(ES)$ above .5, then the play is good, as they will be in the green zone.
-If they cannot then they should run a different play with 7 seconds left.
-</p>
-
+\end{align}</div>
+<p>If <span class="math">\(E[\text{Elevator Screen}|7 seconds]=E[PPP|\text{7 seconds}]\)</span>, then the play was an average play, and the delta between these variables will determine how good or bad of a play it is.
+Maintaining the prior assumptions that a Curry three is worth 1.2 points, a Klay iso (with 3 seconds left) is worth .6 points, and <span class="math">\(E[PPP|\text{7 seconds}]\)</span> is .9 points, I will vary <span class="math">\(P(ES)\)</span> values to determine the possible range of <span class="math">\(E[\text{Elevator Screen}|7 seconds]\)</span>.
+Looking at the graph below, I plot two lines <span class="math">\(E[\text{Elevator Screen}|7 seconds]\)</span> and <span class="math">\(E[PPP|\text{7 seconds}]\)</span> to see at which point the trade off occurs.
+So to answer the original question, if the Warriors can get the <span class="math">\(P(ES)\)</span> above .5, then the play is good, as they will be in the green zone.
+If they cannot then they should run a different play with 7 seconds left.</p>
 <p></p><center>
 <img alt="Pelican" src="../images/nba/elevator_screen.png">
 </center><p></p>
@@ -271,7 +260,70 @@ Shooting 45% on tough shots is not efficient when there is plenty on time on the
 
 
 
-<p></p><ol class="simple-footnotes"><li id="sf-shot-clock-1">Offensive rebounds use to reset to the entire 24 second shot clock, but this was changed for the 2019-20 season. <a href="#sf-shot-clock-1-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-2">Technically, there is the ability to get a 4 point play with a three pointer plus a foul or even 5 points with a flagrant foul and a three pointer. <a href="#sf-shot-clock-2-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-3">This is inherently due to the quality of the shot when the shot clock winding down being worse. <a href="#sf-shot-clock-3-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-4"> These values are rounded up, just like on the NBA shot clock so even if there is .1 seconds left on the shot clock it is counted as 1 second left. <a href="#sf-shot-clock-4-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-5"> An alternative would be to parse the play-by-play data, and code up logic to calculate the shot clock, but I am trying to avoid that path for now. <a href="#sf-shot-clock-5-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-6">It is worth noting that the data unfortunately only includes field goals and not free throws or turnovers. <a href="#sf-shot-clock-6-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-7">I believe that using the new 2019-2020 season data which resets shot clock to 14 after offensive rebounds will change this shape dramatically with regards to the 23 and 24 seconds shots. <a href="#sf-shot-clock-7-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-8">Teams can customize the PPP trade-off curve to add in their own percentages as they may be more or less efficient than league average <a href="#sf-shot-clock-8-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-9">The entire paint is 12 feet wide, half of that would be six feet and he looks to be slightly inside the paint <a href="#sf-shot-clock-9-back" class="simple-footnote-back">↩</a></li></ol>
+<p></p>
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script><ol class="simple-footnotes"><li id="sf-shot-clock-1">Offensive rebounds use to reset to the entire 24 second shot clock, but this was changed for the 2019-20 season. <a href="#sf-shot-clock-1-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-2">Technically, there is the ability to get a 4 point play with a three pointer plus a foul or even 5 points with a flagrant foul and a three pointer. <a href="#sf-shot-clock-2-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-3">This is inherently due to the quality of the shot when the shot clock winding down being worse. <a href="#sf-shot-clock-3-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-4"> These values are rounded up, just like on the NBA shot clock so even if there is .1 seconds left on the shot clock it is counted as 1 second left. <a href="#sf-shot-clock-4-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-5"> An alternative would be to parse the play-by-play data, and code up logic to calculate the shot clock, but I am trying to avoid that path for now. <a href="#sf-shot-clock-5-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-6">It is worth noting that the data unfortunately only includes field goals and not free throws or turnovers. <a href="#sf-shot-clock-6-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-7">I believe that using the new 2019-2020 season data which resets shot clock to 14 after offensive rebounds will change this shape dramatically with regards to the 23 and 24 seconds shots. <a href="#sf-shot-clock-7-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-8">Teams can customize the PPP trade-off curve to add in their own percentages as they may be more or less efficient than league average <a href="#sf-shot-clock-8-back" class="simple-footnote-back">↩</a></li><li id="sf-shot-clock-9">The entire paint is 12 feet wide, half of that would be six feet and he looks to be slightly inside the paint <a href="#sf-shot-clock-9-back" class="simple-footnote-back">↩</a></li></ol>
 
 
              
