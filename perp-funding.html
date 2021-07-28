@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.prod.9e9d5ce754.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Bobe Kryant" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Futures, interest rates, Crypto, " />
+
+<meta property="og:title" content="Perpetual Futures Funding "/>
+<meta property="og:url" content="./perp-funding.html" />
+<meta property="og:description" content="Understand and compare funding mechanisms of various platforms" />
+<meta property="og:site_name" content="Bobe&#39;s Thoughts" />
+<meta property="og:article:author" content="Bobe Kryant" />
+<meta property="og:article:published_time" content="2021-07-25T00:00:00-04:00" />
+<meta name="twitter:title" content="Perpetual Futures Funding ">
+<meta name="twitter:description" content="Understand and compare funding mechanisms of various platforms">
+
+        <title>Perpetual Futures Funding  · Bobe&#39;s Thoughts
+</title>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="./"><span class=site-name>Bobe's Thoughts</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       .
+                                    >Home</a>
+                                </li>
+                                <li ><a href="./categories.html">Categories</a></li>
+                                <li ><a href="./tags.html">Tags</a></li>
+                                <li ><a href="./archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="./perp-funding.html">
+                Perpetual Futures Funding
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <h3>Background</h3>
+<p>
+Bitmex <a href="https://blog.bitmex.com/announcing-the-launch-of-the-perpetual-xbtusd-leveraged-swap/" target="_blank">created</a> the first perpetual future in the crypto space which allowed traders to trade with leverage while not rolling each month of each quarter.
+The perpetual swap used an innovative mechanism of funding rate to make sure the market price does not stray too far from the index price of an asset. 
+Holders of the swap pay/receive payments every 8 hours based on the delta between the market price and the index price.
+If the market price is greater than the index price, the longs pay the shorts (encouraging the price to go down) and vice versa.
+</p>
+
+<p>
+The funding rate can be thought of as the interest rate of the crypto ecosystem as people lend dollars for others to speculate with leverage.
+A very popular delta neutral trade is to capture this funding rate by buying the underlying BTC and hedging short the corresponding amount of BTC futures.
+As long as the funding rate is positive, the long speculators will pay the short hedgers and the shorters can collect this "risk-free" rate<sup id="sf-perp-funding-1-back"><a href="#sf-perp-funding-1" class="simple-footnote" title="There are exchange custodial risks, execution risk, as well as liquidation risk depending on how the trade is structured.">1</a></sup>.
+Below is a cumulative sum of the funding rate from the start of the BTC contract<sup id="sf-perp-funding-2-back"><a href="#sf-perp-funding-2" class="simple-footnote" title="Bitmex calls BTC XBT">2</a></sup> till present. 
+We can see that the funding rate is typically positive apart from when volatility dries in the bear market of 2018-2020.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/btc_bitmex_funding.png">
+</center><p></p>
+<p>
+ETH is even more lopsided as we have over 200% returns on a delta neutral strategy in around 3 years, giving an annualized return of over 60%<sup id="sf-perp-funding-3-back"><a href="#sf-perp-funding-3" class="simple-footnote" title="This would be higher due to compounding.">3</a></sup>.
+These high rates are possible because speculators want to use leverage for more gains and they believe that the price appreciation of $BTC or $ETH will be larger than the premium paid to funding<sup id="sf-perp-funding-4-back"><a href="#sf-perp-funding-4" class="simple-footnote" title="And to these speculators credit, the returns of $BTC and $ETH have outpaced that of the funding.">4</a></sup>.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/eth_bitmex_funding.png">
+</center><p></p>
+<h3>Bitmex Calculation</h3>
+<p>
+There are a few formulas to calculate the funding rate for each asset and it differs exchange by exchange.
+Note that the funding rate is rate exchanged between two users: if the trade price is greater than the index price funding is positive and then long speculators pay short speculators.
+Vice versa if the trade price is less than the index (mark price), funding is negative and short speculators pay long speculators.
+The funding rate for BitMex is broken down into two main parts, a fixed interest rate component I and a premium index component P. 
+</p>
+
+<p>
+The interest rate portion is fixed and for <a href="https://www.bitmex.com/app/contract/XBTUSD" target="_blank">$BTC</a> it is always .01%.
+For $BTC we have Q as 0.06%, I as 0.03%, and T as 3 because there are 3 8 hour intervals in a day.
+</p>
+
+<div class="math">\begin{align}
+I &amp;= (Q-B)/T\\
+I &amp;= (0.06\% - 0.03\%) / 3\\
+I &amp;= .01\%\\
+\text{where} &amp; \\
+I &amp;= \text{Interest Rate} \\
+B &amp;= \text{Interest Base} \\
+Q &amp;= \text{Interest Quote} \\
+\end{align}</div>
+<p>
+The premia portion is based around the delta between the trade price and the mark price but there are a few twists which impact this calculation.
+Bitmex introduces a concept called Fair Price Marking to try and reduce liquidations by setting the Mark Price to be equal to the Fair Price instead of the Last Price.
+Impact Bid Price and Impact Ask Price which are tied to how thick the order book is.
+Impact Bid Price is average fill price if 10k USD<sup id="sf-perp-funding-5-back"><a href="#sf-perp-funding-5" class="simple-footnote" title="This is known as Impact Notional Value and is a parameter that varies product by product as well as exchange by exchange.">5</a></sup> were sold while Impact Ask Price is the average fill price if 10k USD were bought<sup id="sf-perp-funding-6-back"><a href="#sf-perp-funding-6" class="simple-footnote" title="These numbers are for all perpetual futures, other impact numbers will vary">6</a></sup>.
+Fair basis takes the most recent funding rate and decays the value throughout the next period. 
+</p>
+
+<div class="math">\begin{align}
+P &amp;= \frac{(Max(0, IBP - MP) - Max(0, MP - IAP))}{SP} + FB\\
+FB &amp;= PFR * (TUF / FI)\\
+\text{where} &amp; \\
+P &amp;= \text{Premium Rate} \\
+IBP &amp;= \text{Impact Bid Price} \\
+MP &amp;= \text{Mark Price} \\
+IAP &amp;= \text{Impact Ask Price} \\
+SP &amp;= \text{Spot Price} \\
+FB &amp;= \text{Fair Basis used in Mark Price} \\
+PFR &amp;= \text{Previous Funding Rate} \\
+TUF &amp;= \text{Time Until Funding} \\
+FI &amp;= \text{Funding Interval} \\
+\end{align}</div>
+<p>
+Finally putting it all together we have the funding rate which is a combination of the premium plus a cap based on difference between interest rate and premium.
+In addition, note that the premium rate and interest rate are TWAPs over the 8 hour interval.
+</p>
+
+<div class="math">\begin{align}
+F &amp;= P + Clamp(I - P, -0.05\%, 0.05\%)\\
+\text{where} &amp; \\
+F &amp;= \text{Funding Rate} \\
+P &amp;= \text{Premium Rate} \\
+I &amp;= \text{Interest Rate} \\
+\end{align}</div>
+<p>
+The clamp is interesting it inherently locks the funding rate to .1% (every 8 hours) as long as the premium index is between -.04% and .06%.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/bitmex_funding_graph.png">
+</center><p></p>
+<p>
+To recap, Bitmex funding is paid every 8 hours, 4UTC, 12UTC and 20UTC.
+The funding price is derived from linear formula with two main portions a constant interest rate (.1%) and a changing premium rate.
+The premium rate is a proxy for the delta between the futures price and the index price.
+</p>
+
+<h3>Binance Calculation</h3>
+<p>
+Binance is the most popular futures exchange with volumes that dwarf competitors and a vast array of altcoins to choose from.
+All of these exchanges have similar formulas with slight adjustments. 
+<a href="https://www.binance.com/en/support/faq/360033525031" target="_blank">Binance</a> has the exact same interest rate formula and funding rate formula, but the premia rate formula is slightly different.
+</p>
+
+<p>
+Here there is no mention of the fair basis and a decay of the previous funding rate. 
+In addition the IBP and IAP look for the average fill price if 25k USD were sold/bought as opposed to 10k from Bitmex.
+This is also more dynamic than Bitmex as Bitmex is 10k impact for all perps while Binance is more realistic and adjust this parameter based on volume and market cap.
+Finally. Binance also has 8 hour payments but pays at 0UTC, 8UTC, and 16UTC.
+</p>
+
+<div class="math">\begin{align}
+P &amp;= \frac{(Max(0, IBP - MP) - Max(0, MP - IAP))}{SP} \\
+\text{where} &amp; \\
+P &amp;= \text{Premium Rate} \\
+IBP &amp;= \text{Impact Bid Price} \\
+MP &amp;= \text{Mark Price} \\
+IAP &amp;= \text{Impact Ask Price} \\
+SP &amp;= \text{Spot Price} \\
+\end{align}</div>
+<h3>FTX Calculation</h3>
+<p>
+One of the fastest growing exchanges is FTX and they have a unique <a href="https://help.ftx.com/hc/en-us/articles/360024780511-Complete-Futures-Specs" target="_blank">approach</a> towards funding rates.
+Funding is calculated hourly and is just a simple TWAP of the percentage difference between market price and index.
+Here market price is the median of last, best bid, and best offer. 
+</p>
+
+<div class="math">\begin{align}
+F &amp;= TWAP(P)/24 \\
+P &amp;= (MP - IP)/IP \\
+\text{where} &amp; \\
+F &amp;= \text{Funding Rate} \\
+P &amp;= \text{Premium Rate} \\
+MP &amp;= \text{Market price which is median of last, best bid and best offer} \\
+IP &amp;= \text{Index Price} \\
+\end{align}</div>
+<p>
+It is important to note here that there is no .1% interest rate built in like Bitmex and Binance.
+FTX rates should be lower than the other two due to this tidbit and thus and more favorable to long traders.
+Looking at the graph below we can indeed confirm this case as FTX has a substantially lower funding rate.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/btc_funding_binance_ftx.png">
+</center><p></p>
+<h3>Perpetual Protocol Calculation</h3>
+<p>
+Moving on to the decentralized exchanges, there are two major ones, Perpetual Protocol (PERP) and dYdX.
+Currently PERP runs on the xDai layer 2 chain with a <a href="https://medium.com/perpetual-protocol/a-deep-dive-into-our-virtual-amm-vamm-40345c522eeb" target="_blank">vAMM mechanism</a> which uses the same xy=k formula as Uniswap, as a price discovery mechanism but there is no actual spot trading.
+There is USDC collateral backing the pool which will be paid out for profitable trades.
+</p>
+
+<p>
+The funding formula is the exact same as FTX, funding price is also paid hourly, but the index price is from Chainlink.
+Because they have the same formula we can easily compare<sup id="sf-perp-funding-7-back"><a href="#sf-perp-funding-7" class="simple-footnote" title="Note that PERP only launched December of 2020">7</a></sup> the cumulative funding for the two. 
+However we can easily see a stark difference as PERP funding has been negative this entire time while FTX is positive.
+This means that the $BTC price on PERP is consistently lower than that on FTX and the shorts pay the longs.
+The dichotomy hints that people are shorting BTC on chain much more actively than on the centralized exchange.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/btc_funding_ftx_perp.png">
+</center><p></p>
+<h3>dYdX Calculation</h3>
+<p>
+dYdx is the other popular decentralized futures exchange and its <a href="https://help.dydx.exchange/en/articles/4797443-perpetual-funding-rate" target="_blank">funding formula</a> is almost identical to Binance just the calculations Impact Bid Price and Impact Ask Price have different amounts of impact notional value.
+In addition, there is a cap on the minimum and maximum funding rate of -0.75% and 0.75% respectively which can be seen by the double clamp formula below.
+</p>
+
+<div class="math">\begin{align}
+F &amp;= Clamp(P + Clamp(I - P, -0.05\%, 0.05\%), -0.75%, .75%)\\
+\text{where} &amp; \\
+F &amp;= \text{Funding Rate} \\
+P &amp;= \text{Premium Rate} \\
+I &amp;= \text{Interest Rate} \\
+\end{align}</div>
+<p>
+Below there is the comparison between Binance and dYdX as they use almost identical interest rate formulas. 
+We can see the Binance funding be substantially higher, a similar trend to the FTX vs PERP funding where the centralized exchange has higher funding than the decentralized one.
+This could also be due to the market microstructure of the players as the DEXs are more novel and require a higher level of sophistication to use compared to the CEXs which could have more retail which likes to use high leverage and go long, increasing the funding on those exchanges.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/btc_funding_binance_dydx.png">
+</center><p></p>
+<h3>Comparisons</h3>
+<p>
+There are a few other altcoins which are on all 4 exchanges. 
+Some of these do not have that much data as PERP and DYDX are consistently putting new markets out but below we look at the $BTC, $ETH, $LINK, and $SUSHI markets which all have at least a few months of data.
+There is vast divergence between the exchanges for some reason PERP seems to be consistently lower funding for some of the $BTC, $ETH, and $LINK, but it is the highest for $SUSHI.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/full_funding_4_assets.png">
+</center><p></p>
+<h3>Liquidations</h3>
+<p>
+It is worth noting that each exchange has different liquidation rules which impacts the max amount of leverage one can safely use on an exchange and putting on a delta hedged trade across exchanges has a non-zero amount of liquidation risk.
+Binance has more aggressive liquidations which market sell a currency leading to cascading liquidations.
+The impact can be seen on <a href="https://www.coindesk.com/binance-controls-flash-crash-polkadot" target="_blank">DOT</a> which dropped over 99% from $30 to $0.2 and <a href="https://www.cryptonary.com/journal/flash-crash-18-april-2021-whats-next/" target="_blank">REN</a> which tanked from $1 to $.1 in a matter of seconds. 
+On the DEX side, PERP has also seen its fair share of controversy with <a href="https://medium.com/perpetual-protocol/2021-2-21-btc-flash-crash-149eef35f7f8" target="_blank">BTC</a> crashing 20k in an hour and then a few months later in <a href="https://perpetualprotocol.medium.com/2021-4-18-flash-crash-19d9a1a16047" target="_blank">ETH</a> which dropped over 50% in a few minutes.
+The liquidation rules ultimately tie back into how much leverage and size one can put on for a delta-neutral trade and thus the corresponding funding rates. 
+</p>
+
+<h3>Conclusion</h3>
+<p>
+Due to the intricacies of calculating funding rates, the microstructure of the markets, and the different liquidation risks, each exchange has vastly different funding rates.
+If one were to implement strict risk management rules, spreading between the exchanges and collecting the funding rates could be a promising delta neutral trade.
+</p>
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script><ol class="simple-footnotes"><li id="sf-perp-funding-1">There are exchange custodial risks, execution risk, as well as liquidation risk depending on how the trade is structured. <a href="#sf-perp-funding-1-back" class="simple-footnote-back">↩</a></li><li id="sf-perp-funding-2">Bitmex calls BTC XBT <a href="#sf-perp-funding-2-back" class="simple-footnote-back">↩</a></li><li id="sf-perp-funding-3">This would be higher due to compounding. <a href="#sf-perp-funding-3-back" class="simple-footnote-back">↩</a></li><li id="sf-perp-funding-4">And to these speculators credit, the returns of $BTC and $ETH have outpaced that of the funding. <a href="#sf-perp-funding-4-back" class="simple-footnote-back">↩</a></li><li id="sf-perp-funding-5">This is known as Impact Notional Value and is a parameter that varies product by product as well as exchange by exchange. <a href="#sf-perp-funding-5-back" class="simple-footnote-back">↩</a></li><li id="sf-perp-funding-6">These numbers are for all perpetual futures, other impact numbers will vary <a href="#sf-perp-funding-6-back" class="simple-footnote-back">↩</a></li><li id="sf-perp-funding-7">Note that PERP only launched December of 2020 <a href="#sf-perp-funding-7-back" class="simple-footnote-back">↩</a></li></ol>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2021-07-25T00:00:00-04:00">Sun 25 July 2021</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#futures-ref">Futures
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="./tags.html#interest-rates-ref">interest rates
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+    <a href="mailto:mailto:bobekryant33824@gmail.com" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Mail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#328cff"/><path d="m250 186c-46 0-69 35-69 74 0 44 29 72 68 72 43 0 73-32 73-75 0-44-34-71-72-71zm-1-37c30 0 57 13 77 33 0-22 35-22 35 1v150c-1 10 10 16 16 9 25-25 54-128-14-187-64-56-149-47-195-15-48 33-79 107-49 175 33 76 126 99 182 76 28-12 41 26 12 39-45 19-168 17-225-82-38-68-36-185 67-248 78-46 182-33 244 32 66 69 62 197-2 246-28 23-71 1-71-32v-11c-20 20-47 32-77 32-57 0-108-51-108-108 0-58 51-110 108-110" fill="#fff"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="./theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
