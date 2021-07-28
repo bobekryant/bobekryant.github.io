@@ -28,11 +28,11 @@ Thus, by examining the holdings of the venture portfolios of the top exchanges, 
 Below is a picture of all of Huobi Capital's (the venture arm of Huobi exchange) <a href="https://www.crunchbase.com/organization/huobi-bd34/recent_investments" target="_blank">investments</a>. 
 WalletCurve does not seem to have a coin and I cannot find any information on Buxx, however Huobi has listed the 5 of the other projects:
 <ul>
-  <li><a href="https://www.coingecko.com/en/coins/iost" target="_blank">Internet of Services, \$IOST</a></li>
-   <li><a href="https://www.coingecko.com/en/coins/ren" target="_blank">Ren, \$REN</a></li>
-  <li><a href="https://www.coingecko.com/en/coins/nervos-network" target="_blank">Nervos Network, \$CKB</a></li>
-  <li><a href="https://www.coingecko.com/en/coins/terra-luna" target="_blank">Terra, \$LUNA</a></li>
-  <li><a href="https://www.coingecko.com/en/coins/thundercore" target="_blank">ThunderCore, \$TT</a></li>
+  <li><a href="https://www.coingecko.com/en/coins/iost" target="_blank">Internet of Services, $IOST</a></li>
+   <li><a href="https://www.coingecko.com/en/coins/ren" target="_blank">Ren, $REN</a></li>
+  <li><a href="https://www.coingecko.com/en/coins/nervos-network" target="_blank">Nervos Network, $CKB</a></li>
+  <li><a href="https://www.coingecko.com/en/coins/terra-luna" target="_blank">Terra, $LUNA</a></li>
+  <li><a href="https://www.coingecko.com/en/coins/thundercore" target="_blank">ThunderCore, $TT</a></li>
 </ul>
 The only one that Huobi has not listed is dForce, probably because it was a recent investment, but I have high conviction that it will be listed eventually.
 </p>
@@ -46,7 +46,7 @@ The only one that Huobi has not listed is dForce, probably because it was a rece
 Both of <a href="https://www.crunchbase.com/organization/binance-labs/recent_investments" target="_blank">Binance Labs</a> 
 as well as <a href="https://www.crunchbase.com/organization/coinbase-ventures/recent_investments" target="_blank">Coinbase Ventures</a> 
 have large portfolios that contain a variety of companies some of which have launched coins. There are a few that have not been listed and I expect them to be listed soon.
-In no particular order they are \$UMA, \$RSR, \$MATIC, and \$LUNA. 
+In no particular order they are $UMA, $RSR, $MATIC, and $LUNA. 
 </p>
 
 
@@ -58,7 +58,7 @@ So when exchanges see large volume from a coin, they also rush to list said coin
 </p>
 <p>
 $YFI launched on July 18th and has consistently had tremendous amounts of volume on decentralized exchanges[ref]These exchanges have no KYC and will list anything. A negative side-effect is that there are alot of scam tokens.[/ref] always ranking in the top 5 in volume traded.
-Below are the exact volumes from launch date till today. The dash red line is August 10th, when Binance listed \$YFI. 
+Below are the exact volumes from launch date till today. The dash red line is August 10th, when Binance listed $YFI. 
 </p>
 
 <center>
@@ -66,29 +66,29 @@ Below are the exact volumes from launch date till today. The dash red line is Au
 </center>
 
 <p>
-\$YFI averaged around 50 million dollars in daily volume primarily on decentralized platforms like Uniswap and Balancer. 
-Looking at the volume charts, this made \$YFI a top 50 coin[ref]Stable coins are not counted in this volume assessment[/ref] based on volume traded.
-Binance has listed almost all of the coins higher on the ranking and adding \$YFI was very low hanging fruit.
+$YFI averaged around 50 million dollars in daily volume primarily on decentralized platforms like Uniswap and Balancer. 
+Looking at the volume charts, this made $YFI a top 50 coin[ref]Stable coins are not counted in this volume assessment[/ref] based on volume traded.
+Binance has listed almost all of the coins higher on the ranking and adding $YFI was very low hanging fruit.
 Fast forward to today and Binance has captured around 75% of the \%YFI volume.
 </p>
 
 <h3>Exchange Profits</h3>
 <p>
 Here is a quick calculation on how much Binance makes in profit off of trading fees. 
-The numbers may be slightly off, but in the Binance whitepaper, 20% of all exchange profits go towards \$BNB token buybacks.
-In the year end review <a href="https://www.binance.com/en/blog/418708327988203520/Binance-2019-Year-in-Review" target="_blank">blog</a> we can see that around \$207,338,000 worth of \$BNB was burned.
-This means that the total profit of Binance was around 5 times that amount at over \$1,000,000,000.  
-Looking at the average trading volume, we can see that there are \$2,852,591,354 dollars in trades per day. 
+The numbers may be slightly off, but in the Binance white-paper, 20% of all exchange profits go towards $BNB token buybacks.
+In the year end review <a href="https://www.binance.com/en/blog/418708327988203520/Binance-2019-Year-in-Review" target="_blank">blog</a> we can see that around $207,338,000 worth of $BNB was burned.
+This means that the total profit of Binance was around 5 times that amount at over $1,000,000,000.  
+Looking at the average trading volume, we can see that there are $2,852,591,354 dollars in trades per day. 
 Multiplying by 365 gives us around 1 trillion dollars in traded volume.
 Thus with a easy back of the hand estimate, we can see that Binance makes approximately 10 basis points per dollar traded, in line with their <a href="https://www.binance.com/en/fee/schedule" target="_blank">fee schedule</a>.
 [ref]The calculations are slightly off as Binance does other things that are also profitable, but fees are the primary driver and this is just a ballpark number[/ref]
 </p>
 
 <p>
-In the 4 days after listing, Binance traded around 37.5 million dollars per day of \$YFI. This equates to around 37.5k in profits for Binance. 
-If those numbers stayed constant for the entire year, Binance would make around 3.5 million from the \$YFI listing. 
-Listing a particular coin is very low hangning fruit as Binance has over a hundred different ones and optimized the procedure.
-It is pretty clear why Binance and other exchanges are heavily incentized to list these high volume coins.
+In the 4 days after listing, Binance traded around 37.5 million dollars per day of $YFI. This equates to around 37.5k in profits for Binance. 
+If those numbers stayed constant for the entire year, Binance would make around 3.5 million from the $YFI listing. 
+Listing a particular coin is very low hanging fruit as Binance has over a hundred different ones and optimized the procedure.
+It is pretty clear why Binance and other exchanges are heavily incentivized to list these high volume coins.
 </p>
 
 <h3>Conclusion</h3>

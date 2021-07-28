@@ -28,7 +28,7 @@ In addition different sites have different betting and payout fees.
 </p>
 
 <p>
-It is worth noting that PredictIt is capped at \$850 dollar max risk per bet in order to comply with regulations and users need to KYC. 
+It is worth noting that PredictIt is capped at $850 dollar max risk per bet in order to comply with regulations and users need to KYC. 
 They try to get around this by offering multiple ways to bet the same outcome like "Will Donald Trump win the 2020 presidential election" along with "Will the republican nominee win the 2020 presidential election".
 Augur and Polymarket do not suffer from these constraints as they are decentralized, but they have less volume and liquidity than PredictIt.
 </p>
@@ -56,6 +56,7 @@ For all intensive purposes, Joe Biden wins this election if he wins either Georg
 <h5>Relative Probabilities</h5>
 <p>
 Instantly it is obvious that something is wrong with these odds. If we use relative probabilities implied from the state odds, then we can calculate Biden's chances as follows:
+</p>
 
 \begin{align}
 P_{Biden} &= 1-((1-P_{ADem})*(1-P_{GDem})*(1-P_{PDem}))\\
@@ -72,9 +73,8 @@ P_{PDem} &= \text{Probability that Biden wins Pennsylvania} \\
 
 Assuming the probabilities of winning each state are independent, the probability that Biden wins the election is the reciprocal of the probability that he losses all the states.
 Nonetheless, some simple hard arbitrage betting strategies can be created like buying Biden winning the presidential election and Trump winning Pennsylvania.
-In this scenario, if Biden wins Pennsylvania, he automatically wins the presidential election and the market is hedged, we make \$.12 off Biden's presidential victory and lose \$.12 off Trump's Pennsylvania victory.
-If Biden losses Pennsylvania, then we make \$.88 off Trump's Pennsylvania victory and can potentially still win the presidential election, but even if he loses the loss is still only \$.12 for a total profit of \$.74.
-</p>
+In this scenario, if Biden wins Pennsylvania, he automatically wins the presidential election and the market is hedged, we make $.12 off Biden's presidential victory and lose $.12 off Trump's Pennsylvania victory.
+If Biden losses Pennsylvania, then we make $.88 off Trump's Pennsylvania victory and can potentially still win the presidential election, but even if he loses the loss is still only $.12 for a total profit of $.74.
 
 <h5>Absolute Probabilities</h5>
 <p>

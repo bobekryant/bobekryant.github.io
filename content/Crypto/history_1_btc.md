@@ -159,6 +159,7 @@ What is the probability that a attack on the blockchain from a dishonest miner s
 It turns out that this would create a race between honest chain and attacker chain, which can be modelled like a binomial random walk. 
 A success is honest chain extending lead by one block, increasing lead by +1, while a failure is attacker chain extending by one block, reducing lead by -1.
 This is the gambler's ruin problem presented below:
+</p>
 
 \begin{align}
 q_z &=\left
@@ -171,7 +172,6 @@ p &= \text{Probability an honest node finds the next block} \\
 q &= \text{Probability the attacker finds the next block} \\
 q_z &= \text{Probability the attacker will ever catch up from z blocks behind} \\
 \end{align}
-</p>
 
 <p>
 The more $p>q$, the less of a chance the attacker has to catch up. 

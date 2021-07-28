@@ -14,11 +14,11 @@ This article will use statistics to show why allocating bitcoin to your portfoli
 <p>
 The traditional retirement portfolio is the 60/40 portfolio, where 60% of the portfolio is in various equities and 40% is in some form of fixed income. 
 Typically portfolio managers rebalance this 60/40 portfolio quarterly to keep the same exposure to both asset classes.
-Using \$SPY and \$TLT as proxies for euities and fixed income, we can simulate the performance of a 60/40 portfolio during this decade long bull market.
-The following plot shows a 60/40 portfolio with \$1000 dollars starting in 2014 till present day. 
+Using $SPY and $TLT as proxies for euities and fixed income, we can simulate the performance of a 60/40 portfolio during this decade long bull market.
+The following plot shows a 60/40 portfolio with $1000 dollars starting in 2014 till present day. 
 This portfolio had pretty consistent performance until the Covid crash in 2020 and there is strong risk adjusted performance.
-In addition, I show what would have happened if instead this portfolio had 2%, 5%, and 10% exposure to \$BTC in addition to the equity and fixed income exposure. 
-I remove equal exposure from the two assets so at 2% \$BTC exposure, we also have 59% equity and 39% fixed income exposure.
+In addition, I show what would have happened if instead this portfolio had 2%, 5%, and 10% exposure to $BTC in addition to the equity and fixed income exposure. 
+I remove equal exposure from the two assets so at 2% $BTC exposure, we also have 59% equity and 39% fixed income exposure.
 </p>
 
 <center>
@@ -33,21 +33,21 @@ I remove equal exposure from the two assets so at 2% \$BTC exposure, we also hav
 | 10% |         2.67 | 0.18 |   -0.22 |   1.19 |    1.28 |
 
 <p>
-The more \$BTC we add to a portfolio, the better it does from an absolute return perspective. 
+The more $BTC we add to a portfolio, the better it does from an absolute return perspective. 
 For the risk adjusted performance, it seems that 5% BTC with 37.5% fixed income and 57.5% equity exposure was the best. 
-The above statement probably seems obvious in hindsight as \$BTC went from less than \$1,000 to over \$16,000 during this time period. 
-What I want to stress is that including \$BTC in the portfolio increases the risk adjusted returns of the portfolio by over 20%.
+The above statement probably seems obvious in hindsight as $BTC went from less than $1,000 to over $16,000 during this time period. 
+What I want to stress is that including $BTC in the portfolio increases the risk adjusted returns of the portfolio by over 20%.
 </p>
 
 <h3>Crypto Bear Markets</h3>
 <p>
 Bitcoin has numerous periods that it has significant drawdowns as it is a very volatile asset. 
 However due to a phenomena known as Shannon's Demon or volatility harvesting, a portfolio including Bitcoin can still outperform one without Bitcoin during these drawdown periods.
-This can be easily visualized if we start the portfolio with 1000 dollars at all time high of \$BTC of 19,000 on December 18th, 2017.
-On this date, \$SPY is around 250 and \$TLT is around 120. 
-Fast forward to today and \$BTC is around 16,300, \$SPY is at 360 and \$TLT is hovering around 160.
-Absolute return wise, both \$SPY and \$TLT outperformed \$BTC.
-However, when we add \$BTC to the rebalanced portfolio, we see that the portoflio with the best relative and absolute performance is actually the one with the most \$BTC exposure at 10%.
+This can be easily visualized if we start the portfolio with 1000 dollars at all time high of $BTC of 19,000 on December 18th, 2017.
+On this date, $SPY is around 250 and $TLT is around 120. 
+Fast forward to today and $BTC is around 16,300, $SPY is at 360 and $TLT is hovering around 160.
+Absolute return wise, both $SPY and $TLT outperformed $BTC.
+However, when we add $BTC to the rebalanced portfolio, we see that the portoflio with the best relative and absolute performance is actually the one with the most $BTC exposure at 10%.
 </p>
 
 <center>
@@ -63,7 +63,7 @@ However, when we add \$BTC to the rebalanced portfolio, we see that the portofli
  
 <h3>Shannon's Demon</h3>
 <p>
-\$BTC works well in the above portfolio, because it is an uncorrelated asset.
+$BTC works well in the above portfolio, because it is an uncorrelated asset.
 Although it produces a negative return on its own, there are large diversification benefits to adding it to a equity-fixed income portfolio.
 The power of diversification and rebalancing is shown clearly in the following made up example:
 Suppose there is an asset that either doubles or halves at every timestep. 
@@ -97,6 +97,6 @@ Out of 1000 iterations over 2/3rds of them did better when rebalancing.
 <h3>Conclusion</h3>
 <p>
 Rebalancing assets is a powerful way to increase both absolute and relative returns.
-\$BTC is the ultimate asset for a traditional portfolio, because it is uncorrelated to traditional assets.
+$BTC is the ultimate asset for a traditional portfolio, because it is uncorrelated to traditional assets.
 Readers should consider adding a small portion of portfolio to Bitcoin and periodically rebalance the new portfolio.
 </p>

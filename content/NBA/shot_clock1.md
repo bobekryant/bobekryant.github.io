@@ -30,18 +30,16 @@ Teams will have different expected points per possession (PPP), and certain play
 </p>
 
 <h3>Thesis</h3>
-<p>
 Assume the Lakers are expected to score 1.2 points every possession and we denote this expression as $E[PPP|\text{24 seconds}]=1.2$. It is important to understand that this 1.2 number is with a full 24 second shot clock and should fall as the shot clock declines.
 Taking the extreme, if there was only 1 second left on the shot clock, the $E[PPP|\text{1 second}]$ would be strictly less than 1.2 (probably more like .5) [ref]This is inherently due to the quality of the shot when the shot clock winding down being worse.[/ref]. 
 I wish to quantify the difference in $E[PPP]$ as it relates to the shot clock, so every second on the 24 second shot clock will have a different $E[PPP]$.
-</p>
-<p>
+<br>
+
 My working hypothesis is that there is some sort of logarithmic distribution from 0-24 seconds. The $E[PPP]$ will be low in the beginning and then gradually rise and top off at 24 seconds.
 Below, I have created a model of what I believe the trade-off should look like[ref] These values are rounded up, just like on the NBA shot clock so even if there is .1 seconds left on the shot clock it is counted as 1 second left.[/ref].
 With 1 second left on the shot clock, anything thrown to the rim is better than an alternative of a turnover so I think $E[PPP|\text{1 second}]$ is close to the expected value of a contested fade-away.
 At 24 seconds on the shot clock, we have the full 1.2 number, but the relationship should not be a linear one. NBA teams typically do not need the full 24 seconds to shoot and can probably generate a decent shot with half the time. 
 More time just gives them the optionality to turn down good shots for great shots. I use an inverse exponential model which tails off later in the shot clock. 
-</p>
 
 <center>
 ![Pelican](../images/nba/predicted_ppp.png)
@@ -93,14 +91,12 @@ This is a very hard decision, because players do not know the expected value in 
 Besides the one pass ahead calculation (which will have a lot of variance), most of the time a player just would not know the future value of this possession, so it brings a game theory question of what to do with the ball.
 </p>
 
-<p>
 A player can rely on the PPP trade-off curve to aid in his decision making process. 
 On a broad level, if a shot creates more expected value than the $E[PPP]$ at the given shot clock time, a player should probably shoot the ball.
 This provides his team with higher than average PPP which by definition is a winning strategy in the long run[ref]Teams can customize the PPP trade-off curve to add in their own percentages as they may be more or less efficient than league average[/ref].
 Using the same graph as above, I shaded the green area to represent optimal area to shoot and shall refer to this area as the green zone.
 Most of the time the optimal strategy is to take the first shot that is in the green area, as the expected value of the possession decreases the longer a team holds the ball.
 I say most, because as mentioned previously there are occasions where the extra pass leads to an increase in $E[PPP]$ and players need to weigh this trade off carefully.
-</p>
 
 <center>
 ![Pelican](../images/nba/top_ppp.png)
@@ -115,15 +111,13 @@ If the plays are successful in creating a clean look, the shot would instantly b
 A classic example is this <a href="https://gfycat.com/brightweirdcranefly" target="_blank">elevator screen</a> where three other Warriors players work in unison to get Curry an open look.
 </p>
 
-<p>
 Lets take a closer look at the elevator screen referenced above. Notice the shot clock is at 7 seconds during the initial pin-down and then Curry catches it with about 4 seconds left.
 A wide open Curry three is worth at least 1.2 points, but what if the Jazz switched and blew this play up? Then Klay would be isoed against Gordon Hayward 30 feet from the hoop with 3 seconds left on the shot clock, and I estimate this to probably be around .6 points.
 Using the PPP trade-off curve as a guideline, one can judge if the elevator screen was a good play call with 7 seconds left on the shot clock. 
 Let us assume that the elevator screen play takes 4 seconds to run. We can then formalize the question: 
 if the expected value of the elevator screen play plus the expected value of the 3 seconds after that are greater than the $E[PPP|\text{7 seconds}]$, the elevator screen is a good play to call.
-</p>
+<br>
 
-<p>
 Let us break the outcome of the elevator screen play down into two states, the state that Curry gets a clean look and the state that Curry does not so Thompson keeps the ball.
 This would lead us to a formula to calculate $E[\text{Elevator Screen}|7 seconds]$.
 
@@ -141,7 +135,6 @@ Maintaining the prior assumptions that a Curry three is worth 1.2 points, a Klay
 Looking at the graph below, I plot two lines $E[\text{Elevator Screen}|7 seconds]$ and $E[PPP|\text{7 seconds}]$ to see at which point the trade off occurs.
 So to answer the original question, if the Warriors can get the $P(ES)$ above .5, then the play is good, as they will be in the green zone.
 If they cannot then they should run a different play with 7 seconds left.
-</p>
 
 <center>
 ![Pelican](../images/nba/elevator_screen.png)

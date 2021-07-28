@@ -1,7 +1,7 @@
 Title: Bullish Hack
 Slug: wcres-hack
 Date: 2021-03-12
-Tags: $wCRES, altcoins
+Tags: DeFi, $wCRES, altcoins
 Summary: Can hacks be bullish?
 
 <h3>Background</h3>
@@ -31,6 +31,6 @@ Doing some quick back of the envelope calculations, on the WCRES/ETH pool, we se
 Market buying 200 ETH would create about 10% in price enhancement. 
 Judging by the message above and being conservative, the team plans to market buy 20 ETH each day for 10 days. 
 With ETH around 2k, this will create around 40k daily additional buy pressure; a huge portion of the total 200k traded volume.
-I expect \$WCRES to increase during this period and am putting on this trade at around $7 and .004 WCRES/ETH. 
+I expect $WCRES to increase during this period and am putting on this trade at around $7 and .004 WCRES/ETH. 
 </p>
 

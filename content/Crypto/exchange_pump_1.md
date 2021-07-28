@@ -15,7 +15,7 @@ Of these tier 1 exchanges, Binance and Coinbase have the most new coin offerings
 
 <h3>Listing Theory</h3>
 <p>
-I am not sure why the coins listed on these exchanges recieve this immediate price increase, but my two working hypothesis are:
+I am not sure why the coins listed on these exchanges receive this immediate price increase, but my two working hypothesis are:
 </p>
 
 <ul>
@@ -27,9 +27,9 @@ I am not sure why the coins listed on these exchanges recieve this immediate pri
 
 <h3>Numearie Example</h3>
 <p>
-Yesterday Coinbase announced the listing of Numearie, \$NMR, through its twitter account and on its blog. 
-Below is a picture of the \$NMR price before and after the tweet.
-We can see a rapid increase from \$20 to around \$60, before stabilizing at around \$50, over a 100% increase just due to the Coinbase listing action. 
+Yesterday Coinbase announced the listing of Numearie, $NMR, through its twitter account and on its blog. 
+Below is a picture of the $NMR price before and after the tweet.
+We can see a rapid increase from $20 to around $60, before stabilizing at around $50, over a 100% increase just due to the Coinbase listing action. 
 </p>
 
 <center>
@@ -49,14 +49,14 @@ Because the <a href="https://blog.coinbase.com/tagged/coinbase-pro" target="_bla
 
 <h3>Data</h3>
 <p>
-Data is pulled from the Coingecko <a href="https://www.coingecko.com/en/api" target="_blank">api</a>. Some coins like \$OXT and \$COMP are excluded, because Coingecko did not have sufficient clean data prior to announcement.
-I also excluded stable coins like \$DAI as they should be inherently pegged to the dollar and removed \$NMR, because there is not enough data.
+Data is pulled from the Coingecko <a href="https://www.coingecko.com/en/api" target="_blank">api</a>. Some coins like $OXT and $COMP are excluded, because Coingecko did not have sufficient clean data prior to announcement.
+I also excluded stable coins like $DAI as they should be inherently pegged to the dollar and removed $NMR, because there is not enough data.
 This leaves us with 22 new listings to examine.
 </p>
 <p>
 Below we see a group of plots, where the x-axis time is in days and time=0 is the listing date, 1 is be the day after listing and -1 is be the day before listing.
 The y-axis shows the cumulative return from time t=-2 to time t=2.
-We can see that there are clear outliers like \$LINK and \$BAND which increased over 50% on listing day, but most of the time there is still a clear positive (albeit smaller) gain from listing.
+We can see that there are clear outliers like $LINK and $BAND which increased over 50% on listing day, but most of the time there is still a clear positive (albeit smaller) gain from listing.
 </p>
 
 <center>
@@ -74,4 +74,4 @@ I have included the mean and median of these cumulative returns and we can see t
 <h3>Next Steps</h3>
 
 In the upcoming days, I will write two follow up articles about strategies that can be used in tandem to front-run these exchange listings. 
-The [first](./exchange-pump-2.html) will be how to identify coins which have a high probability of listing and the [second](./exchange-pump-3.html) will be how to guestimate when the coins will be listing.
+The [first](./exchange-pump-2.html) will be how to identify coins which have a high probability of listing and the [second](./exchange-pump-3.html) will be how to guesstimate when the coins will be listing.
