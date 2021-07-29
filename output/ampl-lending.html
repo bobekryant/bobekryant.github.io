@@ -17,16 +17,16 @@
 
 <meta name="keywords" content="crypto, $AMPL, Crypto, " />
 
-<meta property="og:title" content="Ampleforth "/>
-<meta property="og:url" content="./ampl-intro.html" />
-<meta property="og:description" content="Introduction to Ampleforth" />
+<meta property="og:title" content="Ampleforth on AAVE "/>
+<meta property="og:url" content="./ampl-lending.html" />
+<meta property="og:description" content="Ampleforth lending on AAVE is unique due to the rebase mechanisms." />
 <meta property="og:site_name" content="Bobe&#39;s Thoughts" />
 <meta property="og:article:author" content="Bobe Kryant" />
-<meta property="og:article:published_time" content="2020-07-17T00:00:00-04:00" />
-<meta name="twitter:title" content="Ampleforth ">
-<meta name="twitter:description" content="Introduction to Ampleforth">
+<meta property="og:article:published_time" content="2021-07-29T00:00:00-04:00" />
+<meta name="twitter:title" content="Ampleforth on AAVE ">
+<meta name="twitter:description" content="Ampleforth lending on AAVE is unique due to the rebase mechanisms.">
 
-        <title>Ampleforth  · Bobe&#39;s Thoughts
+        <title>Ampleforth on AAVE  · Bobe&#39;s Thoughts
 </title>
 
 
@@ -67,8 +67,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./ampl-intro.html">
-                Ampleforth
+            <a href="./ampl-lending.html">
+                Ampleforth on AAVE
             </a>
         </h1>
     </header>
@@ -77,51 +77,110 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>
-In the paper <a href="https://www.sciencedirect.com/science/article/pii/S1572308914000722" target="_blank">Synthetic Commodity Money</a>, George Selgin describes Bitcoin and other cryptocurrencies as synthetic commodities that address shortcomings traditional stores of value have. 
-Specifically fiat money has mismanagement issues (queue present day Federal Reserve money printer) and commodities have unexpected supply shocks. The issue with Bitcoin is that there is a fixed amount, so deflation is built in. 
-Another cryptocurrency with more elastic supply would have the benefits Bitcoin has as well as fix the deflationary issue. <a href="https://www.ampleforth.org" target="_blank">Ampleforth</a> tries to tackle this exact issue.
-</p>
+            <h3>Background</h3>
+<p>Over a year ago, I wrote an <a href="./ampl-intro.html">article</a> describing the properties of $AMPL. 
+To recap, $AMPL is a token which rebases to the <a href="https://www.bea.gov/data/personal-consumption-expenditures-price-index" target="_blank">2019</a> US dollar and price threshold is set to 5%.
+This means if the price is greater than 1.05<sup id="sf-ampl-lending-1-back"><a href="#sf-ampl-lending-1" class="simple-footnote" title="Everything is based on 2019 US dollars to remove inflation">1</a></sup>, the current price is corrected by 10% of the delta needed to hit the Target Price which is 1 and the supply is increased by that same amount.
+The exact opposite happens if the price is less than .95 (2019 US dollars) there will be a price increase and a supply decrease of the same percentage.
+If the price is outside the .95 to 1.05 price range, the daily rebase will occur at 2AM UTC.
+For example, if the current $AMPL price is 1.1, there will be a 1% rebase and the new $AMPL price will be 1.09 with a supply increase of 1%.</p>
+<h3>$AMPL on AAVE</h3>
 <p>
-Ampleforth, $AMPL, is one of the most interesting coins, because the supply of it changes daily based on the price. When the price is high, the wallet balances increases and when it is low the balance decreases.
-The main purpose of this rebase is to dampen the volatility of the price, giving it an intrinsic ability to be a stablecoin and price other assets off of Ampleforth.
-In essence, the larger the market cap, the more stable $AMPL price will be. The whitepaper can be found 
-<a href="https://drive.google.com/file/d/1I-NmSnQ6E7wY1nyouuf-GuDdJWNCnJWl/view" target="_blank">here</a>.
-</p>
-
-<h3>How the rebase works works</h3>
-<p>I will outline two specific scenarios. </p>
-<ol>
-  <li>Jordan buys 1 Ample for $1 and the price soon increases to $2. The price-supply equilibrium would 'split' the Amples and Jordan would end up with 2 Amples worth $1 each. The total net worth of Amples is constant, this is literally a stock split.</li>
-  <li>Say after this Jordan's Amples shoot down to $.5. Similarly, after the rebase period, he will end up with 1 Ample worth $1. This is akin to a reverse stock split</li>
-</ol>
-
-<p>The exact details are subject to change but currently if the price is above a target threshold the supply expands and if it is below the supply contracts. Specifically the current price target is one 
-<a href="https://www.bea.gov/data/personal-consumption-expenditures-price-index" target="_blank">2019</a> US dollar and price threshold is at 5%.
-The rebalance occurs gradually over 10 days to smooth out the supply changes, but the key here is that this process is memory-less. The previous days supply change does not matter when calculating the current days supply change. Whatever the supply should be is just adjusted by <span class="math">\(\frac{1}{10}\)</span> everyday.
-More details can be found in this <a href="https://medium.com/ampleforth/the-ampleforth-chainlink-oracle-integration-is-going-live-16053ccdebd5" target="_blank">article</a> written by the founder.</p>
-<h3>Trading Implications</h3>
-<p>
-This rebalance feature has massive implications for the trading world. It can be very harmful to leave stale bids as they can easily get swept from traders gaming the rebase period which occurs daily at 02:00 UTC. Also it should be possible to predict the rebase direction and benefit from front-running this equilibrium point.
+After a months long <a href="https://governance.aave.com/t/proposal-add-support-for-ampl/854" target="_blank">forum proposal</a> to add AMPL to AAVE as a borrowing currency. <a href="https://aave.github.io/aip/AIP-12/" target="_blank">AIP-12</a> was <a href="https://twitter.com/AmpleforthOrg/status/1419041391590592512" target="_blank">implemented</a>.
+Due to the nature of AAVE debt tokens combined with the rebasing mechanism of $AMPL, positive rebases can create arbitrage opportunities for the borrowers at the expense of the lenders.
+Suppose there was 1000 $AMPL in AAVE and Max borrowed all 1000.
+If rebase is 5%, Max now has 1050 $AMPL in his inventory but only has to return 1000 (plus interest).
+The issue is that the interest AAVE charges is less than the rebase return so Max gets risk free rebases as long as AMPL is above a dollar. 
+When the rebases become negative, Max can simply return all the AMPL he borrowed and the lenders are on the hook for the negative rebases but do not profit as much for the positive rebases essentially giving Max a free call option.
+This exact scenario was <a href="https://governance.aave.com/t/proposal-add-support-for-ampl/854/80" target="_blank">described</a> in the forums a <a href="https://governance.aave.com/t/proposal-add-support-for-ampl/854/87" target="_blank">few</a> times.
+Fast forward to the launch and we see 100% utilization on the pool, because of this exact positive rebase scenario.
 </p>
 
-<h3>Investing Implications</h3>
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/ampl_borrow.png">
+</center><p></p>
 <p>
-Unlike most crypto coins, the price of $AMPL is really secondary to the market cap due to the rebase protocol. Below is a market cap and price over the past month from <a href="https://coinmarketcap.com/currencies/ampleforth/" target="_blank">coinmarketcap</a>.
-We can see that while the price increased from $1 to around $2.3, around a 1.3x increase. However the market cap during this same period increased from 6 million to 120 million, a 20x increase and the true value of the investment during this period. 
+The AAVE interest rate <a href="https://docs.aave.com/risk/liquidity-risk/borrow-interest-rate#interest-rate-model" target="_blank">formula</a> (for borrowing) is below.
+When the utilization is below a certain threshold the borrow rate increases slowly, but when utilization is above this number, there is a sharpe increase of borrow rate which we can see in the plot below which is capped at around 48%.
+Currently the base rate is set to 0, the optimal utilization is 90%, slope 1 is 3% and slope 2 is 45% giving us a max APY of 48% and max APR of around 39% at 100% utilization.
 </p>
 
-<p><center>
-<img alt="Pelican" src="../images/ampl_mcap.png">
-</center></p>
-<h3>Additional Thoughts</h3>
+<div class="math">\begin{align}
+    &amp;\begin{cases}
+      R_t = R_0 + \frac{U_t}{U_{\text{optimal}}}R_{\text{slope1}} &amp; \text{U &lt; } U_{\text{optimal}}\\
+      R_t = R_0 + R_{\text{slope1}} + \frac{U_t - U_{\text{optimal}}}{1 - U_{\text{optimal}}}R_{\text{slope2}} &amp; \text{U} \geq U_{\text{optimal}}\\
+    \end{cases}    \\
+&amp; \text{where}  \\
+&amp; U = \text{Utilization Rate} \\
+&amp; U_{\text{optimal}} = \text{Optimal Utilization Rate} \\
+&amp; R_t = \text{Interest Rate} \\
+&amp; R_0 = \text{Base Rate} \\
+&amp; R_1 = \text{Slope 1 Rate} \\
+&amp; R_2 = \text{Slope 2 Rate} \\
+\end{align}</div>
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/ampl_aave_borrow_rate_0.png">
+</center><p></p>
+<h3>Rebase vs AAVE</h3>
 <p>
-Due to the rebase mechanism, $AMPL should have very unique returns characteristics, uncorrelated with other assets both in the traditional space and the crypto space. 
-I believe that it is the ultimate momentum asset because as long as the price stays above $1 the supply will increase. People will see that their net worth has gone up and buy more $AMPL.
-Theoretically people will sell the extra $AMPL for every new issuance, but I do not think that will happen. People will chase returns and put even more money into $AMPL to receive a larger split.
-In a market prone to rapid bull runs, it is against human nature to sell. They will in fact buy more $AMPL, leading to an increase in $AMPL supply and potentially causing a large feedback loop.
-I am not advocating for the fundamentals of $AMPL, rather I believe that the built in mechanics give it a shot to multiply a lot more than some of the other smallcap crypto coins.
-I believe return distribution should have a lot higher right skew and kurtosis than a normal smallcap.
+Before we look at the rebase rates, is important to make the distinction between APY and APR.
+APY is the continuously compounding annual rate while APR stands for annual percentage rate which does not compound.
+AAVE reports yield in APY while AMPL rebase is in APR so it is a little hard to compare the two. 
+For reference, the 48% max APY on AAVE (for $AMPL) translates to around a 39.2% APR.
+When comparing the AAVE rates with the AMPL rates, we will be using APR.
+</p>
+
+<p>
+Since $AMPL was introduced into AAVE on July 24th, there have been 5 rebases, 4 of which were positive while this most recent one was negative.
+In that time, the <a href="https://www.coin-tools.com/ampl/ampl-rebase-history/" target="_blank">rebase gains </a> were about 16.94% APR while AAVE interest cost cumulatively 0.537% APR interest<sup id="sf-ampl-lending-2-back"><a href="#sf-ampl-lending-2" class="simple-footnote" title="This is assuming 100% utilization, but the actually utilization during negative rebases is less than that">2</a></sup>.
+In addition, the deposit APR received is even less than 0.17% APR as AAVE takes a 20% cut. 
+Assuming a 100% borrow rate, and the fact that AAVE has no stable borrows, the deposit APR is 80% of the funding paid so it would be around 0.429% instead of 0.537%
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/ampl_aave_gains_comp.png">
+</center><p></p>
+<p>
+Due to the large delta of the rates that a few foresaw, there is a a new <a href="https://governance.aave.com/t/arc-raise-ampl-maximum-interest-rate/4996" target="_blank">governance thread</a> to discuss potential solutions.
+The first suggestion would be to change the parameters to the following:
+</p><ul>
+  <li>Optimal Utilization = 75%</li>
+  <li>Slope1 = 2%</li>
+  <li>Slope2 = 10,000%</li>
+</ul>
+The proposal turns borrowing above the utilization rate extremely aggressive and would be more than 200x increase in APY and 11.8x increase in APR over the current parameters at 100% utilization. 
+We end with a max borrow APR of around 464% or 1.27% daily. 
+<p></p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/ampl_aave_borrow_rate_1.png">
+</center><p></p>
+<p>
+What if we started with this new formula from the first rebase on July 25th? 
+Assuming 100% utilization, we see that the borrowers paid around 6.36% interest while the lenders received around 5%, still less than 33% of what they would get from holding.
+While this proposal is a step in the right direction, the overarching problem is that the suppliers of $AMPL in AAVE will keep on under preforming in periods of high rebase.
+It remains to be seen how much is borrowed during periods of negative rebase, but I doubt that it will be enough to cover the delta just in these past few days.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/ampl_aave_gains_comp_proposal.png">
+</center><p></p>
+<h3>Conclusion</h3>
+<p>
+$AMPL lenders in AAVE are giving up a lot of the upside performance during periods of high rebase and should consistently under-preform a buy and hold approach.
+Given that $AMPL cannot be used as collateral, I am not sure why anyone would put $AMPL in AAVE. 
+Currently we are going to have another negative rebase and we can see that there currently is only 43% utilization rate, a number I expect to rapidly drop as we approach the 2AM UTC rebase.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/ampl_negative_rebase.png">
+</center><p></p>
+<p>
+Given that we can only tweak interest rate, base rate, slope rate 1, and slope rate 2, I am not sure there are many alternatives other than making the parameters ramp up more.
+Some other suggestions would be to drop the optimal utilization even further and increase slope 2 even more but honestly that is not going to change much.
+The lenders need some way so that the borrows do not get a risk free look at the rebase. 
+This is not possible in AAVE as it stands but adding some fixed term rate could be useful here.
+So before people know if the rebase is positive or negative, sell locked AMPL rates for the next n days.
 </p>
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -185,7 +244,7 @@ I believe return distribution should have a lot higher right skew and kurtosis t
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>
+</script><ol class="simple-footnotes"><li id="sf-ampl-lending-1">Everything is based on 2019 US dollars to remove inflation <a href="#sf-ampl-lending-1-back" class="simple-footnote-back">↩</a></li><li id="sf-ampl-lending-2">This is assuming 100% utilization, but the actually utilization during negative rebases is less than that <a href="#sf-ampl-lending-2-back" class="simple-footnote-back">↩</a></li></ol>
 
 
              
@@ -204,7 +263,7 @@ I believe return distribution should have a lot higher right skew and kurtosis t
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-07-17T00:00:00-04:00">Fri 17 July 2020</time>
+            <time itemprop="dateCreated" datetime="2021-07-29T00:00:00-04:00">Thu 29 July 2021</time>
             <h4>Category</h4>
             <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
             <h4>Tags</h4>

@@ -11,7 +11,8 @@ Another cryptocurrency with more elastic supply would have the benefits Bitcoin 
 </p>
 <p>
 Ampleforth, $AMPL, is one of the most interesting coins, because the supply of it changes daily based on the price. When the price is high, the wallet balances increases and when it is low the balance decreases.
-The main purpose of this rebase is to dampen the volatility of the price, giving it an intrinsic ability to be a stablecoin and price other assets off of Ampleforth. In essence, the larger the market cap, the more stable $AMPL price will be. The whitepaper can be found 
+The main purpose of this rebase is to dampen the volatility of the price, giving it an intrinsic ability to be a stablecoin and price other assets off of Ampleforth.
+In essence, the larger the market cap, the more stable $AMPL price will be. The whitepaper can be found 
 <a href="https://drive.google.com/file/d/1I-NmSnQ6E7wY1nyouuf-GuDdJWNCnJWl/view" target="_blank">here</a>.
 </p>
 

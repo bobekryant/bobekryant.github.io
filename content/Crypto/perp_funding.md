@@ -182,7 +182,7 @@ In addition, there is a cap on the minimum and maximum funding rate of -0.75% an
 </p>
 
 \begin{align}
-F &= Clamp(P + Clamp(I - P, -0.05\%, 0.05\%), -0.75%, .75%)\\
+F &= Clamp(P + Clamp(I - P, -0.05\%, 0.05\%), -0.75\%, .75\%) \\
 \text{where} & \\
 F &= \text{Funding Rate} \\
 P &= \text{Premium Rate} \\
