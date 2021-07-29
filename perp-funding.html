@@ -22,7 +22,7 @@
 <meta property="og:description" content="Understand and compare funding mechanisms of various platforms" />
 <meta property="og:site_name" content="Bobe&#39;s Thoughts" />
 <meta property="og:article:author" content="Bobe Kryant" />
-<meta property="og:article:published_time" content="2021-07-25T00:00:00-04:00" />
+<meta property="og:article:published_time" content="2021-07-28T00:00:00-04:00" />
 <meta name="twitter:title" content="Perpetual Futures Funding ">
 <meta name="twitter:description" content="Understand and compare funding mechanisms of various platforms">
 
@@ -127,7 +127,7 @@ B &amp;= \text{Interest Base} \\
 Q &amp;= \text{Interest Quote} \\
 \end{align}</div>
 <p>
-The premia portion is based around the delta between the trade price and the mark price but there are a few twists which impact this calculation.
+The premia portion is based around the delta between the trade price and the mark price, but there are a few twists which impact this calculation.
 Bitmex introduces a concept called Fair Price Marking to try and reduce liquidations by setting the Mark Price to be equal to the Fair Price instead of the Last Price.
 Impact Bid Price and Impact Ask Price which are tied to how thick the order book is.
 Impact Bid Price is average fill price if 10k USD<sup id="sf-perp-funding-5-back"><a href="#sf-perp-funding-5" class="simple-footnote" title="This is known as Impact Notional Value and is a parameter that varies product by product as well as exchange by exchange.">5</a></sup> were sold while Impact Ask Price is the average fill price if 10k USD were bought<sup id="sf-perp-funding-6-back"><a href="#sf-perp-funding-6" class="simple-footnote" title="These numbers are for all perpetual futures, other impact numbers will vary">6</a></sup>.
@@ -149,7 +149,7 @@ TUF &amp;= \text{Time Until Funding} \\
 FI &amp;= \text{Funding Interval} \\
 \end{align}</div>
 <p>
-Finally putting it all together we have the funding rate which is a combination of the premium plus a cap based on difference between interest rate and premium.
+Finally, putting it all together we have the funding rate which is a combination of the premium plus a cap based on difference between interest rate and premium.
 In addition, note that the premium rate and interest rate are TWAPs over the 8 hour interval.
 </p>
 
@@ -169,22 +169,21 @@ The clamp is interesting it inherently locks the funding rate to .1% (every 8 ho
 </center><p></p>
 <p>
 To recap, Bitmex funding is paid every 8 hours, 4UTC, 12UTC and 20UTC.
-The funding price is derived from linear formula with two main portions a constant interest rate (.1%) and a changing premium rate.
+The funding price is derived from a linear formula with two main portions being a constant interest rate (.1%) and a changing premium rate.
 The premium rate is a proxy for the delta between the futures price and the index price.
 </p>
 
 <h3>Binance Calculation</h3>
 <p>
 Binance is the most popular futures exchange with volumes that dwarf competitors and a vast array of altcoins to choose from.
-All of these exchanges have similar formulas with slight adjustments. 
-<a href="https://www.binance.com/en/support/faq/360033525031" target="_blank">Binance</a> has the exact same interest rate formula and funding rate formula, but the premia rate formula is slightly different.
+All of these exchanges have similar formulas with slight adjustments and <a href="https://www.binance.com/en/support/faq/360033525031" target="_blank">Binance</a> is no different as it has the exact same interest rate formula and funding rate formula, but the premia rate formula is slightly different.
 </p>
 
 <p>
-Here there is no mention of the fair basis and a decay of the previous funding rate. 
-In addition the IBP and IAP look for the average fill price if 25k USD were sold/bought as opposed to 10k from Bitmex.
-This is also more dynamic than Bitmex as Bitmex is 10k impact for all perps while Binance is more realistic and adjust this parameter based on volume and market cap.
-Finally. Binance also has 8 hour payments but pays at 0UTC, 8UTC, and 16UTC.
+The main difference is that there is no mention of the fair basis thus no decay of the previous funding rate. 
+In addition, the IBP and IAP calculate the average fill price if the impact notional was 25k USD as opposed to 10k from Bitmex.
+This is also more dynamic than Bitmex as Bitmex is 10k impact for all perpetual futures while Binance is more realistic and adjust this parameter based on volume and market cap of various coins.
+Finally, Binance also has 8-hour payments but this payment occurs at 0UTC, 8UTC, and 16UTC.
 </p>
 
 <div class="math">\begin{align}
@@ -198,7 +197,7 @@ SP &amp;= \text{Spot Price} \\
 \end{align}</div>
 <h3>FTX Calculation</h3>
 <p>
-One of the fastest growing exchanges is FTX and they have a unique <a href="https://help.ftx.com/hc/en-us/articles/360024780511-Complete-Futures-Specs" target="_blank">approach</a> towards funding rates.
+One of the fastest growing exchanges is FTX and they a more unique <a href="https://help.ftx.com/hc/en-us/articles/360024780511-Complete-Futures-Specs" target="_blank">approach</a> towards funding rates.
 Funding is calculated hourly and is just a simple TWAP of the percentage difference between market price and index.
 Here market price is the median of last, best bid, and best offer. 
 </p>
@@ -213,8 +212,8 @@ MP &amp;= \text{Market price which is median of last, best bid and best offer} \
 IP &amp;= \text{Index Price} \\
 \end{align}</div>
 <p>
-It is important to note here that there is no .1% interest rate built in like Bitmex and Binance.
-FTX rates should be lower than the other two due to this tidbit and thus and more favorable to long traders.
+The biggest difference is that there is no .1% interest rate built in like Bitmex and Binance.
+FTX rates should be lower than the other two due to this tidbit and thus and more favorable to long speculators.
 Looking at the graph below we can indeed confirm this case as FTX has a substantially lower funding rate.
 </p>
 
@@ -223,15 +222,15 @@ Looking at the graph below we can indeed confirm this case as FTX has a substant
 </center><p></p>
 <h3>Perpetual Protocol Calculation</h3>
 <p>
-Moving on to the decentralized exchanges, there are two major ones, Perpetual Protocol (PERP) and dYdX.
-Currently PERP runs on the xDai layer 2 chain with a <a href="https://medium.com/perpetual-protocol/a-deep-dive-into-our-virtual-amm-vamm-40345c522eeb" target="_blank">vAMM mechanism</a> which uses the same xy=k formula as Uniswap, as a price discovery mechanism but there is no actual spot trading.
-There is USDC collateral backing the pool which will be paid out for profitable trades.
+There are two major ones decentralized futures exchanges, Perpetual Protocol (PERP) and dYdX.
+Currently PERP runs on the xDai layer 2 chain with a <a href="https://medium.com/perpetual-protocol/a-deep-dive-into-our-virtual-amm-vamm-40345c522eeb" target="_blank">vAMM mechanism</a> which uses the same xy=k formula as Uniswap.
+That formula is a price discovery mechanism but there is no actual spot trading as there is USDC collateral backing the pool which will be paid out for profitable trades.
 </p>
 
 <p>
-The funding formula is the exact same as FTX, funding price is also paid hourly, but the index price is from Chainlink.
+The funding formula is the exact same as FTX, amd funding price is also paid hourly, but the index price is from Chainlink as opposed to FTX median price due to there being no orderbook.
 Because they have the same formula we can easily compare<sup id="sf-perp-funding-7-back"><a href="#sf-perp-funding-7" class="simple-footnote" title="Note that PERP only launched December of 2020">7</a></sup> the cumulative funding for the two. 
-However we can easily see a stark difference as PERP funding has been negative this entire time while FTX is positive.
+However, we can easily see a stark difference as PERP funding has been negative this entire time while FTX is positive.
 This means that the $BTC price on PERP is consistently lower than that on FTX and the shorts pay the longs.
 The dichotomy hints that people are shorting BTC on chain much more actively than on the centralized exchange.
 </p>
@@ -241,12 +240,12 @@ The dichotomy hints that people are shorting BTC on chain much more actively tha
 </center><p></p>
 <h3>dYdX Calculation</h3>
 <p>
-dYdx is the other popular decentralized futures exchange and its <a href="https://help.dydx.exchange/en/articles/4797443-perpetual-funding-rate" target="_blank">funding formula</a> is almost identical to Binance just the calculations Impact Bid Price and Impact Ask Price have different amounts of impact notional value.
+dYdX is the other popular decentralized futures exchange and its <a href="https://help.dydx.exchange/en/articles/4797443-perpetual-funding-rate" target="_blank">funding formula</a> is almost identical to Binance, but the calculations Impact Bid Price and Impact Ask Price have different amounts of impact notional value.
 In addition, there is a cap on the minimum and maximum funding rate of -0.75% and 0.75% respectively which can be seen by the double clamp formula below.
 </p>
 
 <div class="math">\begin{align}
-F &amp;= Clamp(P + Clamp(I - P, -0.05\%, 0.05\%), -0.75%, .75%)\\
+F &amp;= Clamp(P + Clamp(I - P, -0.05\%, 0.05\%), -0.75\%, .75\%) \\
 \text{where} &amp; \\
 F &amp;= \text{Funding Rate} \\
 P &amp;= \text{Premium Rate} \\
@@ -264,7 +263,7 @@ This could also be due to the market microstructure of the players as the DEXs a
 <h3>Comparisons</h3>
 <p>
 There are a few other altcoins which are on all 4 exchanges. 
-Some of these do not have that much data as PERP and DYDX are consistently putting new markets out but below we look at the $BTC, $ETH, $LINK, and $SUSHI markets which all have at least a few months of data.
+Some of these coins do not have that much data as PERP and DYDX just launched and are still putting new markets out but below we compare at the $BTC, $ETH, $LINK, and $SUSHI markets which all have at least a few months of data.
 There is vast divergence between the exchanges for some reason PERP seems to be consistently lower funding for some of the $BTC, $ETH, and $LINK, but it is the highest for $SUSHI.
 </p>
 
@@ -282,7 +281,7 @@ The liquidation rules ultimately tie back into how much leverage and size one ca
 
 <h3>Conclusion</h3>
 <p>
-Due to the intricacies of calculating funding rates, the microstructure of the markets, and the different liquidation risks, each exchange has vastly different funding rates.
+Due to the intricacies of calculating funding rates, the microstructure of the markets, and the different liquidation risks, each exchange has differing funding rates.
 If one were to implement strict risk management rules, spreading between the exchanges and collecting the funding rates could be a promising delta neutral trade.
 </p>
 
@@ -366,7 +365,7 @@ If one were to implement strict risk management rules, spreading between the exc
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2021-07-25T00:00:00-04:00">Sun 25 July 2021</time>
+            <time itemprop="dateCreated" datetime="2021-07-28T00:00:00-04:00">Wed 28 July 2021</time>
             <h4>Category</h4>
             <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
             <h4>Tags</h4>
