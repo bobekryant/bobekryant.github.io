@@ -8,7 +8,7 @@ Summary: How the basketball posts in this blog will be structured.
 <p>
 Given the name of the blog, its fair to say that I am a huge NBA fan.
 I have been watching the NBA for over 2 decades and saw first hand the rise of analytics in basketball.
-Statistical modelling has greatly impacted basketball strategy from drafting players all the way choosing what play to run.
+Statistical modeling has greatly impacted basketball strategy from drafting players all the way choosing what play to run.
 However, there is still a long way to go as there are many problems with the current state of basketball analytics.
 They often times only paint half the picture, and people just run with the result, rather than taking a moment to reflect on the short comings of these stats.
 <!--- On the exact opposite end of the spectrum, some people refuse to listen to any analytics, regardless of the efficacy. -->
@@ -20,7 +20,7 @@ They often times only paint half the picture, and people just run with the resul
 <p>
 The best example I can think of where statisticians blindly followed the data and jumped to a conclusion is the hot-hand theory. 
 The hot-hand theory is when a person experiences a successful outcome and then has a greater chance of success in future attempts.
-In basketball, it means there is positive autocorrelation with shot-making percentages. I am more likely to hit the next shot if I have already made a few, whether this is do to confidence, focus, or some other unexplainable reason.
+In basketball, it means there is positive auto-correlation with shot-making percentages. I am more likely to hit the next shot if I have already made a few, whether this is do to confidence, focus, or some other unexplainable reason.
 </p>
 
 <p>

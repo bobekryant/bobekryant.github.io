@@ -7,7 +7,7 @@ Summary: How valuable is each second on the shot clock? Should all seconds be va
 <h3>Introduction</h3>
 <p>
 Basketball analytics have come a long way in recent years. A lot of work has gone into "efficient basketball" (dubbed Morey-ball by some) on how to optimize shot distribution.
-This has led to teams sacrificing the midrange shots for a layup or a three-pointer.
+This has led to teams sacrificing the mid-range shots for a layup or a three-pointer.
 In this post, I wish to do a deep dive into a lesser explored topic: the shot clock and how it can be used as a decision making tool to play optimal basketball.
 For instance, a semi-contested three with 20 seconds left on the clock is probably not an ideal shot, but what if there is only 5 seconds left on the clock?
 Is there a way quantify shot quality as it relates to the shot clock?

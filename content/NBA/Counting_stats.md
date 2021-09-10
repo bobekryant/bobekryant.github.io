@@ -44,7 +44,7 @@ More specifically, tracking data can calculate how close the nearest defender is
 <p>
 I bring up Thompsons's backcourt mate Steph Curry, because he shoots many of his three pointers off the bounce which do not require a screener. And because he creates more of his shots from a 1-on-1 perspective, his style is very different than Klay's, like how the two assets have different paths but all lead to the same net outcome. 
 Curry's 1-on-1 playing style (although he does have off ball screens and pick and rolls) creates a more accurate representation of his 3-point shooting percentage when looking at the counting stats of 3PA and 3PM, because the screener is not being accounted for. Klay Thompson shooting around 42% (a very elite number) from three during his entire career, however the counting stats have inflated his number.
-Suppose that Zaza Pachulia (and previously Andrew Bogut) sets an illegal screen that gets called 10% of the time resulting in a turnover. Instead of hitting 42 threes in 100 posessions, Thompson would instead hit around 38 threes in 95 attempts (but 100 possessions) giving him a real shooting percentage of 38%. 
+Suppose that Zaza Pachulia (and previously Andrew Bogut) sets an illegal screen that gets called 10% of the time resulting in a turnover. Instead of hitting 42 threes in 100 possessions, Thompson would instead hit around 38 threes in 95 attempts (but 100 possessions) giving him a real shooting percentage of 38%. 
 This are all made up numbers and a moving screen should not be 100% the shooters or the screeners fault, but this example is just an illustration of how counting stats, while they give a good summary, are not entirely accurate in the picture they paint. 
 </p>
 <p>

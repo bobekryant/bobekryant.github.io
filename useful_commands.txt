@@ -8,6 +8,8 @@ git add .
 git commit -m "update blog"
 git push origin content
 
+
+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
 ----
 need to add following in base.html of themes
 MathJax.Hub.Config({

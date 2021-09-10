@@ -15,18 +15,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="NBA, analytics, NBA, " />
+<meta name="keywords" content="crypto, Crypto, " />
 
-<meta property="og:title" content="Basketball Introduction "/>
-<meta property="og:url" content="./basketball-introduction.html" />
-<meta property="og:description" content="How the basketball posts in this blog will be structured." />
+<meta property="og:title" content="Intraday Seasonality in Crypto "/>
+<meta property="og:url" content="./time-of-day.html" />
+<meta property="og:description" content="Different hours have different characteristics" />
 <meta property="og:site_name" content="Bobe&#39;s Thoughts" />
 <meta property="og:article:author" content="Bobe Kryant" />
-<meta property="og:article:published_time" content="2020-07-09T00:00:00-04:00" />
-<meta name="twitter:title" content="Basketball Introduction ">
-<meta name="twitter:description" content="How the basketball posts in this blog will be structured.">
+<meta property="og:article:published_time" content="2021-09-05T00:00:00-04:00" />
+<meta name="twitter:title" content="Intraday Seasonality in Crypto ">
+<meta name="twitter:description" content="Different hours have different characteristics">
 
-        <title>Basketball Introduction  · Bobe&#39;s Thoughts
+        <title>Intraday Seasonality in Crypto  · Bobe&#39;s Thoughts
 </title>
 
 
@@ -67,8 +67,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="./basketball-introduction.html">
-                Basketball Introduction
+            <a href="./time-of-day.html">
+                Intraday Seasonality in Crypto
             </a>
         </h1>
     </header>
@@ -77,53 +77,90 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h3>Introduction</h3>
+            <h3>Background</h3>
 <p>
-Given the name of the blog, its fair to say that I am a huge NBA fan.
-I have been watching the NBA for over 2 decades and saw first hand the rise of analytics in basketball.
-Statistical modeling has greatly impacted basketball strategy from drafting players all the way choosing what play to run.
-However, there is still a long way to go as there are many problems with the current state of basketball analytics.
-They often times only paint half the picture, and people just run with the result, rather than taking a moment to reflect on the short comings of these stats.
-<!--- On the exact opposite end of the spectrum, some people refuse to listen to any analytics, regardless of the efficacy. -->
-<!--- Like most things in life, the right blend is somewhere in the middle. -->
+The SPY was created in 1993 and it is an ETF tracking the S&amp;P 500 which has gone up over 10x from then till present day. 
+What if I told you that all those gains occurred after hours<sup id="sf-time-of-day-1-back"><a href="#sf-time-of-day-1" class="simple-footnote" title="After the market closed from 4 PM EST till 9:30 AM EST the following day.">1</a></sup> and the performance during the market open was basically flat?
+Below is a chart of this phenomenon. 
+We can steady gains in the after market periods up until Covid, when we were getting news bombs at night from China, thus tanking the market during the overnight period. 
+That ended up being a temporary blip and the after hours gains started to come back after a few weeks. 
+More importantly, from the inception of the SPY till present day, the cumulative performance of the SPY when the market<sup id="sf-time-of-day-2-back"><a href="#sf-time-of-day-2" class="simple-footnote" title="9:30 AM EST till 4:00 PM EST">2</a></sup> is less than 1%.
 </p>
 
-<h3>Hot Hand Theory</h3>
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/spy_day_night.png">
+</center><p></p>
 <p>
-The best example I can think of where statisticians blindly followed the data and jumped to a conclusion is the hot-hand theory. 
-The hot-hand theory is when a person experiences a successful outcome and then has a greater chance of success in future attempts.
-In basketball, it means there is positive auto-correlation with shot-making percentages. I am more likely to hit the next shot if I have already made a few, whether this is do to confidence, focus, or some other unexplainable reason.
+This abnormal performance holds in all types of markets, from individual stocks in various sectors to the equity indices.  
+Some hypothesis are that the after hours are when news (earnings, buyouts) comes out and these are typically bullish events. 
+Others relate to the market microstructure and the fact that there are tighter <a href="https://www.cmegroup.com/education/files/eq-trading-hours.pdf" target="_blank">circuit breakers</a> after hours.
+A more in-depth examination can be found in <a href="https://www.krannert.purdue.edu/faculty/hgulen/Day_and_Night.pdf" target="_blank">these</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1625495" target="_blank">papers</a>.
 </p>
 
+<h3>Crypto Sessions</h3>
 <p>
-For years, statisticians and media members quoted a <a href="https://www.sciencedirect.com/science/article/abs/pii/0010028585900106?via%3Dihub
-" target="_blank">paper</a> by Gilovich, Vallone, and Tversky which claimed that the hot hand did not exist.
-By looking at sequences of shooting, the authors concluded that the various 'hot hand' streaks were nothing more than random sequences of chance.
-</p>
+Crypto trades 24/7/365 but not all hours have the same market dynamics as the participants change as we shift from Europe to US to Asia sessions.
+The trading periods are as follows<sup id="sf-time-of-day-3-back"><a href="#sf-time-of-day-3" class="simple-footnote" title="These times actually follow the Bitmex perp funding schedule">3</a></sup>:
+
+</p><ul>
+  <li>4:00 - 12:00 UTC is Europe Session</li>
+  <li>12:00 - 18:00 UTC is America Session</li>
+  <li>18:00 - 4:00 UTC is Asia Session</li>
+</ul>
+<p></p>
 
 <p>
-Players and coaches were shocked at this conclusion. 
-From a person who has been playing basketball at various levels since I was 5, I could not accept this conclusion either.
-I was doing mental gymnasts trying to reconcile what I was feeling and the data.
-This was a very controversial debate with people who played basketball on one side arguing against those who analyzed the data.
-Most of the basketball community had accepted the paper as gospel and the hot hand was renamed the hot hand fallacy.
+An interesting study is to break down returns by time period and compare to see if some time periods are more bullish or bearish than others.
+We can see if Asia session <a href="https://twitter.com/AltcoinPsycho/status/1350705185761456129" target="_blank">bearish</a> bias is warranted. 
+Below is the cumulative return chart of $BTC broken down into the three sessions above. We can see that the Asian session had the worst performance out of the three only increasing 40% while both the US and European sessions had over 80% increases.
+Counter intuitively, the China mining ban had the largest negative impact on US hours not Asian hours. Before the ban in April, Asian session was tracking with the Europe session but since then they have been on divergent paths.
 </p>
 
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/btc_sessions.png">
+</center><p></p>
 <p>
-Finally, in 2014 the NBA got tracking data and the hot hand fallacy was debunked.
-A <a href="http://www.sloansportsconference.com/wp-content/uploads/2014/02/2014_SSAC_The-Hot-Hand-A-New-Approach.pdf" target="_blank">paper</a> using tracking data
-was able to control for shot difficulty and disprove the hot hand fallacy.
-Players who are 'hot' shoot their next shot from further away and face a tougher defense, lowering the expected value of the shot.
-The conclusion is that players who are outperforming will continue to do so, conditional on the difficulty of their present shot. 
+We can extend this study to other coins like $ETH and $SOL. It is interesting to see that $ETH has actually gone down in Asian hours while the US hours is extremely bullish. 
+The Asia $ETH session looks like a TWAP sell algo which could mean miners hedging and selling either coins as most of the miners are in Asia. 
+The dichotomy between the sessions is even starker on $SOL. 
+There is a relentless US session bid that dwarfs any other time period and my best guess is that it is institutions/VC.
 </p>
 
-<h3>The Blog</h3>
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/eth_sessions.png">
+</center><p></p>
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/sol_sessions.png">
+</center><p></p>
 <p>
-Similarly to the hot hand fallacy, our current statistics are have flaws when trying to describe the game, which leads to people often drawing wrong conclusions from the data.
-When people analyze a game, they often look at the box score which will often have around 15 categories, ranging from minutes to FG to points.
-I wish to tackle basketball analysis from first principles and examine the pros and cons of each box score statistic.
-I will do deep dives on new statistics that are important in describing the outcome of a game and show how these new metrics can help create optimal game play. 
+We can extend this study to other coins like $ETH and $SOL. It is interesting to see that $ETH has actually gone down in Asian hours while the US hours is extremely bullish. 
+The Asia $ETH session looks like a TWAP sell algo which could mean miners hedging and selling either coins as most of the miners are in Asia. 
+The dichotomy between the sessions is even starker on $SOL. 
+There is a relentless US session bid that dwarfs any other time period and my best guess is that it is institutions/VC.
 </p>
+
+<h3>When do Apes Ape?</h3>
+<p>
+From the previous plots it would seem that the US session is when all the gains are made and the Asia session is when they are lost. 
+This changes from coin to coin as oftentimes it is the Europe session that has massive gains, but for most of the coins the Asian session is the worst session in terms of performance and the difference is stark.
+Below are some other L1s which exhibit insane gains during the Europe session when compared to other sessions. 
+The differences are so stark, I went back to double check if there was a bug in the code.
+Both $AVAX and $EGLD just repeatedly rip during one session and stay still for the other two, almost like there is a TWAP bid every Europe session, but goes into profit taking mode outside the European hours.
+</p>
+
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/avax_sessions.png">
+</center><p></p>
+<p></p><center>
+<img alt="Pelican2" src="../images/crypto/egld_sessions.png">
+</center><p></p>
+<h3>Conclusion</h3>
+<p>
+Here we examined some time of day discrepancies between various assets. Some assets like $ETH and $SOL seem to only move during the US hours, while others move during the European session. 
+This information can be used in a variety of ways from outright trading to risk management (increasing/decreasing leverage as the potential moves are more/less likely in certain times).
+The article focuses mainly on intraday seasonality, but the same concept can be extended to various days of the week and days of the month. 
+In addition, a next step could be to condition on some funding and OI data to see how the results change.
+</p><ol class="simple-footnotes"><li id="sf-time-of-day-1">After the market closed from 4 PM EST till 9:30 AM EST the following day. <a href="#sf-time-of-day-1-back" class="simple-footnote-back">↩</a></li><li id="sf-time-of-day-2">9:30 AM EST till 4:00 PM EST <a href="#sf-time-of-day-2-back" class="simple-footnote-back">↩</a></li><li id="sf-time-of-day-3">These times actually follow the Bitmex perp funding schedule <a href="#sf-time-of-day-3-back" class="simple-footnote-back">↩</a></li></ol>
 
 
              
@@ -142,16 +179,13 @@ I will do deep dives on new statistics that are important in describing the outc
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-07-09T00:00:00-04:00">Thu 09 July 2020</time>
+            <time itemprop="dateCreated" datetime="2021-09-05T00:00:00-04:00">Sun 05 September 2021</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#nba-ref">NBA</a>
+            <a class="category-link" href="./categories.html#crypto-ref">Crypto</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#analytics-ref">analytics
-                    <span class="superscript">4</span>
-</a></li>
-                <li><a href="./tags.html#nba-ref">NBA
-                    <span class="superscript">3</span>
+                <li><a href="./tags.html#crypto-ref">crypto
+                    <span class="superscript">10</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

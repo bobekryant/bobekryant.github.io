@@ -6,7 +6,7 @@ Summary: Introduction to cryptocurrencies and how I think of them
 
 <p>
 I have been around crypto since the days of SilkRoad and Mt. Gox. I still remember my college friend buying Bitcoin for under $20 and then ordering edibles off of SilkRoad. Living in a dorm there was free electricity so my suite-mate started to mine Litecoin.
-That was the early adaptor phase, but after the crash of Mt. Gox cryptocurrencies faded from the mainstream media until the ICO bubbles in 2017. I was working at a trading firm at the time, and the senior traders likened it to the 2000's tech bubble. 
+That was the early adopter phase, but after the crash of Mt. Gox cryptocurrencies faded from the mainstream media until the ICO bubbles in 2017. I was working at a trading firm at the time, and the senior traders likened it to the 2000's tech bubble. 
 Anything that you would buy would go up. It was also around this time that the crypto exchanges were very inefficient and prices were not in line at all and I would buy and sell on various exchanges to try to arbitrage the prices, mainly taking on exchange risk.
 And some of these exchanges were definitely scams like Bitgrail and Cryptopia. 
 </p>

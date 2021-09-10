@@ -6,15 +6,15 @@ Summary: Bitcoin can help a portfolio increase performance in both absolute and 
 
 <h3>Background</h3>
 <p>
-I am a Bitcoin permabull, so my views on Bitcoin are definately biased. 
-There are numerous fundamental reasons why I believe it is poised to revolutionalize the financial industry as we know it, but I will save those arguments for a future post.
+I am a Bitcoin permabull, so my views on Bitcoin are definitely biased. 
+There are numerous fundamental reasons why I believe it is poised to revolutionize the financial industry as we know it, but I will save those arguments for a future post.
 This article will use statistics to show why allocating bitcoin to your portfolio has historically been beneficial on both an absolute and risk adjusted basis.
 </p>
 
 <p>
 The traditional retirement portfolio is the 60/40 portfolio, where 60% of the portfolio is in various equities and 40% is in some form of fixed income. 
 Typically portfolio managers rebalance this 60/40 portfolio quarterly to keep the same exposure to both asset classes.
-Using $SPY and $TLT as proxies for euities and fixed income, we can simulate the performance of a 60/40 portfolio during this decade long bull market.
+Using $SPY and $TLT as proxies for equities and fixed income, we can simulate the performance of a 60/40 portfolio during this decade long bull market.
 The following plot shows a 60/40 portfolio with $1000 dollars starting in 2014 till present day. 
 This portfolio had pretty consistent performance until the Covid crash in 2020 and there is strong risk adjusted performance.
 In addition, I show what would have happened if instead this portfolio had 2%, 5%, and 10% exposure to $BTC in addition to the equity and fixed income exposure. 
@@ -41,13 +41,13 @@ What I want to stress is that including $BTC in the portfolio increases the risk
 
 <h3>Crypto Bear Markets</h3>
 <p>
-Bitcoin has numerous periods that it has significant drawdowns as it is a very volatile asset. 
+Bitcoin has numerous periods that it has significant draw downs as it is a very volatile asset. 
 However due to a phenomena known as Shannon's Demon or volatility harvesting, a portfolio including Bitcoin can still outperform one without Bitcoin during these drawdown periods.
 This can be easily visualized if we start the portfolio with 1000 dollars at all time high of $BTC of 19,000 on December 18th, 2017.
 On this date, $SPY is around 250 and $TLT is around 120. 
 Fast forward to today and $BTC is around 16,300, $SPY is at 360 and $TLT is hovering around 160.
 Absolute return wise, both $SPY and $TLT outperformed $BTC.
-However, when we add $BTC to the rebalanced portfolio, we see that the portoflio with the best relative and absolute performance is actually the one with the most $BTC exposure at 10%.
+However, when we add $BTC to the re-balanced portfolio, we see that the portfolio with the best relative and absolute performance is actually the one with the most $BTC exposure at 10%.
 </p>
 
 <center>
@@ -66,13 +66,13 @@ However, when we add $BTC to the rebalanced portfolio, we see that the portoflio
 $BTC works well in the above portfolio, because it is an uncorrelated asset.
 Although it produces a negative return on its own, there are large diversification benefits to adding it to a equity-fixed income portfolio.
 The power of diversification and rebalancing is shown clearly in the following made up example:
-Suppose there is an asset that either doubles or halves at every timestep. 
+Suppose there is an asset that either doubles or halves at every time step. 
 In addition, it starts and ends at the same price.
 </p>
 
 <p>
 In the example below, the price of this asset starts and stops at 100, but by rebalancing, the price of the portfolio ends at over 600, more than 6x the original starting point.
-Obviously this is an extreme example, but it properly illustrates the power of reblancing under a mean reverting asset.
+Obviously this is an extreme example, but it properly illustrates the power of rebalancing under a mean reverting asset.
 </p>
 
 <center>
@@ -80,12 +80,12 @@ Obviously this is an extreme example, but it properly illustrates the power of r
 </center>
 
 <p>
-We can use monte carlo simulations to look at more realistic scenarios of possible performance from reblanacing. 
+We can use monte carlo simulations to look at more realistic scenarios of possible performance from rebalancing. 
 Rebalancing is not a magical panacea and there are places where it underperforms not rebalancing.
-I generate 1000 synthetic streams from a random gaussian process with 250 datapoints, setting the mean to zero and an annualized 20% standard deviation.  
-Each day I do a 50-50 rebalance with cash and then compare the performance against a non-rebalacning portfolio at the end of the time period.
+I generate 1000 synthetic streams from a random Gaussian process with 250 data points, setting the mean to zero and an annualized 20% standard deviation.  
+Each day I do a 50-50 rebalance with cash and then compare the performance against a non-rebalancing portfolio at the end of the time period.
 As we can see in the below graph, rebalancing a portfolio gives a payoff similar to selling options on the underlying.
-When the underlying does not move that much, rebalancing is plus ev, but if there are extreme moves then it is negative expected value.
+When the underlying does not move that much, rebalancing is plus EV, but if there are extreme moves then it is negative expected value.
 We see that when the asset moves less than 20% in either direction, rebalancing is better than holding.
 Out of 1000 iterations over 2/3rds of them did better when rebalancing.
 </p>

@@ -64,7 +64,7 @@ When comparing the AAVE rates with the AMPL rates, we will be using APR.
 
 <p>
 Since $AMPL was introduced into AAVE on July 24th, there have been 5 rebases, 4 of which were positive while this most recent one was negative.
-In that time, the <a href="https://www.coin-tools.com/ampl/ampl-rebase-history/" target="_blank">rebase gains </a> were about 16.94% APR while AAVE interest cost cumulatively 0.537% APR interest[ref]This is assuming 100% utilization, but the actually utilization during negative rebases is less than that[/ref].
+In that time, the <a href="https://www.coin-tools.com/ampl/ampl-rebase-history/" target="_blank">rebase gains </a> were about 16.94% APR while AAVE interest cost cumulatively 0.537% APR interest[ref]This is assuming 100% utilization, but the actual utilization during negative rebases is less than that[/ref].
 In addition, the deposit APR received is even less than 0.17% APR as AAVE takes a 20% cut. 
 Assuming a 100% borrow rate, and the fact that AAVE has no stable borrows, the deposit APR is 80% of the funding paid so it would be around 0.429% instead of 0.537%
 </p>

@@ -8,7 +8,7 @@ Summary: There is a generational opportunity forming in gold and other related. 
 <p>
 A quick and dirty way to price gold is to look at the total amount of money in circulation (M2) and divide it by the size of gold stock. This would quite literally tell how much gold is worth.
 It is kind of difficult to precisely measure all of the gold stocks in the world, but there are rough <a href="https://www.gold.org/about-gold/gold-supply/gold-mining/how-much-gold" target="_blank">estimates</a> we can use.
-Splitting gold into jewellery, private investment, official holdings, and other, we see around 197.6k tonnes in existence at the end of 2019. In addition, we know that mining adds around 2.5-3k tonnes annually. 
+Splitting gold into jewelry, private investment, official holdings, and other, we see around 197.6k tonnes in existence at the end of 2019. In addition, we know that mining adds around 2.5-3k tonnes annually. 
 Given that we are midway through 2020, I will add 1.5 tonnes and assume that we have a total of 199.1k tonnes of gold in existence. Turning this into troy ounces, we get around 6.4 billion troy ounces of gold. 
 As of July 16th 2020, <a href="https://fred.stlouisfed.org/series/M2" target="_blank">M2</a> money stock was 18.522 trillion giving gold a fair value price of 2894 per troy ounce and at the current gold price of around 1870 there is roughly a 35% premium.
 </p>
