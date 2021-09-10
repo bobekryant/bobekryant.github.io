@@ -28,7 +28,7 @@ A more in-depth examination of this behavior can be found in <a href="https://ww
 
 <h3>Crypto Sessions</h3>
 <p>
-Crypto trades 24/7/365 but not all hours have the same market dynamics as the participants change as we shift from Europe to US to Asia sessions.
+Crypto trades 24/7/365, but not all hours have the same market dynamics as the participants change as we shift from Europe to US to Asia sessions.
 The trading periods are as follows[ref]These times actually follow the Bitmex perp funding schedule[/ref]:
 
 <ul>
@@ -41,7 +41,8 @@ The trading periods are as follows[ref]These times actually follow the Bitmex pe
 <p>
 An interesting study is to break down returns by time period and compare to see if some time periods are more bullish or bearish than others.
 We can see if Asia session <a href="https://twitter.com/AltcoinPsycho/status/1350705185761456129" target="_blank">bearish</a> bias is warranted. 
-Below is the cumulative return chart of $BTC broken down into the three sessions above. We can see that the Asian session had the worst performance out of the three only increasing 40% while both the US and European sessions had over 80% increases.
+Below is the cumulative return chart of $BTC broken down into the three sessions above. 
+We see that the Asian session had the worst performance out of the three only increasing 40% while both the US and European sessions had over 80% increases.
 Counter intuitively, the China mining ban had the largest negative impact on US hours not Asian hours. Before the ban in April, Asian session was tracking with the Europe session but since then they have been on divergent paths.
 </p>
 
@@ -50,10 +51,10 @@ Counter intuitively, the China mining ban had the largest negative impact on US 
 </center>
 
 <p>
-We can extend this study to other coins like $ETH and $SOL. It is interesting to see that $ETH has actually gone down in Asian hours while the US hours is extremely bullish. 
+Extending this study to other coins like $ETH and $SOL, $ETH has actually gone down in Asian hours while the US hours is extremely bullish. 
 The Asia $ETH session looks like a TWAP sell algo which could mean miners hedging and selling either coins as most of the miners are in Asia. 
-The dichotomy between the sessions is even starker on $SOL. 
-There is a relentless US session bid that dwarfs any other time period and my best guess is that it is institutions/VC.
+The dichotomy between the sessions is even more stark on $SOL. 
+There is a relentless US session bid that dwarfs any other time period and my best guess is that it is institutions/VC [ref]We can compare with OI and funding rates to see if this is a future lead move or a spot led move.[/ref]
 </p>
 
 <center>
@@ -64,17 +65,12 @@ There is a relentless US session bid that dwarfs any other time period and my be
 ![Pelican2](../images/crypto/sol_sessions.png)
 </center>
 
-<p>
-We can extend this study to other coins like $ETH and $SOL. It is interesting to see that $ETH has actually gone down in Asian hours while the US hours is extremely bullish. 
-The Asia $ETH session looks like a TWAP sell algo which could mean miners hedging and selling either coins as most of the miners are in Asia. 
-The dichotomy between the sessions is even starker on $SOL. 
-There is a relentless US session bid that dwarfs any other time period and my best guess is that it is institutions/VC.
-</p>
 
 <h3>When do Apes Ape?</h3>
 <p>
 From the previous plots it would seem that the US session is when all the gains are made and the Asia session is when they are lost. 
-This changes from coin to coin as oftentimes it is the Europe session that has massive gains, but for most of the coins the Asian session is the worst session in terms of performance and the difference is stark.
+This actually changes coin to coin as oftentimes it is the Europe session that has massive gains.
+For most part, the Asian session is the worst performing session in terms of returns and the difference is nontrivial.
 Below are some other L1s which exhibit insane gains during the Europe session when compared to other sessions. 
 The differences are so stark, I went back to double check if there was a bug in the code.
 Both $AVAX and $EGLD just repeatedly rip during one session and stay still for the other two, almost like there is a TWAP bid every Europe session, but goes into profit taking mode outside the European hours.
