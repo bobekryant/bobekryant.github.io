@@ -6,7 +6,7 @@ Summary: Different hours have different characteristics
 
 <h3>Background</h3>
 <p>
-The SPY was created in 1993 and it is an ETF tracking the S&P 500 which has gone up over 10x from then till present day. 
+The SPY was created in 1993 and it is an ETF tracking the S&P 500 which has gone up over 10x since. 
 What if I told you that all those gains occurred after hours[ref]After the market closed from 4 PM EST till 9:30 AM EST the following day.[/ref] and the performance during the market open was basically flat?
 Below is a chart of this phenomenon. 
 We can steady gains in the after market periods up until Covid, when we were getting news bombs at night from China, thus tanking the market during the overnight period. 
@@ -20,10 +20,10 @@ More importantly, from the inception of the SPY till present day, the cumulative
 </center>
 
 <p>
-This abnormal performance holds in all types of markets, from individual stocks in various sectors to the equity indices.  
+This abnormal performance holds in all types of traditional finance markets, from individual stocks in various sectors to the equity indices.  
 Some hypothesis are that the after hours are when news (earnings, buyouts) comes out and these are typically bullish events. 
-Others relate to the market microstructure and the fact that there are tighter <a href="https://www.cmegroup.com/education/files/eq-trading-hours.pdf" target="_blank">circuit breakers</a> after hours.
-A more in-depth examination can be found in <a href="https://www.krannert.purdue.edu/faculty/hgulen/Day_and_Night.pdf" target="_blank">these</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1625495" target="_blank">papers</a>.
+Others believe that the market microstructure is the driving factor of these returns. The <a href="https://www.cmegroup.com/education/files/eq-trading-hours.pdf" target="_blank">circuit breakers</a> are tighter after hours.
+A more in-depth examination of this behavior can be found in <a href="https://www.krannert.purdue.edu/faculty/hgulen/Day_and_Night.pdf" target="_blank">these</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1625495" target="_blank">papers</a>.
 </p>
 
 <h3>Crypto Sessions</h3>
@@ -93,5 +93,5 @@ Both $AVAX and $EGLD just repeatedly rip during one session and stay still for t
 Here we examined some time of day discrepancies between various assets. Some assets like $ETH and $SOL seem to only move during the US hours, while others move during the European session. 
 This information can be used in a variety of ways from outright trading to risk management (increasing/decreasing leverage as the potential moves are more/less likely in certain times).
 The article focuses mainly on intraday seasonality, but the same concept can be extended to various days of the week and days of the month. 
-In addition, a next step could be to condition on some funding and OI data to see how the results change.
+In addition, a next step could be to condition on funding and OI data to see how the results change.
 </p>
